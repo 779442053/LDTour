@@ -16,26 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z74-gH-Wuk">
-                                <rect key="frame" x="136" y="261" width="51" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="HMv-FL-4kG"/>
-                                    <constraint firstAttribute="height" constant="31" id="xMq-6o-exZ"/>
-                                </constraints>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高仿面包旅行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA7-to-Jpg">
-                                <rect key="frame" x="109" y="230" width="102" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="640_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-cY-UrK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高仿版" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-dI-gN8">
+                                <rect key="frame" x="135" y="70" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z74-gH-Wuk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0Kw-uM-rKY"/>
-                            <constraint firstItem="kA7-to-Jpg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1h1-CO-4kZ"/>
-                            <constraint firstItem="kA7-to-Jpg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dpq-IK-jev"/>
-                            <constraint firstItem="Z74-gH-Wuk" firstAttribute="top" secondItem="kA7-to-Jpg" secondAttribute="bottom" constant="10" id="hF5-Jn-4B1"/>
+                            <constraint firstItem="rK4-cY-UrK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="OX2-FL-MEU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rK4-cY-UrK" secondAttribute="bottom" id="PVZ-bI-hJ5"/>
+                            <constraint firstItem="rK4-cY-UrK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="net-UQ-agN"/>
+                            <constraint firstItem="BPw-dI-gN8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="50" id="otJ-Z1-NFp"/>
+                            <constraint firstItem="BPw-dI-gN8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ueh-c2-FmD"/>
+                            <constraint firstAttribute="trailing" secondItem="rK4-cY-UrK" secondAttribute="trailing" id="wlQ-4m-OY5"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -45,4 +43,7 @@
             <point key="canvasLocation" x="210" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="640_1136.png" width="320" height="568"/>
+    </resources>
 </document>

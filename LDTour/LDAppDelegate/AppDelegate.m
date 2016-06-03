@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LDMainTabBarVC.h"
 
 @interface AppDelegate () 
 @end
@@ -32,7 +33,7 @@
 #pragma mark - 系统delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window.rootViewController = [UIViewController new];
+    self.window.rootViewController = [LDMainTabBarVC new];
     return YES;
 }
 
