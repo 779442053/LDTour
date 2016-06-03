@@ -8,15 +8,31 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () 
 @end
 
 @implementation AppDelegate
 
 
+#pragma mark -
+#pragma mark - init
+#pragma mark - 生命周期
+#pragma mark - getters setters
+
+- (UIWindow *)window {
+
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.backgroundColor = [UIColor whiteColor];
+        [_window makeKeyAndVisible];
+    }
+    return _window;
+}
+
+#pragma mark - 系统delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window.rootViewController = [UIViewController new];
     return YES;
 }
 
@@ -41,5 +57,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - 自定义delegate
+#pragma mark - 公有方法
+#pragma mark - 私有方法
+#pragma mark - 事件响应
+
 
 @end
