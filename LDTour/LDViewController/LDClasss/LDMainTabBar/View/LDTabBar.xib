@@ -28,7 +28,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-Cp-PIM">
                     <rect key="frame" x="154" y="0.0" width="77" height="62"/>
-                    <state key="normal" backgroundImage="tabbar_trip_add_normal.png"/>
+                    <color key="backgroundColor" red="0.76470588235294112" green="0.87450980392156863" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="tapCenterButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="GE3-ts-tu5"/>
                     </connections>
@@ -49,6 +49,13 @@
                         <action selector="buttonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaW-TD-s1P"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_trip_add_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-3q-aRu">
+                    <rect key="frame" x="175" y="14" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Tgo-2s-9LC"/>
+                        <constraint firstAttribute="height" constant="35" id="c0t-xp-1Dk"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -59,6 +66,7 @@
                 <constraint firstAttribute="bottom" secondItem="Xak-Cp-PIM" secondAttribute="bottom" id="Ew0-5t-K92"/>
                 <constraint firstAttribute="bottom" secondItem="xwr-ZZ-ejS" secondAttribute="bottom" id="H0z-rX-Yid"/>
                 <constraint firstItem="Xak-Cp-PIM" firstAttribute="width" secondItem="xwr-ZZ-ejS" secondAttribute="width" id="JKx-Zm-Bfe"/>
+                <constraint firstItem="2cB-3q-aRu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OTj-1a-YbG"/>
                 <constraint firstItem="l4b-7Z-FBm" firstAttribute="height" secondItem="xwr-ZZ-ejS" secondAttribute="height" id="Oop-gq-obQ"/>
                 <constraint firstAttribute="trailing" secondItem="Ehh-cV-Haw" secondAttribute="trailing" id="Sxt-Gx-p3P"/>
                 <constraint firstItem="Ehh-cV-Haw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U37-Av-USn"/>
@@ -68,6 +76,7 @@
                 <constraint firstItem="xwr-ZZ-ejS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="deb-wo-p3X"/>
                 <constraint firstItem="xwr-ZZ-ejS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fH6-z5-ZOj"/>
                 <constraint firstItem="Xak-Cp-PIM" firstAttribute="height" secondItem="xwr-ZZ-ejS" secondAttribute="height" id="fW2-kr-8Mq"/>
+                <constraint firstItem="2cB-3q-aRu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="im8-gZ-pmy"/>
                 <constraint firstItem="Ehh-cV-Haw" firstAttribute="leading" secondItem="aym-Fb-8au" secondAttribute="trailing" id="jA2-xn-9P9"/>
                 <constraint firstItem="Xak-Cp-PIM" firstAttribute="leading" secondItem="l4b-7Z-FBm" secondAttribute="trailing" id="mm9-ab-7mh"/>
                 <constraint firstItem="l4b-7Z-FBm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nti-Jm-Kwz"/>
@@ -79,6 +88,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addImageView" destination="2cB-3q-aRu" id="h2c-Yf-UaU"/>
+            </connections>
             <point key="canvasLocation" x="552.5" y="75"/>
         </view>
     </objects>

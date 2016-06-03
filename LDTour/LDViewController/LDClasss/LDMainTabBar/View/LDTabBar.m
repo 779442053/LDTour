@@ -8,6 +8,12 @@
 
 #import "LDTabBar.h"
 
+@interface LDTabBar ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *addImageView;
+
+@end
+
 @implementation LDTabBar
 
 - (void)awakeFromNib {
@@ -53,6 +59,34 @@
 - (IBAction)tapCenterButtonClick {
     
     self.tapCenterBlock ? self.tapCenterBlock():nil;
+
+    [self.addImageView.layer addAnimation:[self getAnim] forKey:nil];
 }
+
+
+
+- (CABasicAnimation *)getAnim {
+
+    // 对Y轴进行旋转（指定Z轴的话，就和UIView的动画一样绕中心旋转）
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    
+    // 设定动画选项
+    animation.duration = 0.3;
+    
+    animation.repeatCount = 1; // 重复次数
+
+    // 设定旋转角度
+    animation.fromValue = @0.0f;
+    
+    animation.toValue = @(M_PI*0.5);
+    
+    animation.autoreverses = YES;
+    
+    
+    animation.removedOnCompletion = NO;
+    
+    return animation;
+}
+
 
 @end
