@@ -32,7 +32,6 @@
 
 #pragma mark - 系统delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     self.window.rootViewController = [LDMainTabBarVC new];
     return YES;
 }

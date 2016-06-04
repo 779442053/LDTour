@@ -64,9 +64,8 @@
 }
 
 
-
 - (CABasicAnimation *)getAnim {
-
+    
     // 对Y轴进行旋转（指定Z轴的话，就和UIView的动画一样绕中心旋转）
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     
@@ -78,12 +77,11 @@
     // 设定旋转角度
     animation.fromValue = @0.0f;
     
-    animation.toValue = @(M_PI*0.5);
+    animation.toValue = @(M_PI);
     
-    animation.autoreverses = YES;
-    
-    
-    animation.removedOnCompletion = NO;
+//    animation.autoreverses = YES;
+
+//    animation.removedOnCompletion = NO;
     
     return animation;
 }

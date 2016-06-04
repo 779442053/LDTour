@@ -142,6 +142,18 @@
 		6350CD3F1D020542004FBA60 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2A1D020542004FBA60 /* UIScrollView+MJExtension.m */; };
 		6350CD401D020542004FBA60 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2C1D020542004FBA60 /* UIScrollView+MJRefresh.m */; };
 		6350CD411D020542004FBA60 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2E1D020542004FBA60 /* UIView+MJExtension.m */; };
+		636F3AF91D030CDE00395BC4 /* LDHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3AF81D030CDE00395BC4 /* LDHHTTPSessionManager.m */; };
+		636F3B061D031AE400395BC4 /* BMScannerQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3AFC1D031AE400395BC4 /* BMScannerQRCodeView.m */; };
+		636F3B071D031AE400395BC4 /* image_qr_corner_001_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3AFD1D031AE400395BC4 /* image_qr_corner_001_@2x.png */; };
+		636F3B081D031AE400395BC4 /* image_qr_corner_001_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3AFE1D031AE400395BC4 /* image_qr_corner_001_@3x.png */; };
+		636F3B091D031AE400395BC4 /* image_qr_corner_002_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3AFF1D031AE400395BC4 /* image_qr_corner_002_@2x.png */; };
+		636F3B0A1D031AE400395BC4 /* image_qr_corner_002_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B001D031AE400395BC4 /* image_qr_corner_002_@3x.png */; };
+		636F3B0B1D031AE400395BC4 /* image_qr_corner_003_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B011D031AE400395BC4 /* image_qr_corner_003_@2x.png */; };
+		636F3B0C1D031AE400395BC4 /* image_qr_corner_003_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B021D031AE400395BC4 /* image_qr_corner_003_@3x.png */; };
+		636F3B0D1D031AE400395BC4 /* image_qr_corner_004_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B031D031AE400395BC4 /* image_qr_corner_004_@2x.png */; };
+		636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B041D031AE400395BC4 /* image_qr_corner_004_@3x.png */; };
+		636F3B0F1D031AE400395BC4 /* image_qr_scan_line_001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */; };
+		636F3B131D031EB900395BC4 /* LDScannerQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 /* End PBXBuildFile section */
@@ -425,6 +437,21 @@
 		6350CD2C1D020542004FBA60 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		6350CD2D1D020542004FBA60 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		6350CD2E1D020542004FBA60 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		636F3AF71D030CDE00395BC4 /* LDHHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHHTTPSessionManager.h; sourceTree = "<group>"; };
+		636F3AF81D030CDE00395BC4 /* LDHHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHHTTPSessionManager.m; sourceTree = "<group>"; };
+		636F3AFB1D031AE400395BC4 /* BMScannerQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMScannerQRCodeView.h; sourceTree = "<group>"; };
+		636F3AFC1D031AE400395BC4 /* BMScannerQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMScannerQRCodeView.m; sourceTree = "<group>"; };
+		636F3AFD1D031AE400395BC4 /* image_qr_corner_001_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_001_@2x.png"; sourceTree = "<group>"; };
+		636F3AFE1D031AE400395BC4 /* image_qr_corner_001_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_001_@3x.png"; sourceTree = "<group>"; };
+		636F3AFF1D031AE400395BC4 /* image_qr_corner_002_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_002_@2x.png"; sourceTree = "<group>"; };
+		636F3B001D031AE400395BC4 /* image_qr_corner_002_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_002_@3x.png"; sourceTree = "<group>"; };
+		636F3B011D031AE400395BC4 /* image_qr_corner_003_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_003_@2x.png"; sourceTree = "<group>"; };
+		636F3B021D031AE400395BC4 /* image_qr_corner_003_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_003_@3x.png"; sourceTree = "<group>"; };
+		636F3B031D031AE400395BC4 /* image_qr_corner_004_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_004_@2x.png"; sourceTree = "<group>"; };
+		636F3B041D031AE400395BC4 /* image_qr_corner_004_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_corner_004_@3x.png"; sourceTree = "<group>"; };
+		636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_scan_line_001@2x.png"; sourceTree = "<group>"; };
+		636F3B111D031EB900395BC4 /* LDScannerQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDScannerQRCodeVC.h; sourceTree = "<group>"; };
+		636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDScannerQRCodeVC.m; sourceTree = "<group>"; };
 		6397C9681D0251790038CC4A /* UIDevice+BMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMDevice.h"; sourceTree = "<group>"; };
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
@@ -778,6 +805,7 @@
 		6350CC041D01E9DE004FBA60 /* LDLibs */ = {
 			isa = PBXGroup;
 			children = (
+				636F3AFA1D031AE400395BC4 /* BMScannerQRCodeView */,
 				633697971D02BC5A00D541A9 /* FDFullscreenPopGesture */,
 				633697771D02B44700D541A9 /* SDCycleScrollView */,
 				63440C4D1D02589000F6D1F3 /* IQKeyBoardManager */,
@@ -897,6 +925,8 @@
 			isa = PBXGroup;
 			children = (
 				6350CC7C1D01F116004FBA60 /* LDNetworkInterface-Header.h */,
+				636F3AF71D030CDE00395BC4 /* LDHHTTPSessionManager.h */,
+				636F3AF81D030CDE00395BC4 /* LDHHTTPSessionManager.m */,
 			);
 			path = LDNetworkCenter;
 			sourceTree = "<group>";
@@ -1129,6 +1159,7 @@
 		6350CC6D1D01EFC4004FBA60 /* LDRecommendation */ = {
 			isa = PBXGroup;
 			children = (
+				636F3B101D031EA700395BC4 /* LDScannerQRCode */,
 				6336978E1D02BB7500D541A9 /* LDAdvertisement */,
 				6350CC6E1D01EFC4004FBA60 /* Controller */,
 				6350CC6F1D01EFC4004FBA60 /* Model */,
@@ -1357,6 +1388,33 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		636F3AFA1D031AE400395BC4 /* BMScannerQRCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				636F3AFB1D031AE400395BC4 /* BMScannerQRCodeView.h */,
+				636F3AFC1D031AE400395BC4 /* BMScannerQRCodeView.m */,
+				636F3AFD1D031AE400395BC4 /* image_qr_corner_001_@2x.png */,
+				636F3AFE1D031AE400395BC4 /* image_qr_corner_001_@3x.png */,
+				636F3AFF1D031AE400395BC4 /* image_qr_corner_002_@2x.png */,
+				636F3B001D031AE400395BC4 /* image_qr_corner_002_@3x.png */,
+				636F3B011D031AE400395BC4 /* image_qr_corner_003_@2x.png */,
+				636F3B021D031AE400395BC4 /* image_qr_corner_003_@3x.png */,
+				636F3B031D031AE400395BC4 /* image_qr_corner_004_@2x.png */,
+				636F3B041D031AE400395BC4 /* image_qr_corner_004_@3x.png */,
+				636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */,
+			);
+			path = BMScannerQRCodeView;
+			sourceTree = "<group>";
+		};
+		636F3B101D031EA700395BC4 /* LDScannerQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				636F3B111D031EB900395BC4 /* LDScannerQRCodeVC.h */,
+				636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */,
+			);
+			path = LDScannerQRCode;
+			sourceTree = "<group>";
+		};
 		6397C9671D0251790038CC4A /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
@@ -1485,7 +1543,10 @@
 				6350CD3D1D020542004FBA60 /* MJRefresh.bundle in Resources */,
 				633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */,
 				6350CCC31D01F462004FBA60 /* LDBespokeVC.xib in Resources */,
+				636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */,
+				636F3B081D031AE400395BC4 /* image_qr_corner_001_@3x.png in Resources */,
 				6350CCEB1D01F6ED004FBA60 /* LDAlertView.xib in Resources */,
+				636F3B091D031AE400395BC4 /* image_qr_corner_002_@2x.png in Resources */,
 				6350CCC81D01F46F004FBA60 /* LDCenterVC.xib in Resources */,
 				6350CCDF1D01F5AF004FBA60 /* tabbar_destination_selected.png in Resources */,
 				6350CCB61D01F439004FBA60 /* LDRecommendationVC.xib in Resources */,
@@ -1493,15 +1554,21 @@
 				6350CC3D1D01E9DE004FBA60 /* LICENSE in Resources */,
 				6350CCE61D01F5AF004FBA60 /* tabbar_trip_add_normal.png in Resources */,
 				6350CCFE1D02012F004FBA60 /* LDRecommendationStoriesCell.xib in Resources */,
+				636F3B0F1D031AE400395BC4 /* image_qr_scan_line_001@2x.png in Resources */,
 				6350CCF91D01FF12004FBA60 /* LDRecommendationOriginalityCell.xib in Resources */,
+				636F3B0A1D031AE400395BC4 /* image_qr_corner_002_@3x.png in Resources */,
 				6350CCE41D01F5AF004FBA60 /* tabbar_sale_normal.png in Resources */,
+				636F3B0C1D031AE400395BC4 /* image_qr_corner_003_@3x.png in Resources */,
 				63440CB61D02589000F6D1F3 /* IQKeyboardManager.bundle in Resources */,
 				6350CCE21D01F5AF004FBA60 /* tabbar_me_normal.png in Resources */,
+				636F3B0B1D031AE400395BC4 /* image_qr_corner_003_@2x.png in Resources */,
 				634597451D01E4F3007837CD /* LaunchScreen.storyboard in Resources */,
+				636F3B0D1D031AE400395BC4 /* image_qr_corner_004_@2x.png in Resources */,
 				6350CCDD1D01F5AF004FBA60 /* 640_1136@2x.png in Resources */,
 				634597421D01E4F3007837CD /* Assets.xcassets in Resources */,
 				6350CCDE1D01F5AF004FBA60 /* tabbar_destination_normal.png in Resources */,
 				6350CCCD1D01F4B0004FBA60 /* LDTabBar.xib in Resources */,
+				636F3B071D031AE400395BC4 /* image_qr_corner_001_@2x.png in Resources */,
 				6350CCE31D01F5AF004FBA60 /* tabbar_me_selected.png in Resources */,
 				6350CC4A1D01E9DE004FBA60 /* SVProgressHUD.bundle in Resources */,
 				6350CCE51D01F5AF004FBA60 /* tabbar_sale_selected.png in Resources */,
@@ -1529,6 +1596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636F3B061D031AE400395BC4 /* BMScannerQRCodeView.m in Sources */,
 				6350CC501D01E9F3004FBA60 /* AppDelegate.m in Sources */,
 				63440CAA1D02589000F6D1F3 /* IQUIScrollView+Additions.m in Sources */,
 				6350CD341D020542004FBA60 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1596,6 +1664,7 @@
 				63440CCE1D02589000F6D1F3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				63440CC11D02589000F6D1F3 /* MKAnnotationView+WebCache.m in Sources */,
 				6350CC3B1D01E9DE004FBA60 /* AFURLResponseSerialization.m in Sources */,
+				636F3B131D031EB900395BC4 /* LDScannerQRCodeVC.m in Sources */,
 				6336978C1D02B44700D541A9 /* SDCycleScrollView.m in Sources */,
 				6350CCE91D01F6E0004FBA60 /* LDAlertView.m in Sources */,
 				63440CC31D02589000F6D1F3 /* SDImageCache.m in Sources */,
@@ -1615,6 +1684,7 @@
 				63440CCF1D02589000F6D1F3 /* UIImageView+WebCache.m in Sources */,
 				6350CC431D01E9DE004FBA60 /* MASViewConstraint.m in Sources */,
 				6350CCA71D01F293004FBA60 /* LDBaseVC.m in Sources */,
+				636F3AF91D030CDE00395BC4 /* LDHHTTPSessionManager.m in Sources */,
 				63440CBC1D02589000F6D1F3 /* NSObject+MJClass.m in Sources */,
 				63440CB31D02589000F6D1F3 /* IQTitleBarButtonItem.m in Sources */,
 				63440CB91D02589000F6D1F3 /* MJProperty.m in Sources */,
