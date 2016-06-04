@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633697871D02B44700D541A9 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336977A1D02B44700D541A9 /* TAAbstractDotView.m */; };
+		633697881D02B44700D541A9 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336977C1D02B44700D541A9 /* TAAnimatedDotView.m */; };
+		633697891D02B44700D541A9 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336977E1D02B44700D541A9 /* TADotView.m */; };
+		6336978A1D02B44700D541A9 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697801D02B44700D541A9 /* TAPageControl.m */; };
+		6336978B1D02B44700D541A9 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697821D02B44700D541A9 /* SDCollectionViewCell.m */; };
+		6336978C1D02B44700D541A9 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697841D02B44700D541A9 /* SDCycleScrollView.m */; };
+		6336978D1D02B44700D541A9 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697861D02B44700D541A9 /* UIView+SDExtension.m */; };
+		633697951D02BB9300D541A9 /* LDAdvertisementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697931D02BB9300D541A9 /* LDAdvertisementVC.m */; };
+		633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633697941D02BB9300D541A9 /* LDAdvertisementVC.xib */; };
+		6336979A1D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 633697991D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		63440CA91D02589000F6D1F3 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 63440C501D02589000F6D1F3 /* IQNSArray+Sort.m */; };
 		63440CAA1D02589000F6D1F3 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63440C521D02589000F6D1F3 /* IQUIScrollView+Additions.m */; };
 		63440CAB1D02589000F6D1F3 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63440C541D02589000F6D1F3 /* IQUITextFieldView+Additions.m */; };
@@ -154,6 +164,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		633697791D02B44700D541A9 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		6336977A1D02B44700D541A9 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		6336977B1D02B44700D541A9 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		6336977C1D02B44700D541A9 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		6336977D1D02B44700D541A9 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		6336977E1D02B44700D541A9 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		6336977F1D02B44700D541A9 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		633697801D02B44700D541A9 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		633697811D02B44700D541A9 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		633697821D02B44700D541A9 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		633697831D02B44700D541A9 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		633697841D02B44700D541A9 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		633697851D02B44700D541A9 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		633697861D02B44700D541A9 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		633697921D02BB9300D541A9 /* LDAdvertisementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDAdvertisementVC.h; sourceTree = "<group>"; };
+		633697931D02BB9300D541A9 /* LDAdvertisementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDAdvertisementVC.m; sourceTree = "<group>"; };
+		633697941D02BB9300D541A9 /* LDAdvertisementVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDAdvertisementVC.xib; sourceTree = "<group>"; };
+		633697981D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		633697991D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		63440C4F1D02589000F6D1F3 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		63440C501D02589000F6D1F3 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
 		63440C511D02589000F6D1F3 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
@@ -427,6 +456,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633697771D02B44700D541A9 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				633697781D02B44700D541A9 /* PageControl */,
+				633697811D02B44700D541A9 /* SDCollectionViewCell.h */,
+				633697821D02B44700D541A9 /* SDCollectionViewCell.m */,
+				633697831D02B44700D541A9 /* SDCycleScrollView.h */,
+				633697841D02B44700D541A9 /* SDCycleScrollView.m */,
+				633697851D02B44700D541A9 /* UIView+SDExtension.h */,
+				633697861D02B44700D541A9 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		633697781D02B44700D541A9 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				633697791D02B44700D541A9 /* TAAbstractDotView.h */,
+				6336977A1D02B44700D541A9 /* TAAbstractDotView.m */,
+				6336977B1D02B44700D541A9 /* TAAnimatedDotView.h */,
+				6336977C1D02B44700D541A9 /* TAAnimatedDotView.m */,
+				6336977D1D02B44700D541A9 /* TADotView.h */,
+				6336977E1D02B44700D541A9 /* TADotView.m */,
+				6336977F1D02B44700D541A9 /* TAPageControl.h */,
+				633697801D02B44700D541A9 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		6336978E1D02BB7500D541A9 /* LDAdvertisement */ = {
+			isa = PBXGroup;
+			children = (
+				6336978F1D02BB7500D541A9 /* Controller */,
+				633697901D02BB7500D541A9 /* Model */,
+				633697911D02BB7500D541A9 /* View */,
+			);
+			path = LDAdvertisement;
+			sourceTree = "<group>";
+		};
+		6336978F1D02BB7500D541A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				633697921D02BB9300D541A9 /* LDAdvertisementVC.h */,
+				633697931D02BB9300D541A9 /* LDAdvertisementVC.m */,
+				633697941D02BB9300D541A9 /* LDAdvertisementVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		633697901D02BB7500D541A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		633697911D02BB7500D541A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		633697971D02BC5A00D541A9 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				633697981D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.h */,
+				633697991D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
 		63440C4D1D02589000F6D1F3 /* IQKeyBoardManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +778,8 @@
 		6350CC041D01E9DE004FBA60 /* LDLibs */ = {
 			isa = PBXGroup;
 			children = (
+				633697971D02BC5A00D541A9 /* FDFullscreenPopGesture */,
+				633697771D02B44700D541A9 /* SDCycleScrollView */,
 				63440C4D1D02589000F6D1F3 /* IQKeyBoardManager */,
 				63440C711D02589000F6D1F3 /* MJExtension */,
 				63440C871D02589000F6D1F3 /* SDWebImage */,
@@ -1026,6 +1129,7 @@
 		6350CC6D1D01EFC4004FBA60 /* LDRecommendation */ = {
 			isa = PBXGroup;
 			children = (
+				6336978E1D02BB7500D541A9 /* LDAdvertisement */,
 				6350CC6E1D01EFC4004FBA60 /* Controller */,
 				6350CC6F1D01EFC4004FBA60 /* Model */,
 				6350CC701D01EFC4004FBA60 /* View */,
@@ -1379,6 +1483,7 @@
 				6350CCE01D01F5AF004FBA60 /* tabbar_explore_normal.png in Resources */,
 				63440CDE1D02626C00F6D1F3 /* LDSettingHeadView.xib in Resources */,
 				6350CD3D1D020542004FBA60 /* MJRefresh.bundle in Resources */,
+				633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */,
 				6350CCC31D01F462004FBA60 /* LDBespokeVC.xib in Resources */,
 				6350CCEB1D01F6ED004FBA60 /* LDAlertView.xib in Resources */,
 				6350CCC81D01F46F004FBA60 /* LDCenterVC.xib in Resources */,
@@ -1430,6 +1535,7 @@
 				63440CC81D02589000F6D1F3 /* SDWebImageManager.m in Sources */,
 				6350CCD11D01F4F5004FBA60 /* LDCitPersonVC.m in Sources */,
 				6350CC371D01E9DE004FBA60 /* AFHTTPSessionManager.m in Sources */,
+				633697881D02B44700D541A9 /* TAAnimatedDotView.m in Sources */,
 				6350CC3C1D01E9DE004FBA60 /* AFURLSessionManager.m in Sources */,
 				63440CA91D02589000F6D1F3 /* IQNSArray+Sort.m in Sources */,
 				63440CAB1D02589000F6D1F3 /* IQUITextFieldView+Additions.m in Sources */,
@@ -1443,14 +1549,17 @@
 				6350CC441D01E9DE004FBA60 /* NSArray+MASAdditions.m in Sources */,
 				6350CD331D020542004FBA60 /* MJRefreshHeader.m in Sources */,
 				6350CD351D020542004FBA60 /* MJRefreshAutoNormalFooter.m in Sources */,
+				633697951D02BB9300D541A9 /* LDAdvertisementVC.m in Sources */,
 				63440CB81D02589000F6D1F3 /* MJFoundation.m in Sources */,
 				63440CB21D02589000F6D1F3 /* IQBarButtonItem.m in Sources */,
 				63440CC21D02589000F6D1F3 /* NSData+ImageContentType.m in Sources */,
+				6336978D1D02B44700D541A9 /* UIView+SDExtension.m in Sources */,
 				63440CBD1D02589000F6D1F3 /* NSObject+MJCoding.m in Sources */,
 				63440CAD1D02589000F6D1F3 /* IQUIViewController+Additions.m in Sources */,
 				63440CAC1D02589000F6D1F3 /* IQUIView+Hierarchy.m in Sources */,
 				63440CBA1D02589000F6D1F3 /* MJPropertyKey.m in Sources */,
 				6350CCB51D01F439004FBA60 /* LDRecommendationVC.m in Sources */,
+				6336979A1D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				6350CC391D01E9DE004FBA60 /* AFSecurityPolicy.m in Sources */,
 				6350CC461D01E9DE004FBA60 /* View+MASAdditions.m in Sources */,
 				63440CB11D02589000F6D1F3 /* IQTextView.m in Sources */,
@@ -1472,6 +1581,7 @@
 				63440CBE1D02589000F6D1F3 /* NSObject+MJKeyValue.m in Sources */,
 				6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */,
 				63440CB51D02589000F6D1F3 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				633697891D02B44700D541A9 /* TADotView.m in Sources */,
 				6350CC451D01E9DE004FBA60 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				6350CD411D020542004FBA60 /* UIView+MJExtension.m in Sources */,
 				6350CCB11D01F414004FBA60 /* LDMainTabBarVC.m in Sources */,
@@ -1486,12 +1596,15 @@
 				63440CCE1D02589000F6D1F3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				63440CC11D02589000F6D1F3 /* MKAnnotationView+WebCache.m in Sources */,
 				6350CC3B1D01E9DE004FBA60 /* AFURLResponseSerialization.m in Sources */,
+				6336978C1D02B44700D541A9 /* SDCycleScrollView.m in Sources */,
 				6350CCE91D01F6E0004FBA60 /* LDAlertView.m in Sources */,
 				63440CC31D02589000F6D1F3 /* SDImageCache.m in Sources */,
 				63440CAE1D02589000F6D1F3 /* IQUIWindow+Hierarchy.m in Sources */,
 				6350CC481D01E9DE004FBA60 /* README.md in Sources */,
+				6336978A1D02B44700D541A9 /* TAPageControl.m in Sources */,
 				6350CC401D01E9DE004FBA60 /* MASConstraintMaker.m in Sources */,
 				6350CCF81D01FF12004FBA60 /* LDRecommendationOriginalityCell.m in Sources */,
+				6336978B1D02B44700D541A9 /* SDCollectionViewCell.m in Sources */,
 				6350CC491D01E9DE004FBA60 /* SVIndefiniteAnimatedView.m in Sources */,
 				6350CC471D01E9DE004FBA60 /* ViewController+MASAdditions.m in Sources */,
 				63440CC41D02589000F6D1F3 /* SDWebImageCompat.m in Sources */,
@@ -1505,6 +1618,7 @@
 				63440CBC1D02589000F6D1F3 /* NSObject+MJClass.m in Sources */,
 				63440CB31D02589000F6D1F3 /* IQTitleBarButtonItem.m in Sources */,
 				63440CB91D02589000F6D1F3 /* MJProperty.m in Sources */,
+				633697871D02B44700D541A9 /* TAAbstractDotView.m in Sources */,
 				6350CD371D020542004FBA60 /* MJRefreshBackGifFooter.m in Sources */,
 				6350CCFD1D02012F004FBA60 /* LDRecommendationStoriesCell.m in Sources */,
 				6350CCF21D01FC64004FBA60 /* LDRecommendationHeaderView.m in Sources */,

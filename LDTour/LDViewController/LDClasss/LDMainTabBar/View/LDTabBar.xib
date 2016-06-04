@@ -12,6 +12,7 @@
             <subviews>
                 <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwr-ZZ-ejS">
                     <rect key="frame" x="0.0" y="0.0" width="77" height="62"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" backgroundImage="tabbar_explore_normal.png"/>
                     <state key="selected" backgroundImage="tabbar_explore_selected.png"/>
                     <connections>
@@ -20,6 +21,7 @@
                 </button>
                 <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-7Z-FBm">
                     <rect key="frame" x="77" y="0.0" width="77" height="62"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" backgroundImage="tabbar_destination_normal.png"/>
                     <state key="selected" backgroundImage="tabbar_destination_selected.png"/>
                     <connections>
@@ -35,6 +37,7 @@
                 </button>
                 <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aym-Fb-8au">
                     <rect key="frame" x="231" y="0.0" width="77" height="62"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" backgroundImage="tabbar_sale_normal.png"/>
                     <state key="selected" backgroundImage="tabbar_sale_selected.png"/>
                     <connections>
@@ -43,6 +46,7 @@
                 </button>
                 <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-cV-Haw">
                     <rect key="frame" x="308" y="0.0" width="77" height="62"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" backgroundImage="tabbar_me_normal.png"/>
                     <state key="selected" backgroundImage="tabbar_me_selected.png"/>
                     <connections>
@@ -57,7 +61,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="l4b-7Z-FBm" secondAttribute="bottom" id="2zj-0I-W8m"/>
                 <constraint firstItem="Ehh-cV-Haw" firstAttribute="width" secondItem="xwr-ZZ-ejS" secondAttribute="width" id="9mH-b6-0bo"/>

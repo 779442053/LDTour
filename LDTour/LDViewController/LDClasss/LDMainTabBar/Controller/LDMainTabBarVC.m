@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     self.tabBar.hidden = NO;
+    self.tabBar.translucent = NO;
 
     [self addVC:[LDRecommendationVC class] title:@"推荐"];
     [self addVC:[LDCitPersonVC class] title:@"城市达人"];
@@ -61,6 +62,8 @@
     c.navigationItem.title = title;
     nc.navigationBar.barTintColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
     [views addObject:nc];
+    nc.navigationBar.translucent = NO;
+    nc.navigationBar.hidden = NO;
     self.viewControllers = [views copy];
 }
 
