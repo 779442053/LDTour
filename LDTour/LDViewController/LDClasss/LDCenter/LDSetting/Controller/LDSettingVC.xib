@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDCenterVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDSettingVC">
             <connections>
-                <outlet property="centerPersonTableView" destination="CO3-73-woX" id="Tb8-WE-eUn"/>
+                <outlet property="settingTableView" destination="MGp-Ze-oXJ" id="cDs-Mw-Gt7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,24 +15,24 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-73-woX">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MGp-Ze-oXJ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="ghY-kT-VDU"/>
-                        <outlet property="delegate" destination="-1" id="DsN-Ri-WeF"/>
+                        <outlet property="dataSource" destination="-1" id="boc-Ng-oRO"/>
+                        <outlet property="delegate" destination="-1" id="mLp-Ml-0VT"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="CO3-73-woX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GLk-N9-HKH"/>
-                <constraint firstAttribute="trailing" secondItem="CO3-73-woX" secondAttribute="trailing" id="WGb-7p-DZG"/>
-                <constraint firstItem="CO3-73-woX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ahM-w7-TG1"/>
-                <constraint firstAttribute="bottom" secondItem="CO3-73-woX" secondAttribute="bottom" id="d3i-Hr-v7l"/>
+                <constraint firstAttribute="trailing" secondItem="MGp-Ze-oXJ" secondAttribute="trailing" id="3dl-ax-g4j"/>
+                <constraint firstItem="MGp-Ze-oXJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ifT-dG-6i5"/>
+                <constraint firstItem="MGp-Ze-oXJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ljd-Pc-Wof"/>
+                <constraint firstAttribute="bottom" secondItem="MGp-Ze-oXJ" secondAttribute="bottom" id="sdp-LD-LV3"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="388" y="-83"/>
+            <point key="canvasLocation" x="583" y="58"/>
         </view>
     </objects>
 </document>
