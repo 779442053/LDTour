@@ -100,6 +100,7 @@
         [SVProgressHUD showSuccessWithStatus:@"退出登录成功!"];
         LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
         [cacheManager loginSituation:NO];
+        [self.navigationController popViewControllerAnimated:YES];
         return;
     }
     

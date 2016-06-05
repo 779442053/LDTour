@@ -19,17 +19,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="640_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-cY-UrK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高仿版" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-dI-gN8">
-                                <rect key="frame" x="135" y="70" width="51" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="面包旅行(高仿)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-dI-gN8">
+                                <rect key="frame" x="103" y="70" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asiosldh@163.com inc 2016 06 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-aX-fWy">
+                                <rect key="frame" x="64" y="445" width="193" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="1z3-aX-fWy" secondAttribute="bottom" constant="20" id="Ep9-6h-o9U"/>
                             <constraint firstItem="rK4-cY-UrK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="OX2-FL-MEU"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rK4-cY-UrK" secondAttribute="bottom" id="PVZ-bI-hJ5"/>
+                            <constraint firstItem="1z3-aX-fWy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mjz-rK-jrs"/>
                             <constraint firstItem="rK4-cY-UrK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="net-UQ-agN"/>
                             <constraint firstItem="BPw-dI-gN8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="50" id="otJ-Z1-NFp"/>
                             <constraint firstItem="BPw-dI-gN8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ueh-c2-FmD"/>

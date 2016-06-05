@@ -32,11 +32,14 @@
 
 - (IBAction)loginButtonClick {
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-        [cacheManager loginSituation:YES];
-    }];
+    [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD showSuccessWithStatus:@"登录成功!"];
+        [self dismissViewControllerAnimated:YES completion:^{
+            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+            [cacheManager loginSituation:YES];
+        }];
+    });
 }
-
 
 @end
