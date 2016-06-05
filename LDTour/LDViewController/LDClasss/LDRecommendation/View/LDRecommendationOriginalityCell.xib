@@ -15,26 +15,19 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-uT-lC9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
-                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32Q-sD-iPI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="nvI-uT-lC9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0Aj-UY-xLy"/>
-                    <constraint firstItem="32Q-sD-iPI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7lY-52-OCZ"/>
                     <constraint firstAttribute="trailing" secondItem="nvI-uT-lC9" secondAttribute="trailing" id="8D0-zQ-NMz"/>
-                    <constraint firstAttribute="bottom" secondItem="32Q-sD-iPI" secondAttribute="bottom" id="8hD-bw-Ylb"/>
                     <constraint firstItem="nvI-uT-lC9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JIk-ua-Dy2"/>
-                    <constraint firstAttribute="trailing" secondItem="32Q-sD-iPI" secondAttribute="trailing" id="ime-sL-CeD"/>
-                    <constraint firstItem="32Q-sD-iPI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pNB-1l-THK"/>
                     <constraint firstAttribute="bottom" secondItem="nvI-uT-lC9" secondAttribute="bottom" id="w48-Bg-fqd"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="nvI-uT-lC9" id="UuN-zt-2Pb"/>
+            </connections>
             <point key="canvasLocation" x="269" y="183"/>
         </tableViewCell>
     </objects>

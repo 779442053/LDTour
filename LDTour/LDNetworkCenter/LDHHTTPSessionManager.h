@@ -33,4 +33,11 @@ typedef void(^LDHFailureBlock)         (NSError   *error);
                         downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
                                  successBlock:(LDHSuccessBlock)successBlock
                                  failureBlock:(LDHFailureBlock)failureBlock;
+
++ (void)getMenuTableDataWithNetIdentifier:(NSString *)netIdentifier
+                                    start:(int)start
+                                    count:(int)count
+                    downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                             successBlock:(LDHSuccessBlock)successBlock
+                             failureBlock:(LDHFailureBlock)failureBlock;
 @end

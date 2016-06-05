@@ -21,6 +21,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *recommendationTableView;
 @property (strong, nonatomic) SDCycleScrollView *cycleScrollView;
+@property (strong, nonatomic) NSMutableArray *recommendationArray;
+@property (assign, nonatomic) int start;
+@property (assign, nonatomic) int count;
+
 @end
 
 @implementation LDRecommendationVC
@@ -35,36 +39,40 @@
     
     [self setUI];
     
+    _start = 0;
+    _count = 10;
     [self startDownloadData];
+    [self setartDownloadTableData];
 }
 
 #pragma mark - getters setters
+
+- (NSMutableArray *)recommendationArray {
+
+    if (!_recommendationArray) {
+        _recommendationArray = [@[] mutableCopy];
+    }
+    return _recommendationArray;
+}
+
 #pragma mark - 系统delegate
 #pragma mark - 自定义delegate
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 4;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return 2;
-    }
-    return 10;
+    return self.recommendationArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: indexPath.section == 0 ? @"LDRecommendationStoriesCell" : @"LDRecommendationOriginalityCell" ];
+    LDRecommendationOriginalityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LDRecommendationOriginalityCell"];
+    cell.imageUrl = self.recommendationArray[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 50.0f;
+    return 5.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -77,15 +85,10 @@
     return 200;
 }
 
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     LDRecommendationSectionHeaderView *head = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"LDRecommendationSectionHeaderView"];
-    if (section == 0) {
-        head.contentView.backgroundColor = [UIColor orangeColor];
-    }else{
-        head.contentView.backgroundColor = [UIColor yellowColor];
-    }
+    head.contentView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     return head;
 }
 
@@ -113,13 +116,18 @@
     
     [self.recommendationTableView registerClass:[LDRecommendationSectionHeaderView class] forHeaderFooterViewReuseIdentifier:@"LDRecommendationSectionHeaderView"];
     
-    
     // 添加下拉和上拉刷新控件
     self.recommendationTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.start = 0;
         [self.recommendationTableView.header beginRefreshing];
-        [self startDownloadData];
+        [self setartDownloadTableData];
     }];
     
+    self.recommendationTableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        self.start++;
+        [self.recommendationTableView.footer beginRefreshing];
+        [self setartDownloadTableData];
+    }];
     self.recommendationTableView.tableHeaderView = self.cycleScrollView;
 }
 
@@ -135,14 +143,31 @@
 
 - (void)startDownloadData {
     
-    [SVProgressHUD showWithStatus:@"正在加载..."];
     [LDHHTTPSessionManager getAdvertisementDataWithNetIdentifier:@"getAdvertisementDataIdentifier" downloadProgressBlock:nil successBlock:^(id responseObject) {
+        [self reloadAdvertisementUIWithData:responseObject];
+    } failureBlock:^(NSError *error) {
+    }];
+}
+- (void)setartDownloadTableData {
+    
+    [SVProgressHUD showWithStatus:@"正在加载..."];
+    [LDHHTTPSessionManager getMenuTableDataWithNetIdentifier:@"setartDownloadTableData" start:self.start count:self.count downloadProgressBlock:nil successBlock:^(id responseObject) {
         [SVProgressHUD dismiss];
         [self.recommendationTableView.header endRefreshing];
-        [self reloadAdvertisementUIWithData:responseObject];
+        [self.recommendationTableView.footer endRefreshing];
+        
+        if (self.start == 0) {
+            [self.recommendationArray removeAllObjects];
+        }
+        NSArray *array = responseObject[@"trips"];
+        for (NSDictionary *dict in array) {
+            [self.recommendationArray addObject:dict[@"cover_image"]];
+        }
+        [self.recommendationTableView reloadData];
     } failureBlock:^(NSError *error) {
         [SVProgressHUD showInfoWithStatus:error.domain];
         [self.recommendationTableView.header endRefreshing];
+        [self.recommendationTableView.footer endRefreshing];
     }];
 }
 
@@ -162,7 +187,7 @@
 #pragma mark - 事件响应
 
 - (void)scanfButtonClick {
-
+    
     [self.navigationController pushViewController:[LDScannerQRCodeVC new] animated:YES];
 }
 @end

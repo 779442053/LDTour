@@ -10,4 +10,6 @@
 
 @interface LDRecommendationOriginalityCell : UITableViewCell
 
+@property (copy, nonatomic) NSString *imageUrl;
+
 @end

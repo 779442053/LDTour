@@ -284,6 +284,17 @@
                                  successBlock:(LDHSuccessBlock)successBlock
                                  failureBlock:(LDHFailureBlock)failureBlock {
     
-    [[self sharedHTTPSessionManager] get:kLDMENUM_INTERFACE_URL parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+    [[self sharedHTTPSessionManager] get:kLDMENUM_ADVERTISEMENT_INTERFACE_URL parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+}
+
++ (void)getMenuTableDataWithNetIdentifier:(NSString *)netIdentifier
+                                    start:(int)start
+                                    count:(int)count
+                    downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                             successBlock:(LDHSuccessBlock)successBlock
+                             failureBlock:(LDHFailureBlock)failureBlock {
+    
+    NSString *url = [NSString stringWithFormat:kLDMENUM_TABLE_INTERFACE_URL,(count),(start)];
+    [[self sharedHTTPSessionManager] get:url parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
 }
 @end
