@@ -7,6 +7,7 @@
 //
 
 #import "LDSettingVC.h"
+#import "LDAPPCacheManager.h"
 
 @interface LDSettingVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -50,6 +51,7 @@
             }
             [_settingArray addObject:muarr];
         }
+        [_settingArray addObject:@[@"退出登录"]];
     }
     return _settingArray;
 }
@@ -93,7 +95,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
+    if (indexPath.section+1 == self.settingArray.count) {
+        [SVProgressHUD showSuccessWithStatus:@"退出登录成功!"];
+        LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+        [cacheManager loginSituation:NO];
+        return;
+    }
+    
     NSString *string = self.settingArray[indexPath.section][indexPath.row];
     [SVProgressHUD showSuccessWithStatus:string];
 }

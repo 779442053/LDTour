@@ -158,6 +158,9 @@
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
 		63ED9F9B1D04780400EFD598 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F981D04780400EFD598 /* EXTScope.m */; };
+		63ED9F9E1D04808400EFD598 /* LDAPPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F9D1D04808400EFD598 /* LDAPPCacheManager.m */; };
+		63ED9FA31D04833D00EFD598 /* LDAertLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */; };
+		63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -463,6 +466,12 @@
 		63ED9F971D04780400EFD598 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		63ED9F981D04780400EFD598 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		63ED9F991D04780400EFD598 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		63ED9F9C1D04808400EFD598 /* LDAPPCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDAPPCacheManager.h; sourceTree = "<group>"; };
+		63ED9F9D1D04808400EFD598 /* LDAPPCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDAPPCacheManager.m; sourceTree = "<group>"; };
+		63ED9F9F1D04819800EFD598 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		63ED9FA01D04833D00EFD598 /* LDAertLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDAertLoginVC.h; sourceTree = "<group>"; };
+		63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDAertLoginVC.m; sourceTree = "<group>"; };
+		63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDAertLoginVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -959,6 +968,9 @@
 		6350CC561D01EFC4004FBA60 /* LDUtil */ = {
 			isa = PBXGroup;
 			children = (
+				63ED9F9F1D04819800EFD598 /* Singleton.h */,
+				63ED9F9C1D04808400EFD598 /* LDAPPCacheManager.h */,
+				63ED9F9D1D04808400EFD598 /* LDAPPCacheManager.m */,
 			);
 			path = LDUtil;
 			sourceTree = "<group>";
@@ -1231,6 +1243,9 @@
 		6350CC731D01EFC4004FBA60 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				63ED9FA01D04833D00EFD598 /* LDAertLoginVC.h */,
+				63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */,
+				63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1561,6 +1576,7 @@
 				6350CCE01D01F5AF004FBA60 /* tabbar_explore_normal.png in Resources */,
 				63440CDE1D02626C00F6D1F3 /* LDSettingHeadView.xib in Resources */,
 				6350CD3D1D020542004FBA60 /* MJRefresh.bundle in Resources */,
+				63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */,
 				633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */,
 				6350CCC31D01F462004FBA60 /* LDBespokeVC.xib in Resources */,
 				636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */,
@@ -1626,6 +1642,7 @@
 				633697881D02B44700D541A9 /* TAAnimatedDotView.m in Sources */,
 				6350CC3C1D01E9DE004FBA60 /* AFURLSessionManager.m in Sources */,
 				63440CA91D02589000F6D1F3 /* IQNSArray+Sort.m in Sources */,
+				63ED9FA31D04833D00EFD598 /* LDAertLoginVC.m in Sources */,
 				63440CAB1D02589000F6D1F3 /* IQUITextFieldView+Additions.m in Sources */,
 				6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */,
 				6350CD3B1D020542004FBA60 /* MJRefreshNormalHeader.m in Sources */,
@@ -1708,6 +1725,7 @@
 				6350CCA71D01F293004FBA60 /* LDBaseVC.m in Sources */,
 				636F3AF91D030CDE00395BC4 /* LDHHTTPSessionManager.m in Sources */,
 				63440CBC1D02589000F6D1F3 /* NSObject+MJClass.m in Sources */,
+				63ED9F9E1D04808400EFD598 /* LDAPPCacheManager.m in Sources */,
 				63440CB31D02589000F6D1F3 /* IQTitleBarButtonItem.m in Sources */,
 				63440CB91D02589000F6D1F3 /* MJProperty.m in Sources */,
 				633697871D02B44700D541A9 /* TAAbstractDotView.m in Sources */,

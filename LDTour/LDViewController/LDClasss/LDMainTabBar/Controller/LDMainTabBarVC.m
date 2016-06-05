@@ -65,6 +65,9 @@
     nc.navigationBar.translucent = NO;
     nc.navigationBar.hidden = NO;
     self.viewControllers = [views copy];
+    
+    
+    
 }
 
 @end

@@ -121,6 +121,7 @@
         self.start = 0;
         [self.recommendationTableView.header beginRefreshing];
         [self setartDownloadTableData];
+        [self startDownloadData];
     }];
     
     self.recommendationTableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
@@ -142,7 +143,6 @@
 }
 
 - (void)startDownloadData {
-    
     [LDHHTTPSessionManager getAdvertisementDataWithNetIdentifier:@"getAdvertisementDataIdentifier" downloadProgressBlock:nil successBlock:^(id responseObject) {
         [self reloadAdvertisementUIWithData:responseObject];
     } failureBlock:^(NSError *error) {

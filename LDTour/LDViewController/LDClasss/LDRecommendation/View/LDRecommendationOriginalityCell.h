@@ -1,5 +1,5 @@
 //
-//  LDRecommendationOriginalityCell.h
+//  /Users/a1/Desktop/LDTour/LDTour/LDViewController/LDOther/LDLogin/Controller/LDAertLoginVC.mLDRecommendationOriginalityCell.h
 //  LDTour
 //
 //  Created by Daredos on 16/6/4.

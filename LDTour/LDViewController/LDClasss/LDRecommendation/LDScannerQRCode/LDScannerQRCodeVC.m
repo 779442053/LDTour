@@ -8,6 +8,8 @@
 
 #import "LDScannerQRCodeVC.h"
 #import "BMScannerQRCodeView.h"
+#import "UIDevice+BMDevice.h"
+#import "UIApplication+BMExtension.h"
 
 @interface LDScannerQRCodeVC ()
 
@@ -31,10 +33,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"扫一扫";
+    
+    if (![UIDevice bm_haveCamera]) {
+        
+        [SVProgressHUD showInfoWithStatus:@"你的设备没有相机哦."];
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+        
+    }else if (![UIApplication bm_haveAlbumPower]) {
+        
+        [SVProgressHUD showInfoWithStatus:@"APP 没有相机权限哦，请到设置 -> 通用 -> 相机 中打开."];
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
     [self.view addSubview:self.scannerQRCodeView];
-
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(becomeActiveNotificationClick:)
                                                  name:UIApplicationWillResignActiveNotification object:@"UIApplicationDidBecomeActiveNotification"];

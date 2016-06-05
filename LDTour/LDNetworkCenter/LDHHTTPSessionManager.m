@@ -9,11 +9,14 @@
 #import "LDHHTTPSessionManager.h"
 #import "AFNetworking.h"
 #import "LDNetworkInterface-Header.h"
+#import "LDAPPCacheManager.h"
+#import "LDAertLoginVC.h"
+#import "UIApplication+BMExtension.h"
 
 #define kBASE_URL            @""
 #define kTimeoutInterval     10.0f
 
-@interface LDHHTTPSessionManager ()
+@interface LDHHTTPSessionManager () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray <NSDictionary<NSString *,NSURLSessionDataTask *> *> *networkingManagerArray;
 
@@ -273,9 +276,18 @@
     
     /* 是否可以发起api 1.是否登录  2.token是否过期 ... */
     
+    LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+    if (!cacheManager.isLogin) {
+        // 没有网络
+        NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
+        ! failureBlock ? : failureBlock(cancelError);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先登录" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return nil;
+    }
+    
     return  self.mager;
 }
-
 
 #pragma mark - 具体网络请求
 
@@ -296,5 +308,15 @@
     
     NSString *url = [NSString stringWithFormat:kLDMENUM_TABLE_INTERFACE_URL,(count),(start)];
     [[self sharedHTTPSessionManager] get:url parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    UIViewController *c = [UIApplication bm_topViewController];
+    if ([c isKindOfClass:[LDAertLoginVC class]]) {
+        return;
+    }
+    
+    [[UIApplication bm_topViewController] presentViewController:[LDAertLoginVC new] animated:YES completion:nil];
 }
 @end
