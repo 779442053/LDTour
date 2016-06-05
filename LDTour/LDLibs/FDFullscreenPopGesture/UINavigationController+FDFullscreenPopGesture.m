@@ -261,7 +261,6 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-
 - (CGFloat)fd_interactivePopMaxAllowedInitialDistanceToLeftEdge
 {
 #if CGFLOAT_IS_DOUBLE

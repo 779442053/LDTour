@@ -12,5 +12,6 @@
 #import "Masonry.h"
 #import "SVProgressHUD.h"
 #import "UIView+LDExtension.h"
+#import "EXTScope.h"
 
 #endif

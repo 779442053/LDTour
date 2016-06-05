@@ -156,6 +156,8 @@
 		636F3B131D031EB900395BC4 /* LDScannerQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
+		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
+		63ED9F9B1D04780400EFD598 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F981D04780400EFD598 /* EXTScope.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -456,6 +458,11 @@
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
 		6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+BMExtension.m"; sourceTree = "<group>"; };
+		63ED9F951D04780400EFD598 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		63ED9F971D04780400EFD598 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		63ED9F981D04780400EFD598 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		63ED9F991D04780400EFD598 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -805,6 +812,7 @@
 		6350CC041D01E9DE004FBA60 /* LDLibs */ = {
 			isa = PBXGroup;
 			children = (
+				63ED9F941D04780400EFD598 /* libextobjc */,
 				636F3AFA1D031AE400395BC4 /* BMScannerQRCodeView */,
 				633697971D02BC5A00D541A9 /* FDFullscreenPopGesture */,
 				633697771D02B44700D541A9 /* SDCycleScrollView */,
@@ -1433,6 +1441,18 @@
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
+		63ED9F941D04780400EFD598 /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				63ED9F951D04780400EFD598 /* EXTRuntimeExtensions.h */,
+				63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */,
+				63ED9F971D04780400EFD598 /* EXTScope.h */,
+				63ED9F981D04780400EFD598 /* EXTScope.m */,
+				63ED9F991D04780400EFD598 /* metamacros.h */,
+			);
+			path = libextobjc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1634,6 +1654,7 @@
 				6350CC7B1D01F085004FBA60 /* UIView+LDExtension.m in Sources */,
 				63440CC51D02589000F6D1F3 /* SDWebImageDecoder.m in Sources */,
 				6350CD381D020542004FBA60 /* MJRefreshBackNormalFooter.m in Sources */,
+				63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */,
 				63440CCD1D02589000F6D1F3 /* UIImage+WebP.m in Sources */,
 				6350CC411D01E9DE004FBA60 /* MASLayoutConstraint.m in Sources */,
 				6350CCAE1D01F3B2004FBA60 /* LDNoTabBarBaseVC.m in Sources */,
@@ -1646,6 +1667,7 @@
 				6350CCCC1D01F4B0004FBA60 /* LDTabBar.m in Sources */,
 				6350CD321D020542004FBA60 /* MJRefreshFooter.m in Sources */,
 				6350CD3F1D020542004FBA60 /* UIScrollView+MJExtension.m in Sources */,
+				63ED9F9B1D04780400EFD598 /* EXTScope.m in Sources */,
 				63440CBE1D02589000F6D1F3 /* NSObject+MJKeyValue.m in Sources */,
 				6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */,
 				63440CB51D02589000F6D1F3 /* IQUIView+IQKeyboardToolbar.m in Sources */,

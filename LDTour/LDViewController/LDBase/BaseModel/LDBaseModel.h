@@ -10,4 +10,8 @@
 
 @interface LDBaseModel : NSObject
 
++ (NSMutableArray *)modelArrayWithKeyValuesArray:(id)keyValuesArray;
+
++ (instancetype)modelWithKeyValues:(id)keyValues;
+
 @end

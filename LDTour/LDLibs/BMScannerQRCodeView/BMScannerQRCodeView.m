@@ -220,7 +220,6 @@ alpha:al]
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2.0f, (kScreenHight-64-200)/2.0f)];
     
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2.0f, (kScreenHight-64-200)/2.0f+200.0f)];
-
     anim.repeatCount = INT_MAX;
     
     anim.autoreverses = YES;
