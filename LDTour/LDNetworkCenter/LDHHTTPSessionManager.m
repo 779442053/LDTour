@@ -279,13 +279,21 @@
     
     LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
     if (!cacheManager.isLogin) {
-
+        
         // 没有网络
-        NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
-        ! failureBlock ? : failureBlock(cancelError);
+         NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
+         ! failureBlock ? : failureBlock(cancelError);
+        [SVProgressHUD dismiss];
+        
         if (!self.alertLogin) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先登录" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
+            DAAlertAction *loginAction = [DAAlertAction actionWithTitle:@"去登录" style:DAAlertActionStyleDefault handler:^{
+                self.alertLogin = NO;
+                [[UIApplication bm_topViewController] presentViewController:[LDAertLoginVC new] animated:YES completion:nil];
+            }];
+            DAAlertAction *noAction = [DAAlertAction actionWithTitle:@"暂不登录" style:DAAlertActionStyleDestructive handler:^{
+                self.alertLogin = NO;
+            }];
+            [DAAlertController showAlertOfStyle:1 inViewController:[UIApplication bm_topViewController] withTitle:@"请先登录" message:nil actions:@[noAction,loginAction]];
             self.alertLogin = YES;
         }
         return nil;
@@ -315,9 +323,4 @@
     [[self sharedHTTPSessionManager] get:url parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-
-    self.alertLogin = NO;
-    [[UIApplication bm_topViewController] presentViewController:[LDAertLoginVC new] animated:YES completion:nil];
-}
 @end

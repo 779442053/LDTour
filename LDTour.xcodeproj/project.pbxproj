@@ -163,6 +163,8 @@
 		63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */; };
 		63ED9FA81D048B7600EFD598 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA71D048B7600EFD598 /* icon.png */; };
 		ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */; };
+		ED5E18F91D051D0C00B6F9FC /* DAAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */; };
+		ED5E18FA1D051D0C00B6F9FC /* DAAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -477,6 +479,10 @@
 		63ED9FA71D048B7600EFD598 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		ED5E18931D04FCC000B6F9FC /* LDConditionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDConditionManager.h; sourceTree = "<group>"; };
 		ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDConditionManager.m; sourceTree = "<group>"; };
+		ED5E18F51D051D0C00B6F9FC /* DAAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlertAction.h; sourceTree = "<group>"; };
+		ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertAction.m; sourceTree = "<group>"; };
+		ED5E18F71D051D0C00B6F9FC /* DAAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlertController.h; sourceTree = "<group>"; };
+		ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -826,6 +832,7 @@
 		6350CC041D01E9DE004FBA60 /* LDLibs */ = {
 			isa = PBXGroup;
 			children = (
+				ED5E18F41D051D0C00B6F9FC /* DAAlertController */,
 				63ED9F941D04780400EFD598 /* libextobjc */,
 				636F3AFA1D031AE400395BC4 /* BMScannerQRCodeView */,
 				633697971D02BC5A00D541A9 /* FDFullscreenPopGesture */,
@@ -1476,6 +1483,17 @@
 			path = libextobjc;
 			sourceTree = "<group>";
 		};
+		ED5E18F41D051D0C00B6F9FC /* DAAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				ED5E18F51D051D0C00B6F9FC /* DAAlertAction.h */,
+				ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */,
+				ED5E18F71D051D0C00B6F9FC /* DAAlertController.h */,
+				ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */,
+			);
+			path = DAAlertController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1658,6 +1676,7 @@
 				63440CAF1D02589000F6D1F3 /* IQKeyboardManager.m in Sources */,
 				6350CCA41D01F27A004FBA60 /* LDBaseModel.m in Sources */,
 				6350CD401D020542004FBA60 /* UIScrollView+MJRefresh.m in Sources */,
+				ED5E18FA1D051D0C00B6F9FC /* DAAlertController.m in Sources */,
 				63440CB01D02589000F6D1F3 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				6350CCAB1D01F2D6004FBA60 /* UITableViewCell+LDExtension.m in Sources */,
 				6350CC441D01E9DE004FBA60 /* NSArray+MASAdditions.m in Sources */,
@@ -1677,6 +1696,7 @@
 				6350CC391D01E9DE004FBA60 /* AFSecurityPolicy.m in Sources */,
 				6350CC461D01E9DE004FBA60 /* View+MASAdditions.m in Sources */,
 				63440CB11D02589000F6D1F3 /* IQTextView.m in Sources */,
+				ED5E18F91D051D0C00B6F9FC /* DAAlertAction.m in Sources */,
 				6350CC7B1D01F085004FBA60 /* UIView+LDExtension.m in Sources */,
 				63440CC51D02589000F6D1F3 /* SDWebImageDecoder.m in Sources */,
 				6350CD381D020542004FBA60 /* MJRefreshBackNormalFooter.m in Sources */,
