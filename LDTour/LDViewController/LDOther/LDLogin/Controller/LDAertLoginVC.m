@@ -10,6 +10,8 @@
 #import "LDAPPCacheManager.h"
 #import "LDHHTTPSessionManager.h"
 #import "IQKeyboardManager.h"
+#import "UIApplication+BMExtension.h"
+#import "LDRegisterVC.h"
 
 @interface LDAertLoginVC ()
 
@@ -38,18 +40,7 @@
     self.view.backgroundColor = [UIColor blueColor];
     self.loginButton.backgroundColor = [UIColor grayColor];
     self.loginButton.userInteractionEnabled = NO;
-}
-
-- (IBAction)testChangedClick:(id)sender {
-    if (self.userTextfiled.text.length && self.passwordTextfiled.text.length) {
-        
-        self.loginButton.backgroundColor = [UIColor orangeColor];
-        self.loginButton.userInteractionEnabled = YES;
-    }else {
-        
-        self.loginButton.backgroundColor = [UIColor grayColor];
-        self.loginButton.userInteractionEnabled = NO;
-    }
+    
 }
 
 - (IBAction)cancelButtonClick {
@@ -78,5 +69,45 @@
     } failureBlock:^(NSError *error) {
         [SVProgressHUD showInfoWithStatus:error.domain];
     }];
+}
+
+- (IBAction)registerButtonClick:(id)sender {
+    
+    [self.navigationController pushViewController:[LDRegisterVC new] animated:YES];
+}
+
++ (void)alertLoginVC {
+    
+    LDAertLoginVC *c = [LDAertLoginVC new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+    nc.navigationBar.barTintColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
+    [[UIApplication bm_topViewController] presentViewController:nc animated:YES completion:nil];
+}
+
+
+- (IBAction)usertextfiledChangedClick:(id)sender {
+    
+    if (self.userTextfiled.text.length && self.passwordTextfiled.text.length) {
+        
+        self.loginButton.backgroundColor = [UIColor orangeColor];
+        self.loginButton.userInteractionEnabled = YES;
+    }else {
+        
+        self.loginButton.backgroundColor = [UIColor grayColor];
+        self.loginButton.userInteractionEnabled = NO;
+    }
+}
+
+- (IBAction)passwordtextfiledChangedClick:(id)sender {
+    
+    if (self.userTextfiled.text.length && self.passwordTextfiled.text.length) {
+        
+        self.loginButton.backgroundColor = [UIColor orangeColor];
+        self.loginButton.userInteractionEnabled = YES;
+    }else {
+        
+        self.loginButton.backgroundColor = [UIColor grayColor];
+        self.loginButton.userInteractionEnabled = NO;
+    }
 }
 @end

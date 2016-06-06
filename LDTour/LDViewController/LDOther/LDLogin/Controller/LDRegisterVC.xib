@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDRegisterVC">
+            <connections>
+                <outlet property="passwordTextfiled" destination="ejp-YJ-kV8" id="Kt2-h4-HnT"/>
+                <outlet property="registerButton" destination="yEP-iO-AaW" id="SIS-UL-XEy"/>
+                <outlet property="userNameTextfiled" destination="jPp-gM-Pgp" id="P9A-zh-dZa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-iO-AaW">
+                    <rect key="frame" x="20" y="240" width="280" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Mex-Vw-XzI"/>
+                    </constraints>
+                    <state key="normal" title="注  册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="registerButtonClick:" destination="-1" eventType="touchUpInside" id="SK2-gI-Cpa"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPp-gM-Pgp">
+                    <rect key="frame" x="20" y="100" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GC4-wP-byG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="usertextfiledChangedClick:" destination="-1" eventType="editingChanged" id="sLU-3I-fsX"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejp-YJ-kV8">
+                    <rect key="frame" x="20" y="170" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="y8I-XD-nYl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="passwordtextfiledChangedClick:" destination="-1" eventType="editingChanged" id="kfm-tC-xaR"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jPp-gM-Pgp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="2TC-oY-Q1q"/>
+                <constraint firstItem="jPp-gM-Pgp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Gac-oa-4xr"/>
+                <constraint firstItem="ejp-YJ-kV8" firstAttribute="top" secondItem="jPp-gM-Pgp" secondAttribute="bottom" constant="30" id="HRn-4w-Qrq"/>
+                <constraint firstItem="yEP-iO-AaW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="JED-7q-rHv"/>
+                <constraint firstAttribute="trailing" secondItem="jPp-gM-Pgp" secondAttribute="trailing" constant="20" id="W8H-TM-tMJ"/>
+                <constraint firstAttribute="trailing" secondItem="ejp-YJ-kV8" secondAttribute="trailing" constant="20" id="bpF-qs-dMQ"/>
+                <constraint firstItem="ejp-YJ-kV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="iaC-vT-iyB"/>
+                <constraint firstAttribute="trailing" secondItem="yEP-iO-AaW" secondAttribute="trailing" constant="20" id="mbp-q8-WwI"/>
+                <constraint firstItem="yEP-iO-AaW" firstAttribute="top" secondItem="ejp-YJ-kV8" secondAttribute="bottom" constant="30" id="waX-y7-Gqx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

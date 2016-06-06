@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LDMainTabBarVC.h"
 #import <MobAPI/MobAPI.h>
+#import "LDStartViewController.h"
 
 @interface AppDelegate ()
 @end
@@ -20,6 +21,7 @@
 #pragma mark - init
 #pragma mark - 生命周期
 #pragma mark - getters setters
+
 
 - (UIWindow *)window {
 
@@ -33,8 +35,13 @@
 
 #pragma mark - 系统delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.rootViewController = [LDMainTabBarVC new];
+    
     [MobAPI registerApp:@"1346f56d837b7"];
+    
+    LDStartViewController *c = [LDStartViewController startViewControllerWithGifName:@"animate_gif.gif" timingTime:arc4random()%5+2 endBlock:^{
+        self.window.rootViewController = [LDMainTabBarVC new];
+    }];
+    self.window.rootViewController = c;
     return YES;
 }
 

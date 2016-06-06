@@ -10,4 +10,6 @@
 
 @interface LDAertLoginVC : LDNoTabBarBaseVC
 
++ (void)alertLoginVC;
+
 @end

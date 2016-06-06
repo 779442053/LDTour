@@ -289,7 +289,7 @@
         if (!self.alertLogin) {
             DAAlertAction *loginAction = [DAAlertAction actionWithTitle:@"去登录" style:DAAlertActionStyleDefault handler:^{
                 self.alertLogin = NO;
-                [[UIApplication bm_topViewController] presentViewController:[LDAertLoginVC new] animated:YES completion:nil];
+                [LDAertLoginVC alertLoginVC];
             }];
             DAAlertAction *noAction = [DAAlertAction actionWithTitle:@"暂不登录" style:DAAlertActionStyleDestructive handler:^{
                 self.alertLogin = NO;
@@ -332,6 +332,24 @@
                   failureBlock:(LDHFailureBlock)failureBlock {
 
     [MobAPI sendRequest:[MOBAUserCenter userLoginRequestByUsername:userName password:password] onResult:^(MOBAResponse *response) {
+        if (response.error) {
+            failureBlock ? failureBlock(response.error) : nil;
+        }else{
+            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+            [cacheManager loginSituation:YES];
+            successBlock ? successBlock(response.responder) : nil;
+        }
+    }];
+}
+
++ (void)registerWithNetIdentifier:(NSString *)netIdentifier
+                         userName:(NSString *)userName
+                         password:(NSString *)password
+            downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                     successBlock:(LDHSuccessBlock)successBlock
+                     failureBlock:(LDHFailureBlock)failureBlock {
+    
+    [MobAPI sendRequest:[MOBAUserCenter userRigisterRequestByUsername:userName password:password] onResult:^(MOBAResponse *response) {
         if (response.error) {
             failureBlock ? failureBlock(response.error) : nil;
         }else{

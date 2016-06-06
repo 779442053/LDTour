@@ -159,6 +159,13 @@
 		637261C31D05B48D00ED9F23 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C21D05B48D00ED9F23 /* QuartzCore.framework */; };
 		637261C51D05B4D700ED9F23 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C41D05B4D700ED9F23 /* WebKit.framework */; };
 		637261C71D05B4F100ED9F23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C61D05B4F100ED9F23 /* AVFoundation.framework */; };
+		6375E9031D05CEF100E48B29 /* animate_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6375E8FE1D05CEF100E48B29 /* animate_gif.gif */; };
+		6375E9041D05CEF100E48B29 /* animate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6375E8FF1D05CEF100E48B29 /* animate.png */; };
+		6375E9051D05CEF100E48B29 /* LDStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6375E9011D05CEF100E48B29 /* LDStartViewController.m */; };
+		6375E9061D05CEF100E48B29 /* LDStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375E9021D05CEF100E48B29 /* LDStartViewController.xib */; };
+		6375E9081D05CF6300E48B29 /* ann.png in Resources */ = {isa = PBXBuildFile; fileRef = 6375E9071D05CF6300E48B29 /* ann.png */; };
+		6375E90C1D05D48600E48B29 /* LDRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6375E90A1D05D48600E48B29 /* LDRegisterVC.m */; };
+		6375E90D1D05D48600E48B29 /* LDRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
@@ -478,6 +485,15 @@
 		637261C21D05B48D00ED9F23 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		637261C41D05B4D700ED9F23 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		637261C61D05B4F100ED9F23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6375E8FE1D05CEF100E48B29 /* animate_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animate_gif.gif; sourceTree = "<group>"; };
+		6375E8FF1D05CEF100E48B29 /* animate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animate.png; sourceTree = "<group>"; };
+		6375E9001D05CEF100E48B29 /* LDStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDStartViewController.h; sourceTree = "<group>"; };
+		6375E9011D05CEF100E48B29 /* LDStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDStartViewController.m; sourceTree = "<group>"; };
+		6375E9021D05CEF100E48B29 /* LDStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDStartViewController.xib; sourceTree = "<group>"; };
+		6375E9071D05CF6300E48B29 /* ann.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ann.png; sourceTree = "<group>"; };
+		6375E9091D05D48600E48B29 /* LDRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDRegisterVC.h; sourceTree = "<group>"; };
+		6375E90A1D05D48600E48B29 /* LDRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDRegisterVC.m; sourceTree = "<group>"; };
+		6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDRegisterVC.xib; sourceTree = "<group>"; };
 		6397C9681D0251790038CC4A /* UIDevice+BMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMDevice.h"; sourceTree = "<group>"; };
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
@@ -965,6 +981,12 @@
 			children = (
 				6350CC4D1D01E9F3004FBA60 /* AppDelegate.h */,
 				6350CC4E1D01E9F3004FBA60 /* AppDelegate.m */,
+				6375E8FE1D05CEF100E48B29 /* animate_gif.gif */,
+				6375E8FF1D05CEF100E48B29 /* animate.png */,
+				6375E9071D05CF6300E48B29 /* ann.png */,
+				6375E9001D05CEF100E48B29 /* LDStartViewController.h */,
+				6375E9011D05CEF100E48B29 /* LDStartViewController.m */,
+				6375E9021D05CEF100E48B29 /* LDStartViewController.xib */,
 				6350CC4F1D01E9F3004FBA60 /* main.m */,
 			);
 			path = LDAppDelegate;
@@ -1298,6 +1320,9 @@
 				63ED9FA01D04833D00EFD598 /* LDAertLoginVC.h */,
 				63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */,
 				63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */,
+				6375E9091D05D48600E48B29 /* LDRegisterVC.h */,
+				6375E90A1D05D48600E48B29 /* LDRegisterVC.m */,
+				6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1660,6 +1685,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6375E9081D05CF6300E48B29 /* ann.png in Resources */,
 				63440CD91D025A2B00F6D1F3 /* LDSettingVC.xib in Resources */,
 				6350CCD21D01F4F5004FBA60 /* LDCitPersonVC.xib in Resources */,
 				6350CCE01D01F5AF004FBA60 /* tabbar_explore_normal.png in Resources */,
@@ -1667,6 +1693,7 @@
 				6350CD3D1D020542004FBA60 /* MJRefresh.bundle in Resources */,
 				63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */,
 				633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */,
+				6375E9031D05CEF100E48B29 /* animate_gif.gif in Resources */,
 				6350CCC31D01F462004FBA60 /* LDBespokeVC.xib in Resources */,
 				636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */,
 				636F3B081D031AE400395BC4 /* image_qr_corner_001_@3x.png in Resources */,
@@ -1680,10 +1707,12 @@
 				6350CC3D1D01E9DE004FBA60 /* LICENSE in Resources */,
 				EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */,
 				6350CCE61D01F5AF004FBA60 /* tabbar_trip_add_normal.png in Resources */,
+				6375E9041D05CEF100E48B29 /* animate.png in Resources */,
 				6350CCFE1D02012F004FBA60 /* LDRecommendationStoriesCell.xib in Resources */,
 				636F3B0F1D031AE400395BC4 /* image_qr_scan_line_001@2x.png in Resources */,
 				6350CCF91D01FF12004FBA60 /* LDRecommendationOriginalityCell.xib in Resources */,
 				636F3B0A1D031AE400395BC4 /* image_qr_corner_002_@3x.png in Resources */,
+				6375E90D1D05D48600E48B29 /* LDRegisterVC.xib in Resources */,
 				6350CCE41D01F5AF004FBA60 /* tabbar_sale_normal.png in Resources */,
 				636F3B0C1D031AE400395BC4 /* image_qr_corner_003_@3x.png in Resources */,
 				63440CB61D02589000F6D1F3 /* IQKeyboardManager.bundle in Resources */,
@@ -1693,6 +1722,7 @@
 				636F3B0D1D031AE400395BC4 /* image_qr_corner_004_@2x.png in Resources */,
 				6350CCDD1D01F5AF004FBA60 /* 640_1136@2x.png in Resources */,
 				634597421D01E4F3007837CD /* Assets.xcassets in Resources */,
+				6375E9061D05CEF100E48B29 /* LDStartViewController.xib in Resources */,
 				6350CCDE1D01F5AF004FBA60 /* tabbar_destination_normal.png in Resources */,
 				6350CCCD1D01F4B0004FBA60 /* LDTabBar.xib in Resources */,
 				636F3B071D031AE400395BC4 /* image_qr_corner_001_@2x.png in Resources */,
@@ -1756,11 +1786,13 @@
 				63440CAC1D02589000F6D1F3 /* IQUIView+Hierarchy.m in Sources */,
 				63440CBA1D02589000F6D1F3 /* MJPropertyKey.m in Sources */,
 				6350CCB51D01F439004FBA60 /* LDRecommendationVC.m in Sources */,
+				6375E9051D05CEF100E48B29 /* LDStartViewController.m in Sources */,
 				6336979A1D02BC5A00D541A9 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				6350CC391D01E9DE004FBA60 /* AFSecurityPolicy.m in Sources */,
 				6350CC461D01E9DE004FBA60 /* View+MASAdditions.m in Sources */,
 				63440CB11D02589000F6D1F3 /* IQTextView.m in Sources */,
 				ED5E18F91D051D0C00B6F9FC /* DAAlertAction.m in Sources */,
+				6375E90C1D05D48600E48B29 /* LDRegisterVC.m in Sources */,
 				6350CC7B1D01F085004FBA60 /* UIView+LDExtension.m in Sources */,
 				63440CC51D02589000F6D1F3 /* SDWebImageDecoder.m in Sources */,
 				6350CD381D020542004FBA60 /* MJRefreshBackNormalFooter.m in Sources */,

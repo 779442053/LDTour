@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="640_1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-cY-UrK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animate.png" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-cY-UrK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="面包旅行(高仿)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-dI-gN8">
@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="640_1136.png" width="320" height="568"/>
+        <image name="animate.png" width="512" height="512"/>
     </resources>
 </document>
