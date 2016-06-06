@@ -19,8 +19,9 @@
 @interface LDHHTTPSessionManager () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray <NSDictionary<NSString *,NSURLSessionDataTask *> *> *networkingManagerArray;
-
 @property (strong, nonatomic) AFHTTPSessionManager *mager;
+
+@property (assign, nonatomic) BOOL alertLogin;
 
 @end
 
@@ -278,11 +279,15 @@
     
     LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
     if (!cacheManager.isLogin) {
+
         // 没有网络
         NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
         ! failureBlock ? : failureBlock(cancelError);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先登录" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
+        if (!self.alertLogin) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请先登录" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+            self.alertLogin = YES;
+        }
         return nil;
     }
     
@@ -311,12 +316,8 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    UIViewController *c = [UIApplication bm_topViewController];
-    if ([c isKindOfClass:[LDAertLoginVC class]]) {
-        return;
-    }
-    
+
+    self.alertLogin = NO;
     [[UIApplication bm_topViewController] presentViewController:[LDAertLoginVC new] animated:YES completion:nil];
 }
 @end

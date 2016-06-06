@@ -162,6 +162,7 @@
 		63ED9FA31D04833D00EFD598 /* LDAertLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */; };
 		63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */; };
 		63ED9FA81D048B7600EFD598 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA71D048B7600EFD598 /* icon.png */; };
+		ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,6 +475,8 @@
 		63ED9FA11D04833D00EFD598 /* LDAertLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDAertLoginVC.m; sourceTree = "<group>"; };
 		63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDAertLoginVC.xib; sourceTree = "<group>"; };
 		63ED9FA71D048B7600EFD598 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		ED5E18931D04FCC000B6F9FC /* LDConditionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDConditionManager.h; sourceTree = "<group>"; };
+		ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDConditionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -974,6 +977,8 @@
 				63ED9F9F1D04819800EFD598 /* Singleton.h */,
 				63ED9F9C1D04808400EFD598 /* LDAPPCacheManager.h */,
 				63ED9F9D1D04808400EFD598 /* LDAPPCacheManager.m */,
+				ED5E18931D04FCC000B6F9FC /* LDConditionManager.h */,
+				ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */,
 			);
 			path = LDUtil;
 			sourceTree = "<group>";
@@ -1701,6 +1706,7 @@
 				63440CBF1D02589000F6D1F3 /* NSObject+MJProperty.m in Sources */,
 				6350CC3E1D01E9DE004FBA60 /* MASCompositeConstraint.m in Sources */,
 				6350CC3A1D01E9DE004FBA60 /* AFURLRequestSerialization.m in Sources */,
+				ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */,
 				63440CD01D02589000F6D1F3 /* UIView+WebCacheOperation.m in Sources */,
 				63440CCC1D02589000F6D1F3 /* UIImage+MultiFormat.m in Sources */,
 				6350CC381D01E9DE004FBA60 /* AFNetworkReachabilityManager.m in Sources */,

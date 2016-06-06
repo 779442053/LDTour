@@ -22,7 +22,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self.scannerQRCodeView startRunning];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -47,41 +47,32 @@
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
-    
     [self.view addSubview:self.scannerQRCodeView];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(becomeActiveNotificationClick:)
-                                                 name:UIApplicationWillResignActiveNotification object:@"UIApplicationDidBecomeActiveNotification"];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(becomeActiveNotificationClick:)
-                                                 name:UIApplicationWillResignActiveNotification object:@"UIApplicationWillResignActiveNotification"];
-    
-    
-    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:)
+                                                 name:UIApplicationWillResignActiveNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:0 target:self action:@selector(selectAlbumButtonClick)];
 }
 
-- (void)becomeActiveNotificationClick:(NSNotification *)notification {
+- (void)applicationWillResignActive:(NSNotification *)notification {
     
-    if ([notification.object isEqualToString:@"UIApplicationDidBecomeActiveNotification"]) {
-        
-        NSLog(@"UIApplicationDidBecomeActiveNotification");
-
-    }else if ([notification.object isEqualToString:@"UIApplicationWillResignActiveNotification"]) {
+    [self.scannerQRCodeView stopRunning];
+}
+- (void)applicationDidBecomeActive:(NSNotification *)notification {
     
-        NSLog(@"UIApplicationWillResignActiveNotification");
-
-    }
+    [self.scannerQRCodeView startRunning];
 }
 
 - (void)selectAlbumButtonClick {
-    
+
 }
 
 - (void)dealloc {
-
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -97,8 +88,8 @@
             
             NSString *lowercaseString = [scanneString lowercaseString];
             // 二维码是http https 开头,直接打开网页
-            if (NSNotFound != [lowercaseString rangeOfString:@"http"].location
-                || NSNotFound != [lowercaseString rangeOfString:@"https"].location) {
+            if (NSNotFound != [lowercaseString rangeOfString:@"http:"].location
+                || NSNotFound != [lowercaseString rangeOfString:@"https:"].location) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:scanneString]];
             }else{
                 [SVProgressHUD showInfoWithStatus:scanneString];
