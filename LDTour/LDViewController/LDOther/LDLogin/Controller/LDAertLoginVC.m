@@ -8,8 +8,13 @@
 
 #import "LDAertLoginVC.h"
 #import "LDAPPCacheManager.h"
+#import <MobAPI/MobAPI.h>
 
 @interface LDAertLoginVC ()
+
+@property (weak, nonatomic) IBOutlet UITextField *userTextfiled;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextfiled;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -17,12 +22,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.loginButton.backgroundColor = [UIColor grayColor];
+    self.loginButton.userInteractionEnabled = NO;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)testChangedClick:(id)sender {
+    if (self.userTextfiled.text.length && self.passwordTextfiled.text.length) {
+        
+        self.loginButton.backgroundColor = [UIColor orangeColor];
+        self.loginButton.userInteractionEnabled = YES;
+    }else {
+        
+        self.loginButton.backgroundColor = [UIColor grayColor];
+        self.loginButton.userInteractionEnabled = NO;
+    }
 }
 
 - (IBAction)cancelButtonClick {
@@ -33,13 +48,15 @@
 - (IBAction)loginButtonClick {
     
     [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showSuccessWithStatus:@"登录成功!"];
-        [self dismissViewControllerAnimated:YES completion:^{
+    [MobAPI sendRequest:[MOBAUserCenter userLoginRequestByUsername:self.userTextfiled.text password:self.passwordTextfiled.text] onResult:^(MOBAResponse *response) {
+        if (response.error) {
+            [SVProgressHUD showInfoWithStatus:response.error.userInfo[@"error_message"]];
+        }else{
             LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
             [cacheManager loginSituation:YES];
-        }];
-    });
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [SVProgressHUD dismiss];
+        }
+    }];
 }
-
 @end

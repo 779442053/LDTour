@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "LDMainTabBarVC.h"
+#import <MobAPI/MobAPI.h>
 
-@interface AppDelegate () 
+@interface AppDelegate ()
 @end
 
 @implementation AppDelegate
@@ -33,6 +34,7 @@
 #pragma mark - 系统delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.rootViewController = [LDMainTabBarVC new];
+    [MobAPI registerApp:@"1346f56d837b7"];
     return YES;
 }
 

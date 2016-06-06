@@ -165,6 +165,13 @@
 		ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */; };
 		ED5E18F91D051D0C00B6F9FC /* DAAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */; };
 		ED5E18FA1D051D0C00B6F9FC /* DAAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */; };
+		EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDD416621D056A6F00908976 /* MobAPI.bundle */; };
+		EDD416661D056A6F00908976 /* MobAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416631D056A6F00908976 /* MobAPI.framework */; };
+		EDD416671D056A6F00908976 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416641D056A6F00908976 /* MOBFoundation.framework */; };
+		EDD416691D056A8800908976 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416681D056A8800908976 /* libicucore.tbd */; };
+		EDD4166B1D056A9000908976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD4166A1D056A9000908976 /* libz.tbd */; };
+		EDD4166D1D056A9900908976 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD4166C1D056A9900908976 /* libstdc++.tbd */; };
+		EDD4166F1D056AA000908976 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD4166E1D056AA000908976 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -483,6 +490,13 @@
 		ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertAction.m; sourceTree = "<group>"; };
 		ED5E18F71D051D0C00B6F9FC /* DAAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlertController.h; sourceTree = "<group>"; };
 		ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertController.m; sourceTree = "<group>"; };
+		EDD416621D056A6F00908976 /* MobAPI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobAPI.bundle; sourceTree = "<group>"; };
+		EDD416631D056A6F00908976 /* MobAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobAPI.framework; sourceTree = "<group>"; };
+		EDD416641D056A6F00908976 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		EDD416681D056A8800908976 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		EDD4166A1D056A9000908976 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EDD4166C1D056A9900908976 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		EDD4166E1D056AA000908976 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +504,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD4166F1D056AA000908976 /* JavaScriptCore.framework in Frameworks */,
+				EDD4166D1D056A9900908976 /* libstdc++.tbd in Frameworks */,
+				EDD4166B1D056A9000908976 /* libz.tbd in Frameworks */,
+				EDD416691D056A8800908976 /* libicucore.tbd in Frameworks */,
+				EDD416671D056A6F00908976 /* MOBFoundation.framework in Frameworks */,
+				EDD416661D056A6F00908976 /* MobAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +787,10 @@
 		634597291D01E4F3007837CD = {
 			isa = PBXGroup;
 			children = (
+				EDD4166E1D056AA000908976 /* JavaScriptCore.framework */,
+				EDD4166C1D056A9900908976 /* libstdc++.tbd */,
+				EDD4166A1D056A9000908976 /* libz.tbd */,
+				EDD416681D056A8800908976 /* libicucore.tbd */,
 				634597341D01E4F3007837CD /* LDTour */,
 				6345974E1D01E4F4007837CD /* LDTourTests */,
 				634597591D01E4F4007837CD /* LDTourUITests */,
@@ -832,6 +856,7 @@
 		6350CC041D01E9DE004FBA60 /* LDLibs */ = {
 			isa = PBXGroup;
 			children = (
+				EDD416611D056A6F00908976 /* libraries */,
 				ED5E18F41D051D0C00B6F9FC /* DAAlertController */,
 				63ED9F941D04780400EFD598 /* libextobjc */,
 				636F3AFA1D031AE400395BC4 /* BMScannerQRCodeView */,
@@ -1494,6 +1519,16 @@
 			path = DAAlertController;
 			sourceTree = "<group>";
 		};
+		EDD416611D056A6F00908976 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				EDD416621D056A6F00908976 /* MobAPI.bundle */,
+				EDD416631D056A6F00908976 /* MobAPI.framework */,
+				EDD416641D056A6F00908976 /* MOBFoundation.framework */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1615,6 +1650,7 @@
 				6350CCB61D01F439004FBA60 /* LDRecommendationVC.xib in Resources */,
 				6350CCE11D01F5AF004FBA60 /* tabbar_explore_selected.png in Resources */,
 				6350CC3D1D01E9DE004FBA60 /* LICENSE in Resources */,
+				EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */,
 				6350CCE61D01F5AF004FBA60 /* tabbar_trip_add_normal.png in Resources */,
 				6350CCFE1D02012F004FBA60 /* LDRecommendationStoriesCell.xib in Resources */,
 				636F3B0F1D031AE400395BC4 /* image_qr_scan_line_001@2x.png in Resources */,
@@ -1911,7 +1947,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LDTour/LDLibs/libraries",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LDTour/LDTourPrefixHeader.pch";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = LDTour/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1924,7 +1967,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LDTour/LDLibs/libraries",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LDTour/LDTourPrefixHeader.pch";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = LDTour/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

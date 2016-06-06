@@ -169,7 +169,9 @@
 + (void)resetDeviceInterFaceOrientationPortrait{
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     if (!UIDeviceOrientationIsPortrait(deviceOrientation)) {
-        [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:YES];
+        
+//        [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:YES];
+        
         if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
             SEL selector = NSSelectorFromString(@"setOrientation:");
             NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
