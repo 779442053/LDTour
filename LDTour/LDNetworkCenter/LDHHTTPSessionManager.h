@@ -21,23 +21,25 @@ typedef void(^LDHFailureBlock)         (NSError   *error);
 
 #pragma mark - 具体网络请求
 
-/*!
- *  @brief 获取主页广告数据
- *
- *  @param netIdentifier         请求标签
- *  @param downloadProgressBlock 进度block
- *  @param successBlock          成功block
- *  @param failureBlock          失败block
- */
+/*! 获取主页广告数据 */
 + (void)getAdvertisementDataWithNetIdentifier:(NSString *)netIdentifier
                         downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
                                  successBlock:(LDHSuccessBlock)successBlock
                                  failureBlock:(LDHFailureBlock)failureBlock;
 
+/*! 获取主页表格数据*/
 + (void)getMenuTableDataWithNetIdentifier:(NSString *)netIdentifier
                                     start:(int)start
                                     count:(int)count
                     downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
                              successBlock:(LDHSuccessBlock)successBlock
                              failureBlock:(LDHFailureBlock)failureBlock;
+/*! 登录接口 */
++ (void)loginWithNetIdentifier:(NSString *)netIdentifier
+                      userName:(NSString *)userName
+                      password:(NSString *)password
+         downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                  successBlock:(LDHSuccessBlock)successBlock
+                  failureBlock:(LDHFailureBlock)failureBlock;
+
 @end

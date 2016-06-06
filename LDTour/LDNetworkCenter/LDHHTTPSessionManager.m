@@ -12,6 +12,7 @@
 #import "LDAPPCacheManager.h"
 #import "LDAertLoginVC.h"
 #import "UIApplication+BMExtension.h"
+#import <MobAPI/MobAPI.h>
 
 #define kBASE_URL            @""
 #define kTimeoutInterval     10.0f
@@ -321,6 +322,24 @@
     
     NSString *url = [NSString stringWithFormat:kLDMENUM_TABLE_INTERFACE_URL,(count),(start)];
     [[self sharedHTTPSessionManager] get:url parameters:nil netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+}
+
++ (void)loginWithNetIdentifier:(NSString *)netIdentifier
+                      userName:(NSString *)userName
+                      password:(NSString *)password
+         downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                  successBlock:(LDHSuccessBlock)successBlock
+                  failureBlock:(LDHFailureBlock)failureBlock {
+
+    [MobAPI sendRequest:[MOBAUserCenter userLoginRequestByUsername:userName password:password] onResult:^(MOBAResponse *response) {
+        if (response.error) {
+            failureBlock ? failureBlock(response.error) : nil;
+        }else{
+            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+            [cacheManager loginSituation:YES];
+            successBlock ? successBlock(response.responder) : nil;
+        }
+    }];
 }
 
 @end

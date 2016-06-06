@@ -8,6 +8,7 @@
 
 #import "LDSettingVC.h"
 #import "LDAPPCacheManager.h"
+#import "DAAlertController.h"
 
 @interface LDSettingVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -36,21 +37,13 @@
     if (!_settingArray) {
         
         _settingArray = [@[] mutableCopy];
-        
-        int sec = arc4random()%5+4;
-        int s = 0;
-        while (s++ < sec) {
-            int r = 0;
-            int row = arc4random()%6+3;
-            if (s == 1) {
-                row = 1;
-            }
-            NSMutableArray *muarr = [@[] mutableCopy];
-            while (r++ < row) {
-                [muarr addObject:[NSString stringWithFormat:@"第%d组（第%d行设置）",s,r]];
-            }
-            [_settingArray addObject:muarr];
-        }
+        [_settingArray addObject:@[@"我是头像栏"]];
+        [_settingArray addObject:@[@"添加朋友"]];
+        [_settingArray addObject:@[@"修改账户密码",@"推送通知设置",@"链接社交网络",@"其他"]];
+        [_settingArray addObject:@[@"清除缓存"]];
+
+        [_settingArray addObject:@[@"关于我们",@"喜欢我，给我 5❤️吧",@"我有话说"]];
+        [_settingArray addObject:@[@"精品应用推荐"]];
         [_settingArray addObject:@[@"退出登录"]];
     }
     return _settingArray;
@@ -73,12 +66,22 @@
     NSString *string = self.settingArray[indexPath.section][indexPath.row];
     cell.textLabel.text = string;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
+    cell.textLabel.textAlignment = 0;
+    cell.textLabel.textColor = [UIColor blackColor];
+
+    if (indexPath.section == 6) {
+        cell.textLabel.textAlignment = 1;
+        cell.accessoryType = 0;
+        cell.textLabel.textColor = [UIColor orangeColor];
+    }
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 40.0f;
+    return 20.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -97,10 +100,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section+1 == self.settingArray.count) {
-        [SVProgressHUD showSuccessWithStatus:@"退出登录成功!"];
-        LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-        [cacheManager loginSituation:NO];
-        [self.navigationController popViewControllerAnimated:YES];
+        
+        DAAlertAction *a = [DAAlertAction actionWithTitle:@"确定" style:DAAlertActionStyleDestructive handler:^{
+            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+            [cacheManager loginSituation:NO];
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        DAAlertAction *b = [DAAlertAction actionWithTitle:@"取消" style:DAAlertActionStyleCancel handler:nil];
+        [DAAlertController showAlertOfStyle:DAAlertControllerStyleActionSheet inViewController:self withTitle:@"确定退出登录?" message:nil actions:@[a,b]];
         return;
     }
     

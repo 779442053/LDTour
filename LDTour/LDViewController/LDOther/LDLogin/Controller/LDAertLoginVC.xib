@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDAertLoginVC">
             <connections>
-                <outlet property="loginButton" destination="Tqe-Oz-L0c" id="7Ch-Hz-wO1"/>
-                <outlet property="passwordTextfiled" destination="nWw-gC-sl5" id="VDk-FK-3p4"/>
-                <outlet property="userTextfiled" destination="fCQ-iL-EAq" id="4vz-S7-DBf"/>
+                <outlet property="loginButton" destination="Tqe-Oz-L0c" id="h5W-SQ-qdf"/>
+                <outlet property="passwordTextfiled" destination="nWw-gC-sl5" id="bEz-oF-Sqy"/>
+                <outlet property="userTextfiled" destination="fCQ-iL-EAq" id="PGR-rq-MXZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,64 +18,85 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqe-Oz-L0c">
-                    <rect key="frame" x="20" y="220" width="280" height="30"/>
+                    <rect key="frame" x="20" y="240" width="280" height="40"/>
                     <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="aBD-ET-sSF"/>
+                        <constraint firstAttribute="height" constant="40" id="aBD-ET-sSF"/>
                     </constraints>
                     <state key="normal" title="登  录">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="loginButtonClick" destination="-1" eventType="touchUpInside" id="S8f-Y9-Vcl"/>
+                        <action selector="loginButtonClick" destination="-1" eventType="touchUpInside" id="H7m-Ex-Kip"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-iL-EAq">
-                    <rect key="frame" x="20" y="100" width="280" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-iL-EAq">
+                    <rect key="frame" x="20" y="100" width="280" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="PHW-p5-9Xp"/>
+                        <constraint firstAttribute="height" constant="40" id="PHW-p5-9Xp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="testChangedClick:" destination="-1" eventType="editingDidEnd" id="zrT-up-ndJ"/>
+                        <action selector="testChangedClick:" destination="-1" eventType="editingDidEnd" id="RwX-8M-3u2"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-gC-sl5">
-                    <rect key="frame" x="20" y="160" width="280" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-gC-sl5">
+                    <rect key="frame" x="20" y="170" width="280" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="HT9-yr-8zB"/>
+                        <constraint firstAttribute="height" constant="40" id="HT9-yr-8zB"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="testChangedClick:" destination="-1" eventType="editingChanged" id="lZS-we-Abe"/>
+                        <action selector="testChangedClick:" destination="-1" eventType="editingDidEnd" id="e5J-nT-zFX"/>
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-Yk-bhn">
                     <rect key="frame" x="10" y="10" width="30" height="30"/>
-                    <state key="normal" title="取消"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="cancelButtonClick" destination="-1" eventType="touchUpInside" id="wTG-mZ-HbB"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-mq-HZh">
+                    <rect key="frame" x="270" y="285" width="30" height="30"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-hl-mB7">
+                    <rect key="frame" x="20" y="285" width="73" height="30"/>
+                    <state key="normal" title="tempLogin">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tempLoginButtonClick:" destination="-1" eventType="touchUpInside" id="HcJ-l7-9Ue"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.098812705589999994" green="0.0035207648029999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fCQ-iL-EAq" secondAttribute="trailing" constant="20" id="09e-fr-tff"/>
+                <constraint firstAttribute="trailing" secondItem="gaB-mq-HZh" secondAttribute="trailing" constant="20" id="6iX-Nm-eWC"/>
+                <constraint firstItem="1IH-hl-mB7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="AFi-hh-IXe"/>
                 <constraint firstAttribute="trailing" secondItem="Tqe-Oz-L0c" secondAttribute="trailing" constant="20" id="Kj2-n6-M5e"/>
                 <constraint firstItem="fCQ-iL-EAq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="QUI-wa-xdV"/>
                 <constraint firstItem="fCQ-iL-EAq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Sii-Fi-O82"/>
                 <constraint firstItem="Tqe-Oz-L0c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="a1D-lB-8Xx"/>
+                <constraint firstItem="1IH-hl-mB7" firstAttribute="top" secondItem="Tqe-Oz-L0c" secondAttribute="bottom" constant="5" id="aEi-Rg-xFx"/>
                 <constraint firstItem="nWw-gC-sl5" firstAttribute="top" secondItem="fCQ-iL-EAq" secondAttribute="bottom" constant="30" id="dbB-Qp-bK3"/>
                 <constraint firstAttribute="trailing" secondItem="nWw-gC-sl5" secondAttribute="trailing" constant="20" id="fIa-ge-EDD"/>
                 <constraint firstItem="nxR-Yk-bhn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="lYo-1U-8vy"/>
                 <constraint firstItem="nxR-Yk-bhn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="nff-5k-5Hd"/>
                 <constraint firstItem="Tqe-Oz-L0c" firstAttribute="top" secondItem="nWw-gC-sl5" secondAttribute="bottom" constant="30" id="qBC-xA-Gb0"/>
                 <constraint firstItem="nWw-gC-sl5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="tP0-VQ-5qI"/>
+                <constraint firstItem="gaB-mq-HZh" firstAttribute="top" secondItem="Tqe-Oz-L0c" secondAttribute="bottom" constant="5" id="wzT-5R-e0p"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="318" y="265"/>
+            <point key="canvasLocation" x="222" y="247"/>
         </view>
     </objects>
 </document>

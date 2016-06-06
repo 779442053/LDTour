@@ -154,6 +154,11 @@
 		636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B041D031AE400395BC4 /* image_qr_corner_004_@3x.png */; };
 		636F3B0F1D031AE400395BC4 /* image_qr_scan_line_001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */; };
 		636F3B131D031EB900395BC4 /* LDScannerQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */; };
+		637261BB1D05B3FC00ED9F23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261BA1D05B3FC00ED9F23 /* UIKit.framework */; };
+		637261C11D05B43000ED9F23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C01D05B43000ED9F23 /* Foundation.framework */; };
+		637261C31D05B48D00ED9F23 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C21D05B48D00ED9F23 /* QuartzCore.framework */; };
+		637261C51D05B4D700ED9F23 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C41D05B4D700ED9F23 /* WebKit.framework */; };
+		637261C71D05B4F100ED9F23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C61D05B4F100ED9F23 /* AVFoundation.framework */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
@@ -468,6 +473,11 @@
 		636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_qr_scan_line_001@2x.png"; sourceTree = "<group>"; };
 		636F3B111D031EB900395BC4 /* LDScannerQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDScannerQRCodeVC.h; sourceTree = "<group>"; };
 		636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDScannerQRCodeVC.m; sourceTree = "<group>"; };
+		637261BA1D05B3FC00ED9F23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		637261C01D05B43000ED9F23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		637261C21D05B48D00ED9F23 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		637261C41D05B4D700ED9F23 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		637261C61D05B4F100ED9F23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6397C9681D0251790038CC4A /* UIDevice+BMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMDevice.h"; sourceTree = "<group>"; };
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
@@ -504,6 +514,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637261C71D05B4F100ED9F23 /* AVFoundation.framework in Frameworks */,
+				637261C51D05B4D700ED9F23 /* WebKit.framework in Frameworks */,
+				637261C31D05B48D00ED9F23 /* QuartzCore.framework in Frameworks */,
+				637261C11D05B43000ED9F23 /* Foundation.framework in Frameworks */,
+				637261BB1D05B3FC00ED9F23 /* UIKit.framework in Frameworks */,
 				EDD4166F1D056AA000908976 /* JavaScriptCore.framework in Frameworks */,
 				EDD4166D1D056A9900908976 /* libstdc++.tbd in Frameworks */,
 				EDD4166B1D056A9000908976 /* libz.tbd in Frameworks */,
@@ -787,10 +802,7 @@
 		634597291D01E4F3007837CD = {
 			isa = PBXGroup;
 			children = (
-				EDD4166E1D056AA000908976 /* JavaScriptCore.framework */,
-				EDD4166C1D056A9900908976 /* libstdc++.tbd */,
-				EDD4166A1D056A9000908976 /* libz.tbd */,
-				EDD416681D056A8800908976 /* libicucore.tbd */,
+				637261B91D05B29A00ED9F23 /* Framework */,
 				634597341D01E4F3007837CD /* LDTour */,
 				6345974E1D01E4F4007837CD /* LDTourTests */,
 				634597591D01E4F4007837CD /* LDTourUITests */,
@@ -1476,6 +1488,22 @@
 				636F3B121D031EB900395BC4 /* LDScannerQRCodeVC.m */,
 			);
 			path = LDScannerQRCode;
+			sourceTree = "<group>";
+		};
+		637261B91D05B29A00ED9F23 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				637261C61D05B4F100ED9F23 /* AVFoundation.framework */,
+				637261C41D05B4D700ED9F23 /* WebKit.framework */,
+				637261C21D05B48D00ED9F23 /* QuartzCore.framework */,
+				637261BA1D05B3FC00ED9F23 /* UIKit.framework */,
+				637261C01D05B43000ED9F23 /* Foundation.framework */,
+				EDD4166E1D056AA000908976 /* JavaScriptCore.framework */,
+				EDD4166C1D056A9900908976 /* libstdc++.tbd */,
+				EDD4166A1D056A9000908976 /* libz.tbd */,
+				EDD416681D056A8800908976 /* libicucore.tbd */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		6397C9671D0251790038CC4A /* UIDevice */ = {

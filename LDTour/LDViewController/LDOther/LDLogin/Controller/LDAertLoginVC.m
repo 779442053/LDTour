@@ -8,7 +8,8 @@
 
 #import "LDAertLoginVC.h"
 #import "LDAPPCacheManager.h"
-#import <MobAPI/MobAPI.h>
+#import "LDHHTTPSessionManager.h"
+#import "IQKeyboardManager.h"
 
 @interface LDAertLoginVC ()
 
@@ -20,13 +21,24 @@
 
 @implementation LDAertLoginVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.loginButton.backgroundColor = [UIColor grayColor];
-    self.loginButton.userInteractionEnabled = NO;
+- (void)viewWillAppear:(BOOL)animated {
 
+    [super viewWillAppear:animated];
+    [IQKeyboardManager sharedManager].enable = NO;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+
+    [super viewWillDisappear:animated];
+    [IQKeyboardManager sharedManager].enable = YES;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
+    self.loginButton.backgroundColor = [UIColor grayColor];
+    self.loginButton.userInteractionEnabled = NO;
+}
 
 - (IBAction)testChangedClick:(id)sender {
     if (self.userTextfiled.text.length && self.passwordTextfiled.text.length) {
@@ -48,15 +60,23 @@
 - (IBAction)loginButtonClick {
     
     [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
-    [MobAPI sendRequest:[MOBAUserCenter userLoginRequestByUsername:self.userTextfiled.text password:self.passwordTextfiled.text] onResult:^(MOBAResponse *response) {
-        if (response.error) {
-            [SVProgressHUD showInfoWithStatus:response.error.userInfo[@"error_message"]];
-        }else{
-            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-            [cacheManager loginSituation:YES];
-            [self dismissViewControllerAnimated:YES completion:nil];
-            [SVProgressHUD dismiss];
-        }
+    
+    [LDHHTTPSessionManager loginWithNetIdentifier:@"login" userName:self.userTextfiled.text password:self.passwordTextfiled.text downloadProgressBlock:nil successBlock:^(id responseObject) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [SVProgressHUD dismiss];
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showInfoWithStatus:error.domain];
+    }];
+}
+
+- (IBAction)tempLoginButtonClick:(id)sender {
+    
+    [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
+    [LDHHTTPSessionManager loginWithNetIdentifier:@"login" userName:@"123456" password:@"000000" downloadProgressBlock:nil successBlock:^(id responseObject) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [SVProgressHUD dismiss];
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showInfoWithStatus:error.domain];
     }];
 }
 @end
