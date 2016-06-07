@@ -12,6 +12,8 @@
 #import "IQKeyboardManager.h"
 #import "UIApplication+BMExtension.h"
 #import "LDRegisterVC.h"
+#import "LDForgetVC.h"
+
 
 @interface LDAertLoginVC ()
 
@@ -37,15 +39,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
     self.loginButton.backgroundColor = [UIColor grayColor];
     self.loginButton.userInteractionEnabled = NO;
-    
 }
 
 - (IBAction)cancelButtonClick {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];    
 }
 
 - (IBAction)loginButtonClick {
@@ -62,26 +63,19 @@
 
 - (IBAction)tempLoginButtonClick:(id)sender {
     
-    [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
-    [LDHHTTPSessionManager loginWithNetIdentifier:@"login" userName:@"123456" password:@"000000" downloadProgressBlock:nil successBlock:^(id responseObject) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-        [SVProgressHUD dismiss];
-    } failureBlock:^(NSError *error) {
-        [SVProgressHUD showInfoWithStatus:error.domain];
-    }];
+    [self presentViewController:[LDForgetVC new] animated:YES completion:Nil];
+
 }
 
 - (IBAction)registerButtonClick:(id)sender {
     
-    [self.navigationController pushViewController:[LDRegisterVC new] animated:YES];
+    [self presentViewController:[LDRegisterVC new] animated:YES completion:nil];
 }
 
 + (void)alertLoginVC {
     
     LDAertLoginVC *c = [LDAertLoginVC new];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
-    nc.navigationBar.barTintColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
-    [[UIApplication bm_topViewController] presentViewController:nc animated:YES completion:nil];
+    [[UIApplication bm_topViewController] presentViewController:c animated:YES completion:nil];
 }
 
 

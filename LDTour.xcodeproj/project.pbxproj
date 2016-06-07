@@ -166,6 +166,8 @@
 		6375E9081D05CF6300E48B29 /* ann.png in Resources */ = {isa = PBXBuildFile; fileRef = 6375E9071D05CF6300E48B29 /* ann.png */; };
 		6375E90C1D05D48600E48B29 /* LDRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6375E90A1D05D48600E48B29 /* LDRegisterVC.m */; };
 		6375E90D1D05D48600E48B29 /* LDRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */; };
+		638EDB011D071A0E0038DF2E /* LDForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EDAFF1D071A0E0038DF2E /* LDForgetVC.m */; };
+		638EDB021D071A0E0038DF2E /* LDForgetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EDB001D071A0E0038DF2E /* LDForgetVC.xib */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
@@ -494,6 +496,9 @@
 		6375E9091D05D48600E48B29 /* LDRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDRegisterVC.h; sourceTree = "<group>"; };
 		6375E90A1D05D48600E48B29 /* LDRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDRegisterVC.m; sourceTree = "<group>"; };
 		6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDRegisterVC.xib; sourceTree = "<group>"; };
+		638EDAFE1D071A0E0038DF2E /* LDForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDForgetVC.h; sourceTree = "<group>"; };
+		638EDAFF1D071A0E0038DF2E /* LDForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDForgetVC.m; sourceTree = "<group>"; };
+		638EDB001D071A0E0038DF2E /* LDForgetVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDForgetVC.xib; sourceTree = "<group>"; };
 		6397C9681D0251790038CC4A /* UIDevice+BMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMDevice.h"; sourceTree = "<group>"; };
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
@@ -1323,6 +1328,9 @@
 				6375E9091D05D48600E48B29 /* LDRegisterVC.h */,
 				6375E90A1D05D48600E48B29 /* LDRegisterVC.m */,
 				6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */,
+				638EDAFE1D071A0E0038DF2E /* LDForgetVC.h */,
+				638EDAFF1D071A0E0038DF2E /* LDForgetVC.m */,
+				638EDB001D071A0E0038DF2E /* LDForgetVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1713,6 +1721,7 @@
 				6350CCF91D01FF12004FBA60 /* LDRecommendationOriginalityCell.xib in Resources */,
 				636F3B0A1D031AE400395BC4 /* image_qr_corner_002_@3x.png in Resources */,
 				6375E90D1D05D48600E48B29 /* LDRegisterVC.xib in Resources */,
+				638EDB021D071A0E0038DF2E /* LDForgetVC.xib in Resources */,
 				6350CCE41D01F5AF004FBA60 /* tabbar_sale_normal.png in Resources */,
 				636F3B0C1D031AE400395BC4 /* image_qr_corner_003_@3x.png in Resources */,
 				63440CB61D02589000F6D1F3 /* IQKeyboardManager.bundle in Resources */,
@@ -1846,6 +1855,7 @@
 				6350CC4B1D01E9DE004FBA60 /* SVProgressHUD.m in Sources */,
 				63440CC71D02589000F6D1F3 /* SDWebImageDownloaderOperation.m in Sources */,
 				6350CD3A1D020542004FBA60 /* MJRefreshGifHeader.m in Sources */,
+				638EDB011D071A0E0038DF2E /* LDForgetVC.m in Sources */,
 				63440CCF1D02589000F6D1F3 /* UIImageView+WebCache.m in Sources */,
 				6350CC431D01E9DE004FBA60 /* MASViewConstraint.m in Sources */,
 				6350CCA71D01F293004FBA60 /* LDBaseVC.m in Sources */,

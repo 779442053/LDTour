@@ -191,8 +191,10 @@ void func_path(CALayer *layer, int sec) {
     orbit.path = CFAutorelease(CGPathCreateWithEllipseInRect(boundingRect,NULL));
     
     orbit.duration = sec;
+    
     orbit.additive = YES;
-    orbit.repeatCount = HUGE_VALF;
+    
+    orbit.repeatCount = 2;
     
     orbit.calculationMode = kCAAnimationPaced;
     

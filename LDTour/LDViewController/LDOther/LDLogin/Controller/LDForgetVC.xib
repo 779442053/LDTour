@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDForgetVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-z8-oz8">
+                    <rect key="frame" x="20" y="20" width="30" height="30"/>
+                    <state key="normal" title="&lt;&lt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonClick:" destination="-1" eventType="touchUpInside" id="nY7-fW-lwq"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="找回密码功能暂未开放" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7T-42-h9O">
+                    <rect key="frame" x="20" y="100" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="R7D-Tn-dM6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y7-Oe-SpW">
+                    <rect key="frame" x="20" y="170" width="280" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="43s-Oj-Sdl"/>
+                        <constraint firstAttribute="height" constant="40" id="ZA1-Zg-nLN"/>
+                    </constraints>
+                    <state key="normal" title="重置密码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetButtonClick:" destination="-1" eventType="touchUpInside" id="LNz-hU-t2j"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.41863692429999999" green="0.53250925159999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6y7-Oe-SpW" secondAttribute="trailing" constant="20" id="1nH-0C-S0v"/>
+                <constraint firstItem="6y7-Oe-SpW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7LG-xV-UuX"/>
+                <constraint firstItem="a7T-42-h9O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="8yk-fM-ZCU"/>
+                <constraint firstAttribute="trailing" secondItem="a7T-42-h9O" secondAttribute="trailing" constant="20" id="Ezx-7F-eEz"/>
+                <constraint firstItem="ON8-z8-oz8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Hky-CP-8qe"/>
+                <constraint firstItem="ON8-z8-oz8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Vah-Vo-hHM"/>
+                <constraint firstItem="a7T-42-h9O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="edK-vx-oYH"/>
+                <constraint firstItem="6y7-Oe-SpW" firstAttribute="top" secondItem="a7T-42-h9O" secondAttribute="bottom" constant="30" id="gas-Ez-2IB"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="325" y="283"/>
+        </view>
+    </objects>
+</document>

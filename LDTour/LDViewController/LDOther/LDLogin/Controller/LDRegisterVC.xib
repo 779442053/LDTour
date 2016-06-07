@@ -52,8 +52,17 @@
                         <action selector="passwordtextfiledChangedClick:" destination="-1" eventType="editingChanged" id="kfm-tC-xaR"/>
                     </connections>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTW-pf-Rb0">
+                    <rect key="frame" x="20" y="20" width="30" height="30"/>
+                    <state key="normal" title="&lt;&lt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonClick" destination="-1" eventType="touchUpInside" id="ra5-7u-G6d"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.41863692429999999" green="0.53250925159999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="jPp-gM-Pgp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="2TC-oY-Q1q"/>
                 <constraint firstItem="jPp-gM-Pgp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Gac-oa-4xr"/>
@@ -61,11 +70,14 @@
                 <constraint firstItem="yEP-iO-AaW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="JED-7q-rHv"/>
                 <constraint firstAttribute="trailing" secondItem="jPp-gM-Pgp" secondAttribute="trailing" constant="20" id="W8H-TM-tMJ"/>
                 <constraint firstAttribute="trailing" secondItem="ejp-YJ-kV8" secondAttribute="trailing" constant="20" id="bpF-qs-dMQ"/>
+                <constraint firstItem="aTW-pf-Rb0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="fGL-cT-gzU"/>
+                <constraint firstItem="aTW-pf-Rb0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="fKt-6a-exW"/>
                 <constraint firstItem="ejp-YJ-kV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="iaC-vT-iyB"/>
                 <constraint firstAttribute="trailing" secondItem="yEP-iO-AaW" secondAttribute="trailing" constant="20" id="mbp-q8-WwI"/>
                 <constraint firstItem="yEP-iO-AaW" firstAttribute="top" secondItem="ejp-YJ-kV8" secondAttribute="bottom" constant="30" id="waX-y7-Gqx"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="148" y="162"/>
         </view>
     </objects>
 </document>

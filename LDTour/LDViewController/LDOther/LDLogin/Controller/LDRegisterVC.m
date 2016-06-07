@@ -22,8 +22,8 @@
     [super viewDidLoad];
     self.registerButton.backgroundColor = [UIColor grayColor];
     self.registerButton.userInteractionEnabled = NO;
+    self.view.backgroundColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
 }
-
 
 - (IBAction)registerButtonClick:(id)sender {
 
@@ -60,5 +60,10 @@
         self.registerButton.backgroundColor = [UIColor grayColor];
         self.registerButton.userInteractionEnabled = NO;
     }
+}
+
+- (IBAction)cancelButtonClick {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

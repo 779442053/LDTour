@@ -30,7 +30,7 @@
                         <action selector="loginButtonClick" destination="-1" eventType="touchUpInside" id="H7m-Ex-Kip"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-iL-EAq">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-iL-EAq">
                     <rect key="frame" x="20" y="100" width="280" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="PHW-p5-9Xp"/>
@@ -41,7 +41,7 @@
                         <action selector="usertextfiledChangedClick:" destination="-1" eventType="editingChanged" id="HWR-kH-eyX"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-gC-sl5">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWw-gC-sl5">
                     <rect key="frame" x="20" y="170" width="280" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="HT9-yr-8zB"/>
@@ -53,26 +53,26 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-Yk-bhn">
-                    <rect key="frame" x="10" y="10" width="30" height="30"/>
-                    <state key="normal" title="取消">
+                    <rect key="frame" x="20" y="20" width="30" height="30"/>
+                    <state key="normal" title="&lt;&lt;">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="cancelButtonClick" destination="-1" eventType="touchUpInside" id="wTG-mZ-HbB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-mq-HZh">
-                    <rect key="frame" x="270" y="285" width="30" height="30"/>
-                    <state key="normal" title="注册">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Nz-YnG">
+                    <rect key="frame" x="225" y="285" width="75" height="30"/>
+                    <state key="normal" title="注册新用户">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="registerButtonClick:" destination="-1" eventType="touchUpInside" id="Oim-Vz-IIX"/>
+                        <action selector="registerButtonClick:" destination="-1" eventType="touchUpInside" id="WPt-a3-BPd"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-hl-mB7">
-                    <rect key="frame" x="20" y="285" width="73" height="30"/>
-                    <state key="normal" title="tempLogin">
+                    <rect key="frame" x="20" y="285" width="68" height="30"/>
+                    <state key="normal" title="忘记密码?">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -80,10 +80,10 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.098812705589999994" green="0.0035207648029999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.41863692429999999" green="0.53250925159999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fCQ-iL-EAq" secondAttribute="trailing" constant="20" id="09e-fr-tff"/>
-                <constraint firstAttribute="trailing" secondItem="gaB-mq-HZh" secondAttribute="trailing" constant="20" id="6iX-Nm-eWC"/>
+                <constraint firstAttribute="trailing" secondItem="hM2-Nz-YnG" secondAttribute="trailing" constant="20" id="9uO-0a-zwC"/>
                 <constraint firstItem="1IH-hl-mB7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="AFi-hh-IXe"/>
                 <constraint firstAttribute="trailing" secondItem="Tqe-Oz-L0c" secondAttribute="trailing" constant="20" id="Kj2-n6-M5e"/>
                 <constraint firstItem="fCQ-iL-EAq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="QUI-wa-xdV"/>
@@ -92,14 +92,14 @@
                 <constraint firstItem="1IH-hl-mB7" firstAttribute="top" secondItem="Tqe-Oz-L0c" secondAttribute="bottom" constant="5" id="aEi-Rg-xFx"/>
                 <constraint firstItem="nWw-gC-sl5" firstAttribute="top" secondItem="fCQ-iL-EAq" secondAttribute="bottom" constant="30" id="dbB-Qp-bK3"/>
                 <constraint firstAttribute="trailing" secondItem="nWw-gC-sl5" secondAttribute="trailing" constant="20" id="fIa-ge-EDD"/>
-                <constraint firstItem="nxR-Yk-bhn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="lYo-1U-8vy"/>
-                <constraint firstItem="nxR-Yk-bhn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="nff-5k-5Hd"/>
+                <constraint firstItem="nxR-Yk-bhn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="lYo-1U-8vy"/>
+                <constraint firstItem="nxR-Yk-bhn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="nff-5k-5Hd"/>
+                <constraint firstItem="hM2-Nz-YnG" firstAttribute="top" secondItem="Tqe-Oz-L0c" secondAttribute="bottom" constant="5" id="q1h-oS-6l9"/>
                 <constraint firstItem="Tqe-Oz-L0c" firstAttribute="top" secondItem="nWw-gC-sl5" secondAttribute="bottom" constant="30" id="qBC-xA-Gb0"/>
                 <constraint firstItem="nWw-gC-sl5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="tP0-VQ-5qI"/>
-                <constraint firstItem="gaB-mq-HZh" firstAttribute="top" secondItem="Tqe-Oz-L0c" secondAttribute="bottom" constant="5" id="wzT-5R-e0p"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="222" y="247"/>
+            <point key="canvasLocation" x="99" y="124"/>
         </view>
     </objects>
 </document>
