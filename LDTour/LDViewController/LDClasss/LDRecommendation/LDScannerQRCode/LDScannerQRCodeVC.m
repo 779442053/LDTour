@@ -10,6 +10,9 @@
 #import "BMScannerQRCodeView.h"
 #import "UIDevice+BMDevice.h"
 #import "UIApplication+BMExtension.h"
+#import "BMScannerItemView.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface LDScannerQRCodeVC ()
 
@@ -20,9 +23,8 @@
 @implementation LDScannerQRCodeVC
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
-
+    [self.scannerQRCodeView startRunning];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -48,6 +50,19 @@
         return;
     }
     [self.view addSubview:self.scannerQRCodeView];
+
+    [self.view addSubview:[BMScannerItemView ScannerItemViewWithFrame:CGRectMake(0, kScreenheight-60-64, kScreenwidth, 60) photo:^{
+        
+        DAAlertAction *c = [DAAlertAction actionWithTitle:@"打开" style:0 handler:^{
+        }];
+        DAAlertAction *cancel = [DAAlertAction actionWithTitle:@"取消" style:DAAlertActionStyleDestructive handler:^{
+        }];
+        
+        [DAAlertController showAlertOfStyle:0 inViewController:self withTitle:@"确定打开相册" message:nil actions:@[c, cancel]];
+        
+    } turn:^{
+        ;
+    }]];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:)
                                                  name:UIApplicationWillResignActiveNotification object:nil];
@@ -99,11 +114,9 @@
     }
     return _scannerQRCodeView;
 }
-
 #pragma mark - 系统delegate
 #pragma mark - 自定义delegate
 #pragma mark - 公有方法
 #pragma mark - 私有方法
 #pragma mark - 事件响应
-
 @end

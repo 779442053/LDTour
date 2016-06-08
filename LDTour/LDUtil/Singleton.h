@@ -111,7 +111,6 @@ return _instance; \
 { \
 return 1; \
 } \
-\
 + (instancetype)copyWithZone:(struct _NSZone *)zone \
 { \
 return _instance; \
