@@ -33,7 +33,7 @@
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"<< back" style:0 target:self action:@selector(backClock)];
     self.navigationItem.leftBarButtonItem = item;
-    
+
     self.webView.scrollView.backgroundColor = [UIColor whiteColor];
     self.webView.scalesPageToFit = YES;
     
@@ -42,7 +42,6 @@
         [self.webView.scrollView.header beginRefreshing];
         [self.webView reload];
     }];
-    
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

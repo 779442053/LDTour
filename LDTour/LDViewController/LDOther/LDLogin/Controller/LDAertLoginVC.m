@@ -51,7 +51,7 @@
 
 - (IBAction)loginButtonClick {
     
-    [SVProgressHUD showWithStatus:@"登录中..." maskType:2];
+    [SVProgressHUD showWithStatus:@"登录中..." maskType:SVProgressHUDMaskTypeBlack];
     
     [LDHHTTPSessionManager loginWithNetIdentifier:@"login" userName:self.userTextfiled.text password:self.passwordTextfiled.text downloadProgressBlock:nil successBlock:^(id responseObject) {
         [self dismissViewControllerAnimated:YES completion:nil];

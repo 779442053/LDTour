@@ -60,14 +60,10 @@
     UIViewController *c = [[[class class] alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
     c.navigationItem.title = title;
-    nc.navigationBar.barTintColor = [UIColor colorWithRed:73/255.0 green:189/255.0 blue:206/255.0 alpha:1];
     [views addObject:nc];
     nc.navigationBar.translucent = NO;
     nc.navigationBar.hidden = NO;
-    self.viewControllers = [views copy];
-    
-    
-    
+    self.viewControllers = [views copy];  
 }
 
 @end
