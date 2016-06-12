@@ -35,7 +35,9 @@
     [self initAPP];
 
     [self interfaceSkip];
-    
+
+    return YES;
+    return YES;
     return YES;
 }
 
@@ -62,7 +64,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
+
     // sdk相关
     [MobAPI registerApp:@"1346f56d837b7"];
 
