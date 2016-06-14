@@ -24,7 +24,7 @@
 @property (strong, nonatomic) AFHTTPSessionManager *mager;
 @property (assign, nonatomic) BOOL alertLogin;
 
-@property (strong, nonatomic) NSMutableArray <dispatch_block_t> *blockArray;
+@property (copy, nonatomic) dispatch_block_t tokenBlock;
 
 @end
 
@@ -57,14 +57,6 @@
         sessionManager  = [[self  alloc] init];
     });
     return sessionManager;
-}
-
-- (NSMutableArray<dispatch_block_t> *)blockArray {
-
-    if (!_blockArray) {
-        _blockArray = [@[] mutableCopy];
-    }
-    return _blockArray;
 }
 
 #pragma mark - get
@@ -305,10 +297,9 @@
             self.alertLogin = YES;
         }
 
-        dispatch_block_t block = ^{
-            [self get:path parameters:parameters netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+        self.tokenBlock = ^{
+            [self get:(NSString *)path parameters:parameters netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
         };
-        [self.blockArray addObject:block];
         return nil;
     }
     NSLog(@"已经登录  token = %@",cacheManager.token);
@@ -351,15 +342,12 @@
             LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
             [cacheManager saveLoginUserInfoWithToken:response.responder[@"token"]];
             successBlock ? successBlock(response.responder) : nil;
-            
-            NSArray *blocks = [[self sharedHTTPSessionManager] blockArray];
-            [[[self sharedHTTPSessionManager] blockArray] enumerateObjectsUsingBlock:^(dispatch_block_t  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                obj();
-            }];
+            [[self sharedHTTPSessionManager] tokenBlock] ? [[self sharedHTTPSessionManager] tokenBlock]() : nil;
+            LDHHTTPSessionManager *s = [self sharedHTTPSessionManager];
+            s.tokenBlock = nil;
         }
     }];
 }
-
 + (void)registerWithNetIdentifier:(NSString *)netIdentifier
                          userName:(NSString *)userName
                          password:(NSString *)password

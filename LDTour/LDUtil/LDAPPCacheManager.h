@@ -13,6 +13,7 @@
 
 singleton_h(APPCacheManager);
 
+
 @property (assign, atomic, readonly) BOOL isLogin;
 
 @property (copy, atomic, readonly) NSString *token;
