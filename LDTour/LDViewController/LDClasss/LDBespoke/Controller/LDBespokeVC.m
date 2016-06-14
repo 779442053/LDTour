@@ -7,8 +7,13 @@
 //
 
 #import "LDBespokeVC.h"
+#import "LDBespokeDataVC.h"
 
-@interface LDBespokeVC ()
+@interface LDBespokeVC () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSMutableArray *bespokeArray;
+
+@property (weak, nonatomic) IBOutlet UITableView *bespokeTableView;
 
 @end
 
@@ -16,22 +21,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [SVProgressHUD showWithStatus:@""];
+    [LDHHTTPSessionManager getWxarticleCategoryWithNetIdentifier:@"getWXC" downloadProgressBlock:nil successBlock:^(id responseObject) {
+        [SVProgressHUD dismiss];
+        [self.bespokeArray addObjectsFromArray:responseObject];
+        [self.bespokeTableView reloadData];
+    } failureBlock:^(NSError *error) {
+        [SVProgressHUD showInfoWithStatus:error.domain];
+    }];
+    [self.bespokeTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark -
+#pragma mark - init
+#pragma mark - 生命周期
+#pragma mark - getters setters
+- (NSMutableArray *)bespokeArray {
+
+    if (!_bespokeArray) {
+        
+        _bespokeArray = @[].mutableCopy;
+    }
+    return _bespokeArray;
+}
+#pragma mark - 系统delegate
+#pragma mark - 自定义delegate
+#pragma mark - 公有方法
+#pragma mark - 私有方法
+#pragma mark - 事件响应
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.bespokeArray.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    NSDictionary *dict = self.bespokeArray[indexPath.row];
+    cell.textLabel.text = dict[@"name"];
+    return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    LDBespokeDataVC *c = [LDBespokeDataVC new];
+    NSDictionary *dict = self.bespokeArray[indexPath.row];
+    c.cid = dict[@"cid"];
+    c.title = dict[@"name"];
+    [self.navigationController pushViewController:c animated:YES];
+}
 
 @end

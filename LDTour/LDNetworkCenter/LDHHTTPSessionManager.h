@@ -51,6 +51,18 @@ typedef void(^LDHFailureBlock)         (NSError   *error);
                   successBlock:(LDHSuccessBlock)successBlock
                   failureBlock:(LDHFailureBlock)failureBlock;
 
++ (void)getWxarticleCategoryWithNetIdentifier:(NSString *)netIdentifier
+                        downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                                 successBlock:(LDHSuccessBlock)successBlock
+                                 failureBlock:(LDHFailureBlock)failureBlock;
+
++ (void)getWxarticleListRequestByCIDWithCid:(NSString *)cid
+                                      start:(int)start
+                                      count:(int)count
+                              netIdentifier:(NSString *)netIdentifier
+                      downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                               successBlock:(LDHSuccessBlock)successBlock
+                               failureBlock:(LDHFailureBlock)failureBlock;
 /*! 注册接口 */
 + (void)registerWithNetIdentifier:(NSString *)netIdentifier
                          userName:(NSString *)userName

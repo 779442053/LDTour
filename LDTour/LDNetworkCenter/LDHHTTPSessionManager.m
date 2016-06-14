@@ -364,4 +364,35 @@
     }];
 }
 
++ (void)getWxarticleCategoryWithNetIdentifier:(NSString *)netIdentifier
+                        downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                                 successBlock:(LDHSuccessBlock)successBlock
+                                 failureBlock:(LDHFailureBlock)failureBlock {
+    
+    [MobAPI sendRequest:[MOBAWxArticleRequest wxarticleCategoryRequest] onResult:^(MOBAResponse *response) {
+        if (response.error) {
+            failureBlock ? failureBlock(response.error) : nil;
+        }else{
+            successBlock ? successBlock(response.responder) : nil;
+        }
+    }];
+}
+
++ (void)getWxarticleListRequestByCIDWithCid:(NSString *)cid
+                                      start:(int)start
+                                      count:(int)count
+                              netIdentifier:(NSString *)netIdentifier
+                                downloadProgressBlock:(LDHDownloadProgressBlock)downloadProgressBlock
+                                 successBlock:(LDHSuccessBlock)successBlock
+                                 failureBlock:(LDHFailureBlock)failureBlock {
+    
+    [MobAPI sendRequest:[MOBAWxArticleRequest wxarticleListRequestByCID:cid page:start size:count] onResult:^(MOBAResponse *response) {
+        if (response.error) {
+            failureBlock ? failureBlock(response.error) : nil;
+        }else{
+            successBlock ? successBlock(response.responder) : nil;
+        }
+    }];
+}
+
 @end

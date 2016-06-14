@@ -168,6 +168,10 @@
 		6375E90D1D05D48600E48B29 /* LDRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375E90B1D05D48600E48B29 /* LDRegisterVC.xib */; };
 		638EDB011D071A0E0038DF2E /* LDForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EDAFF1D071A0E0038DF2E /* LDForgetVC.m */; };
 		638EDB021D071A0E0038DF2E /* LDForgetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EDB001D071A0E0038DF2E /* LDForgetVC.xib */; };
+		638F9F031D10560800216273 /* LDBespokeDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F9F011D10560800216273 /* LDBespokeDataVC.m */; };
+		638F9F041D10560800216273 /* LDBespokeDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F9F021D10560800216273 /* LDBespokeDataVC.xib */; };
+		638F9F081D10594F00216273 /* LDBespokeDataWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 638F9F061D10594F00216273 /* LDBespokeDataWebVC.m */; };
+		638F9F091D10594F00216273 /* LDBespokeDataWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638F9F071D10594F00216273 /* LDBespokeDataWebVC.xib */; };
 		6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */; };
 		6397C96E1D0251DB0038CC4A /* UIApplication+BMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397C96D1D0251DB0038CC4A /* UIApplication+BMExtension.m */; };
 		63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F961D04780400EFD598 /* EXTRuntimeExtensions.m */; };
@@ -511,6 +515,12 @@
 		638EDAFE1D071A0E0038DF2E /* LDForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDForgetVC.h; sourceTree = "<group>"; };
 		638EDAFF1D071A0E0038DF2E /* LDForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDForgetVC.m; sourceTree = "<group>"; };
 		638EDB001D071A0E0038DF2E /* LDForgetVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDForgetVC.xib; sourceTree = "<group>"; };
+		638F9F001D10560800216273 /* LDBespokeDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDBespokeDataVC.h; sourceTree = "<group>"; };
+		638F9F011D10560800216273 /* LDBespokeDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDBespokeDataVC.m; sourceTree = "<group>"; };
+		638F9F021D10560800216273 /* LDBespokeDataVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDBespokeDataVC.xib; sourceTree = "<group>"; };
+		638F9F051D10594F00216273 /* LDBespokeDataWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDBespokeDataWebVC.h; sourceTree = "<group>"; };
+		638F9F061D10594F00216273 /* LDBespokeDataWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDBespokeDataWebVC.m; sourceTree = "<group>"; };
+		638F9F071D10594F00216273 /* LDBespokeDataWebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDBespokeDataWebVC.xib; sourceTree = "<group>"; };
 		6397C9681D0251790038CC4A /* UIDevice+BMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMDevice.h"; sourceTree = "<group>"; };
 		6397C9691D0251790038CC4A /* UIDevice+BMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMDevice.m"; sourceTree = "<group>"; };
 		6397C96C1D0251DB0038CC4A /* UIApplication+BMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BMExtension.h"; sourceTree = "<group>"; };
@@ -1169,6 +1179,12 @@
 				6350CCBF1D01F462004FBA60 /* LDBespokeVC.h */,
 				6350CCC01D01F462004FBA60 /* LDBespokeVC.m */,
 				6350CCC11D01F462004FBA60 /* LDBespokeVC.xib */,
+				638F9F001D10560800216273 /* LDBespokeDataVC.h */,
+				638F9F011D10560800216273 /* LDBespokeDataVC.m */,
+				638F9F021D10560800216273 /* LDBespokeDataVC.xib */,
+				638F9F051D10594F00216273 /* LDBespokeDataWebVC.h */,
+				638F9F061D10594F00216273 /* LDBespokeDataWebVC.m */,
+				638F9F071D10594F00216273 /* LDBespokeDataWebVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1783,9 +1799,11 @@
 				63ED9FA81D048B7600EFD598 /* icon.png in Resources */,
 				6350CCC81D01F46F004FBA60 /* LDCenterVC.xib in Resources */,
 				6350CCDF1D01F5AF004FBA60 /* tabbar_destination_selected.png in Resources */,
+				638F9F091D10594F00216273 /* LDBespokeDataWebVC.xib in Resources */,
 				6350CCB61D01F439004FBA60 /* LDRecommendationVC.xib in Resources */,
 				6350CCE11D01F5AF004FBA60 /* tabbar_explore_selected.png in Resources */,
 				ED30C5A41D07AA56000E8D1B /* BMScannerItemView.xib in Resources */,
+				638F9F041D10560800216273 /* LDBespokeDataVC.xib in Resources */,
 				6350CC3D1D01E9DE004FBA60 /* LICENSE in Resources */,
 				EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */,
 				6350CCE61D01F5AF004FBA60 /* tabbar_trip_add_normal.png in Resources */,
@@ -1888,6 +1906,7 @@
 				63440CCA1D02589000F6D1F3 /* UIButton+WebCache.m in Sources */,
 				6350CD391D020542004FBA60 /* MJRefreshBackStateFooter.m in Sources */,
 				ED30C5A21D07AA47000E8D1B /* BMScannerItemView.m in Sources */,
+				638F9F031D10560800216273 /* LDBespokeDataVC.m in Sources */,
 				6350CD311D020542004FBA60 /* MJRefreshComponent.m in Sources */,
 				63440CCB1D02589000F6D1F3 /* UIImage+GIF.m in Sources */,
 				6350CC3F1D01E9DE004FBA60 /* MASConstraint.m in Sources */,
@@ -1911,6 +1930,7 @@
 				6350CC3A1D01E9DE004FBA60 /* AFURLRequestSerialization.m in Sources */,
 				ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */,
 				63440CD01D02589000F6D1F3 /* UIView+WebCacheOperation.m in Sources */,
+				638F9F081D10594F00216273 /* LDBespokeDataWebVC.m in Sources */,
 				63440CCC1D02589000F6D1F3 /* UIImage+MultiFormat.m in Sources */,
 				6350CC381D01E9DE004FBA60 /* AFNetworkReachabilityManager.m in Sources */,
 				63440CCE1D02589000F6D1F3 /* UIImageView+HighlightedWebCache.m in Sources */,
