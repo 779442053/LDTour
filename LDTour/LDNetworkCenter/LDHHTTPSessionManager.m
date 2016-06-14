@@ -40,7 +40,6 @@
         self.mager = (kBASE_URL.length > 0) ?
         [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kBASE_URL]]
         : [[AFHTTPSessionManager alloc] init];
-        
         AFHTTPRequestSerializer *requestSerializerNotCache = [AFHTTPRequestSerializer serializer];
         requestSerializerNotCache.timeoutInterval = kTimeoutInterval;
         self.mager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -130,7 +129,6 @@
     }
     [self.networkingManagerArray removeAllObjects];
 }
-
 - (void)cancelNetworkingWithNetIdentifierArray:(NSArray <NSString *> *)netIdentifierArray {
     
     for (NSString *netIdentifier in netIdentifierArray) {
@@ -275,12 +273,12 @@
         ! failureBlock ? : failureBlock(cancelError);
         return nil;
     }
-    
+
     /* 是否可以发起api 1.是否登录  2.token是否过期 ... */
-    
     LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
     if (!cacheManager.isLogin) {
         
+        NSLog(@"没登录");
         // 没有网络
          NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
          ! failureBlock ? : failureBlock(cancelError);
@@ -299,7 +297,8 @@
         }
         return nil;
     }
-    
+    NSLog(@"已经登录  token = %@",cacheManager.token);
+
     return  self.mager;
 }
 
@@ -336,7 +335,7 @@
             failureBlock ? failureBlock(response.error) : nil;
         }else{
             LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-            [cacheManager loginSituation:YES];
+            [cacheManager saveLoginUserInfoWithToken:response.responder[@"token"]];
             successBlock ? successBlock(response.responder) : nil;
         }
     }];
@@ -353,8 +352,6 @@
         if (response.error) {
             failureBlock ? failureBlock(response.error) : nil;
         }else{
-            LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-            [cacheManager loginSituation:YES];
             successBlock ? successBlock(response.responder) : nil;
         }
     }];

@@ -13,8 +13,12 @@
 
 singleton_h(APPCacheManager);
 
-@property (assign, atomic, readonly, getter=isLogin) BOOL login;
+@property (assign, atomic, readonly) BOOL isLogin;
 
-- (void)loginSituation:(BOOL)situation;
+@property (copy, atomic, readonly) NSString *token;
+
+- (void)saveLoginUserInfoWithToken:(NSString *)token;
+
+- (void)clearLogoutUserInfo;
 
 @end

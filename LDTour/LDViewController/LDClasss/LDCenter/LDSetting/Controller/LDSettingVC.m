@@ -98,12 +98,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     if (indexPath.section+1 == self.settingArray.count) {
         
         DAAlertAction *a = [DAAlertAction actionWithTitle:@"确定" style:DAAlertActionStyleDestructive handler:^{
             LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
-            [cacheManager loginSituation:NO];
+            [cacheManager clearLogoutUserInfo];
             [self.navigationController popViewControllerAnimated:YES];
         }];
         DAAlertAction *b = [DAAlertAction actionWithTitle:@"取消" style:DAAlertActionStyleCancel handler:nil];

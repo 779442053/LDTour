@@ -7,6 +7,13 @@
 //
 
 #import "LDAPPCacheManager.h"
+#import "YYCache.h"
+
+@interface LDAPPCacheManager ()
+
+@property (strong, nonatomic) YYCache *yyCache;
+
+@end
 
 @implementation LDAPPCacheManager
 
@@ -18,15 +25,32 @@
         obj = [super init];
         if (obj) {
             // 加载资源
+            self.yyCache = [[YYCache alloc] initWithName:@"LDTourConditionManagerDB"];
+            _isLogin = [_yyCache containsObjectForKey:@"token"];
         }
     });
     return self;
 }
 singleton_m(APPCacheManager);
 
-- (void)loginSituation:(BOOL)situation {
-    
-    _login = situation;
+- (NSString *)token {
+
+    NSString *token = (NSString *)[self.yyCache objectForKey:@"token"];
+    if ([token isKindOfClass:[NSString class]]) {
+        return token;
+    }
+    return nil;
+}
+
+- (void)saveLoginUserInfoWithToken:(NSString *)token {
+
+    [self.yyCache setObject:token forKey:@"token"];
+    _isLogin = [_yyCache containsObjectForKey:@"token"];
+}
+
+- (void)clearLogoutUserInfo {
+    _isLogin = NO;
+    [self.yyCache removeObjectForKey:@"token"];
 }
 
 @end

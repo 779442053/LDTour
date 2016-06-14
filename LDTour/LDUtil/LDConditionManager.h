@@ -10,5 +10,13 @@
 
 @interface LDConditionManager : NSObject
 
+/*!
+ *  @brief 是否已经登陆
+ */
+@property (assign, nonatomic, readonly) BOOL isLogined;
+
+- (void)saveLoginUserInfoWithToken:(nonnull NSString *)token;
+
+- (void)clearLogoutUserInfo;
 
 @end

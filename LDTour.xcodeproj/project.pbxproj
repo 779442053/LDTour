@@ -185,6 +185,7 @@
 		ED1F3DEF1D0FF893009EB826 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DE51D0FF893009EB826 /* YYDiskCache.m */; };
 		ED1F3DF01D0FF893009EB826 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DE71D0FF893009EB826 /* YYKVStorage.m */; };
 		ED1F3DF11D0FF893009EB826 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DE91D0FF893009EB826 /* YYMemoryCache.m */; };
+		ED1F3DF31D0FFE1C009EB826 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1F3DF21D0FFE1C009EB826 /* libsqlite3.tbd */; };
 		ED30C5A21D07AA47000E8D1B /* BMScannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED30C5A11D07AA47000E8D1B /* BMScannerItemView.m */; };
 		ED30C5A41D07AA56000E8D1B /* BMScannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED30C5A31D07AA56000E8D1B /* BMScannerItemView.xib */; };
 		ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */; };
@@ -544,6 +545,7 @@
 		ED1F3DE71D0FF893009EB826 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
 		ED1F3DE81D0FF893009EB826 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
 		ED1F3DE91D0FF893009EB826 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		ED1F3DF21D0FFE1C009EB826 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		ED30C5A01D07AA47000E8D1B /* BMScannerItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMScannerItemView.h; sourceTree = "<group>"; };
 		ED30C5A11D07AA47000E8D1B /* BMScannerItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMScannerItemView.m; sourceTree = "<group>"; };
 		ED30C5A31D07AA56000E8D1B /* BMScannerItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMScannerItemView.xib; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1F3DF31D0FFE1C009EB826 /* libsqlite3.tbd in Frameworks */,
 				637261C71D05B4F100ED9F23 /* AVFoundation.framework in Frameworks */,
 				637261C51D05B4D700ED9F23 /* WebKit.framework in Frameworks */,
 				637261C31D05B48D00ED9F23 /* QuartzCore.framework in Frameworks */,
@@ -855,6 +858,7 @@
 		634597291D01E4F3007837CD = {
 			isa = PBXGroup;
 			children = (
+				ED1F3DF21D0FFE1C009EB826 /* libsqlite3.tbd */,
 				637261B91D05B29A00ED9F23 /* Framework */,
 				634597341D01E4F3007837CD /* LDTour */,
 				6345974E1D01E4F4007837CD /* LDTourTests */,
