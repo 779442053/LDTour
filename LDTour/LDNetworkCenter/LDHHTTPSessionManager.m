@@ -20,9 +20,11 @@
 @interface LDHHTTPSessionManager () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray <NSDictionary<NSString *,NSURLSessionDataTask *> *> *networkingManagerArray;
-@property (strong, nonatomic) AFHTTPSessionManager *mager;
 
+@property (strong, nonatomic) AFHTTPSessionManager *mager;
 @property (assign, nonatomic) BOOL alertLogin;
+
+@property (strong, nonatomic) NSMutableArray <dispatch_block_t> *blockArray;
 
 @end
 
@@ -57,18 +59,25 @@
     return sessionManager;
 }
 
+- (NSMutableArray<dispatch_block_t> *)blockArray {
+
+    if (!_blockArray) {
+        _blockArray = [@[] mutableCopy];
+    }
+    return _blockArray;
+}
+
 #pragma mark - get
 
 - (void)get:(NSString *)urlString parameters:(id)parameter netIdentifier:(NSString *)netIdentifier progress:(void (^)(NSProgress *downloadProgress))downloadProgressBlock success:(void (^)(id responseObject))successBlock failure:(void (^)(NSError   *error))failureBlock {
     
     // 获取网络管理者
     AFHTTPSessionManager *sessionManager = [self getManagerWithWithPath:urlString parameters:parameter netIdentifier:netIdentifier progress:nil success:successBlock failure:failureBlock ];
-    
+
     if (!sessionManager) {
         return;
     }
-    
-    
+
     NSURLSessionDataTask *task = [sessionManager GET:urlString parameters:parameter progress:downloadProgressBlock success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if (netIdentifier) {
@@ -273,11 +282,11 @@
         ! failureBlock ? : failureBlock(cancelError);
         return nil;
     }
-
+    
     /* 是否可以发起api 1.是否登录  2.token是否过期 ... */
     LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
+    
     if (!cacheManager.isLogin) {
-        
         NSLog(@"没登录");
         // 没有网络
          NSError *cancelError = [NSError errorWithDomain:@"没有登录,请先登录!" code:(-12003) userInfo:nil];
@@ -295,6 +304,11 @@
             [DAAlertController showAlertOfStyle:1 inViewController:[UIApplication bm_topViewController] withTitle:@"请先登录" message:nil actions:@[noAction,loginAction]];
             self.alertLogin = YES;
         }
+
+        dispatch_block_t block = ^{
+            [self get:path parameters:parameters netIdentifier:netIdentifier progress:downloadProgressBlock success:successBlock failure:failureBlock];
+        };
+        [self.blockArray addObject:block];
         return nil;
     }
     NSLog(@"已经登录  token = %@",cacheManager.token);
@@ -337,6 +351,11 @@
             LDAPPCacheManager *cacheManager = [LDAPPCacheManager sharedAPPCacheManager];
             [cacheManager saveLoginUserInfoWithToken:response.responder[@"token"]];
             successBlock ? successBlock(response.responder) : nil;
+            
+            NSArray *blocks = [[self sharedHTTPSessionManager] blockArray];
+            [[[self sharedHTTPSessionManager] blockArray] enumerateObjectsUsingBlock:^(dispatch_block_t  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                obj();
+            }];
         }
     }];
 }
