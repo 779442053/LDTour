@@ -13,6 +13,7 @@
 #import "LDBespokeVC.h"
 #import "LDCenterVC.h"
 #import "LDAlertView.h"
+#import "BMDatePickView.h"
 
 @interface LDMainTabBarVC ()
 
@@ -46,12 +47,21 @@
     [self.tabBar addSubview:tabBar];
     
     tabBar.tapCenterBlock = ^{
-        LDAlertView *alertView = [LDAlertView alertViewWithTravelBlock:^{
-            ;
-        } lifeBlock:^{
-            ;
-        }];
-        [alertView show];
+        
+        NSArray *array  = @[@"UIDatePickerModeTime",@"UIDatePickerModeDate",@"UIDatePickerModeDateAndTime",@"UIDatePickerModeCountDownTimer"];
+        int arc = arc4random()%4;
+        [SVProgressHUD showInfoWithStatus:array[arc]];
+        
+        if (arc4random()%2 == 0) {
+            [BMDatePickView showChangeDatePickViewPickerMode:arc date:nil minimumDate:nil maximumDate:nil changeBlock:^(NSDate *date) {
+                [SVProgressHUD showInfoWithStatus:date.description];
+            }];
+        }else{
+        
+            [BMDatePickView showConfirmDatePickViewPickerMode:arc date:nil minimumDate:nil maximumDate:nil confirmBlock:^(NSDate *date) {
+                [SVProgressHUD showInfoWithStatus:date.description];
+            }];
+        }
     };
 }
 
