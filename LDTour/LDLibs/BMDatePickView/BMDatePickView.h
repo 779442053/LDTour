@@ -2,92 +2,79 @@
 //  BMDatePickView.h
 //  BMDatePickViewDemo
 //
-//  Created by Daredos on 16/6/15.
-//  Copyright © 2016年 Daredos. All rights reserved.
+//  Created by Daredos on 16/6/16.
+//  Copyright © 2016年 LiangDahong. All rights reserved.
 //
-
-/*!
- github: https://github.com/asiosldh
- */
 
 #import <UIKit/UIKit.h>
 
-typedef void(^BMChangeDateBlock)(NSDate *selectDate);
-
 /*!
- *  @brief 弹窗类型
+ *  @brief 自定义的时间选择控件类型
  */
-typedef NS_ENUM(NSInteger, BMDatePickerMode) {
+typedef NS_ENUM(NSInteger, BMDatePickViewMode) {
     /*!
-     *  只有 年
+     *  只有年
      */
-    BMDatePickerModeYear = 0,
+    BMDatePickViewModeYear = 0,
     /*!
-     *  只有 年月
+     *  只有年月
      */
-    BMDatePickerModeYearMon,
+    BMDatePickViewModeYearMonth,
     /*!
-     *  只有 年月日
+     *  只有年月日
      */
-    BMDatePickerModeYearMonday,
+    BMDatePickViewModeYearMonthDay,
     /*!
-     *  只有 年月日时
+     *  只有年月日 时
      */
-    BMDatePickerModeYearMondayH,
+    BMDatePickViewModeYearMonthDayHour,
     /*!
-     *  只有 年月日 时分
+     *  只有年月日 时分
      */
-    BMDatePickerModeYearMondayHM,
+    BMDatePickViewModeYearMonthDayHourMinute,
     /*!
-     *  只有 年月日 时分秒
+     *  只有年月日 时分秒
      */
-    BMDatePickerModeYearMondayHMS,
+    BMDatePickViewModeYearMonthDayHourSecond,
 };
 
-/*!
- *  @brief 模仿系统 datePick
- */
+typedef void(^ChangeBlock)(NSDate *date);
+typedef void(^ConfirmBlock)(NSDate *date);
+
 @interface BMDatePickView : UIView
 
-/*!
- *  @brief 类型
- */
-@property (assign, nonatomic) BMDatePickerMode datePickerMode;
-
-/*!
- *  @brief 显示的时间
- */
 @property (strong, nonatomic) NSDate *date;
 
-/*!
- *  @brief 最大时间
- */
-@property (strong, nonatomic) NSDate *maximumDate;
 
-/*!
- *  @brief 最小时间
- */
-@property (strong, nonatomic) NSDate *minimumDate;
+/*! 创建系统自带的的实时交互的时间选择弹窗 */
++ (void)showChangeDatePickViewPickerMode:(UIDatePickerMode)pickerMode
+                                    date:(NSDate *)date
+                             minimumDate:(NSDate *)minimumDate
+                             maximumDate:(NSDate *)maximumDate
+                             changeBlock:(ChangeBlock)changeBlock;
 
-/*!
- *  @brief 变化时间的回调block
- */
-@property (copy, nonatomic)   BMChangeDateBlock changeDateBlock;
+/*! 创建系统自带的实时交互的时间选择弹窗 */
++ (void)showConfirmDatePickViewPickerMode:(UIDatePickerMode)pickerMode
+                                     date:(NSDate *)date
+                              minimumDate:(NSDate *)minimumDate
+                              maximumDate:(NSDate *)maximumDate
+                             confirmBlock:(ConfirmBlock)confirmBlock;
 
-+ (instancetype)new   UNAVAILABLE_ATTRIBUTE;
-- (instancetype)init  UNAVAILABLE_ATTRIBUTE;
+/*! 创建自定义的实时交互的时间选择弹窗 */
++ (void)showCustomChangeDatePickViewPickerMode:(BMDatePickViewMode)pickerMode
+                                          date:(NSDate *)date
+                                   minimumDate:(NSDate *)minimumDate
+                                   maximumDate:(NSDate *)maximumDate
+                                   changeBlock:(ChangeBlock)changeBlock __deprecated_msg("方法正在完善中");
 
-/*!
- *  @brief 创建时间选择器
- *
- *  @param currentDate     默认显示的时间
- *  @param changeDateBlock 变化时间的回调block
- */
-+ (instancetype)datePickViewWithDate:(NSDate *)date changeDateBlock:(BMChangeDateBlock)changeDateBlock;
-
-/*!
- *  @brief 显示时间选择器
- */
-- (void)show;
-
+/*! 创建自定义的有确定按钮的时间选择弹窗 */
++ (void)showCustomConfirmDatePickViewPickerMode:(BMDatePickViewMode)pickerMode
+                                           date:(NSDate *)date
+                                    minimumDate:(NSDate *)minimumDate
+                                    maximumDate:(NSDate *)maximumDate
+                                   confirmBlock:(ConfirmBlock)confirmBlock __deprecated_msg("方法正在完善中");
 @end
+
+
+
+
