@@ -159,7 +159,6 @@
 		637261C31D05B48D00ED9F23 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C21D05B48D00ED9F23 /* QuartzCore.framework */; };
 		637261C51D05B4D700ED9F23 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C41D05B4D700ED9F23 /* WebKit.framework */; };
 		637261C71D05B4F100ED9F23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637261C61D05B4F100ED9F23 /* AVFoundation.framework */; };
-		63730E031D130013000ED67F /* BMDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63730DFF1D130013000ED67F /* BMDatePickView.m */; };
 		63730E041D130013000ED67F /* BMDateSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63730E011D130013000ED67F /* BMDateSettingView.m */; };
 		63730E051D130013000ED67F /* BMDateSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63730E021D130013000ED67F /* BMDateSettingView.xib */; };
 		6375E9031D05CEF100E48B29 /* animate_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6375E8FE1D05CEF100E48B29 /* animate_gif.gif */; };
@@ -198,6 +197,7 @@
 		ED5E18951D04FCC000B6F9FC /* LDConditionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */; };
 		ED5E18F91D051D0C00B6F9FC /* DAAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */; };
 		ED5E18FA1D051D0C00B6F9FC /* DAAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */; };
+		EDA206571D13C690006B84C1 /* BMDatePickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA206561D13C690006B84C1 /* BMDatePickAlertView.m */; };
 		EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDD416621D056A6F00908976 /* MobAPI.bundle */; };
 		EDD416661D056A6F00908976 /* MobAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416631D056A6F00908976 /* MobAPI.framework */; };
 		EDD416671D056A6F00908976 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416641D056A6F00908976 /* MOBFoundation.framework */; };
@@ -506,8 +506,6 @@
 		637261C21D05B48D00ED9F23 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		637261C41D05B4D700ED9F23 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		637261C61D05B4F100ED9F23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		63730DFE1D130013000ED67F /* BMDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDatePickView.h; sourceTree = "<group>"; };
-		63730DFF1D130013000ED67F /* BMDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDatePickView.m; sourceTree = "<group>"; };
 		63730E001D130013000ED67F /* BMDateSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDateSettingView.h; sourceTree = "<group>"; };
 		63730E011D130013000ED67F /* BMDateSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDateSettingView.m; sourceTree = "<group>"; };
 		63730E021D130013000ED67F /* BMDateSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMDateSettingView.xib; sourceTree = "<group>"; };
@@ -573,6 +571,8 @@
 		ED5E18F61D051D0C00B6F9FC /* DAAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertAction.m; sourceTree = "<group>"; };
 		ED5E18F71D051D0C00B6F9FC /* DAAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlertController.h; sourceTree = "<group>"; };
 		ED5E18F81D051D0C00B6F9FC /* DAAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlertController.m; sourceTree = "<group>"; };
+		EDA206551D13C690006B84C1 /* BMDatePickAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDatePickAlertView.h; sourceTree = "<group>"; };
+		EDA206561D13C690006B84C1 /* BMDatePickAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDatePickAlertView.m; sourceTree = "<group>"; };
 		EDD416621D056A6F00908976 /* MobAPI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobAPI.bundle; sourceTree = "<group>"; };
 		EDD416631D056A6F00908976 /* MobAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobAPI.framework; sourceTree = "<group>"; };
 		EDD416641D056A6F00908976 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -1670,8 +1670,8 @@
 		ED388AF11D112707001392AA /* BMDatePickView */ = {
 			isa = PBXGroup;
 			children = (
-				63730DFE1D130013000ED67F /* BMDatePickView.h */,
-				63730DFF1D130013000ED67F /* BMDatePickView.m */,
+				EDA206551D13C690006B84C1 /* BMDatePickAlertView.h */,
+				EDA206561D13C690006B84C1 /* BMDatePickAlertView.m */,
 				63730E001D130013000ED67F /* BMDateSettingView.h */,
 				63730E011D130013000ED67F /* BMDateSettingView.m */,
 				63730E021D130013000ED67F /* BMDateSettingView.xib */,
@@ -1891,6 +1891,7 @@
 				6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */,
 				6350CD3B1D020542004FBA60 /* MJRefreshNormalHeader.m in Sources */,
 				63440CAF1D02589000F6D1F3 /* IQKeyboardManager.m in Sources */,
+				EDA206571D13C690006B84C1 /* BMDatePickAlertView.m in Sources */,
 				6350CCA41D01F27A004FBA60 /* LDBaseModel.m in Sources */,
 				6350CD401D020542004FBA60 /* UIScrollView+MJRefresh.m in Sources */,
 				ED5E18FA1D051D0C00B6F9FC /* DAAlertController.m in Sources */,
@@ -1979,7 +1980,6 @@
 				6350CD3A1D020542004FBA60 /* MJRefreshGifHeader.m in Sources */,
 				638EDB011D071A0E0038DF2E /* LDForgetVC.m in Sources */,
 				63440CCF1D02589000F6D1F3 /* UIImageView+WebCache.m in Sources */,
-				63730E031D130013000ED67F /* BMDatePickView.m in Sources */,
 				6350CC431D01E9DE004FBA60 /* MASViewConstraint.m in Sources */,
 				6350CCA71D01F293004FBA60 /* LDBaseVC.m in Sources */,
 				ED1F3DEC1D0FF893009EB826 /* UITableView+FDTemplateLayoutCell.m in Sources */,

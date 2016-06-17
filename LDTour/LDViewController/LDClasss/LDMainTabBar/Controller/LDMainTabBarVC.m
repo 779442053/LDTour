@@ -45,24 +45,7 @@
         self.selectedIndex = selectIndex;
     };
     [self.tabBar addSubview:tabBar];
-    
-    tabBar.tapCenterBlock = ^{
-        
-        NSArray *array  = @[@"UIDatePickerModeTime",@"UIDatePickerModeDate",@"UIDatePickerModeDateAndTime",@"UIDatePickerModeCountDownTimer"];
-        int arc = arc4random()%4;
-        [SVProgressHUD showInfoWithStatus:array[arc]];
-        
-        if (arc4random()%2 == 0) {
-            [BMDatePickView showChangeDatePickViewPickerMode:arc date:nil minimumDate:nil maximumDate:nil changeBlock:^(NSDate *date) {
-                [SVProgressHUD showInfoWithStatus:date.description];
-            }];
-        }else{
-        
-            [BMDatePickView showConfirmDatePickViewPickerMode:arc date:nil minimumDate:nil maximumDate:nil confirmBlock:^(NSDate *date) {
-                [SVProgressHUD showInfoWithStatus:date.description];
-            }];
-        }
-    };
+
 }
 
 - (void)addVC:(Class )class title:(NSString *)title {

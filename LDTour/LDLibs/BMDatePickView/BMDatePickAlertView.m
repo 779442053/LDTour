@@ -1,12 +1,12 @@
 //
-//  BMDatePickView.m
-//  BMDatePickViewDemo
+//  BMDatePickAlertView.m
+//  LDTour
 //
-//  Created by Daredos on 16/6/16.
-//  Copyright © 2016年 LiangDahong. All rights reserved.
+//  Created by Daredos on 16/6/17.
+//  Copyright © 2016年 Daredos. All rights reserved.
 //
 
-#import "BMDatePickView.h"
+#import "BMDatePickAlertView.h"
 #import "BMDateSettingView.h"
 
 @interface NSDate (BMDatePickViewTool)
@@ -39,7 +39,7 @@
 }
 
 + (NSDate *)dateWithYear:(NSInteger)year mon:(NSInteger)mon day:(NSInteger)day h:(NSInteger)h m:(NSInteger)m s:(NSInteger)s {
-
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSString *str = [NSString stringWithFormat:@"%.4ld-%.2ld-%.2ld--%.2ld:%.2ld:%.2ld",year,mon,day,h,m,s];
     [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
@@ -57,7 +57,7 @@
 #define __height__      216.0f
 #define __start_year__  2010
 
-@interface BMDatePickView () <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface BMDatePickAlertView () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (strong, nonatomic) UIPickerView       *pickerView;
 @property (assign, nonatomic) BMDatePickViewMode pickerMode;
@@ -74,7 +74,7 @@
 
 @end
 
-@implementation BMDatePickView
+@implementation BMDatePickAlertView
 
 #pragma mark -
 #pragma mark - init
@@ -103,7 +103,7 @@
 }
 
 - (void)setDate:(NSDate *)date {
-
+    
     self.datePicker.date = date;
 }
 
@@ -125,13 +125,13 @@
 }
 
 - (void)setPickDate:(NSDate *)pickDate {
-
+    
     pickDate = pickDate ? pickDate : [NSDate date];
     
     _pickDate = pickDate;
     
     NSInteger year = pickDate.year - __start_year__ < 0 ? 0 : pickDate.year - __start_year__ - 1;
-
+    
     switch (self.pickerMode) {
         case 0:
         {
@@ -229,7 +229,7 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-
+    
     switch (component) {
         case 0:
             return self.yearRang;
@@ -277,14 +277,14 @@
     if (component  < 3) {
         r += 1;
     }
-
+    
     NSMutableString *string = [NSMutableString stringWithFormat:@"%ld",r];
-
+    
     if (component == 0) {
-
+        
         string = [NSMutableString stringWithFormat:@"%ld",r + __start_year__];
     }
-
+    
     if (component > 2) {
         
         string = [NSMutableString stringWithFormat:@"%.2ld",r];
@@ -322,14 +322,14 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
+    
     if (self.pickerMode == 0 || self.pickerMode == 1) {
         if (_changeBlock) {
             [self changeButtonClick];
         }
         return;
     }
-
+    
     if ((component == 1)
         || (component == 0 && [pickerView selectedRowInComponent:1] == 1)) {
         [pickerView reloadComponent:2];
@@ -353,7 +353,7 @@
 + (instancetype)datePickViewWithConfirmForPickerMode:(UIDatePickerMode)pickerMode date:(NSDate *)date minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate confirmBlock:(ConfirmBlock)confirmBlock {
     
     UIWindow *win = [[UIApplication sharedApplication] keyWindow];
-    BMDatePickView *datePickView = [[BMDatePickView alloc] initWithFrame:win.bounds];
+    BMDatePickAlertView *datePickView = [[BMDatePickAlertView alloc] initWithFrame:win.bounds];
     datePickView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     datePickView.confirmBlock = confirmBlock;
     [datePickView addSubview:datePickView.datePicker];
@@ -374,7 +374,7 @@
 + (instancetype)datePickViewWithCustomConfirmForPickerMode:(BMDatePickViewMode)pickerMode date:(NSDate *)date minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate confirmBlock:(ConfirmBlock)confirmBlock {
     
     UIWindow *win = [[UIApplication sharedApplication] keyWindow];
-    BMDatePickView *datePickView = [[BMDatePickView alloc] initWithFrame:win.bounds];
+    BMDatePickAlertView *datePickView = [[BMDatePickAlertView alloc] initWithFrame:win.bounds];
     datePickView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     datePickView.confirmBlock = confirmBlock;
     [datePickView addSubview:datePickView.pickerView];
@@ -404,12 +404,12 @@
 + (instancetype)datePickViewWithChangeForPickerMode:(UIDatePickerMode)pickerMode date:(NSDate *)date minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate changeBlock:(ChangeBlock)changeBlock {
     
     UIWindow *win = [[UIApplication sharedApplication] keyWindow];
-    BMDatePickView *datePickView = [[BMDatePickView alloc] initWithFrame:win.bounds];
+    BMDatePickAlertView *datePickView = [[BMDatePickAlertView alloc] initWithFrame:win.bounds];
     datePickView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     datePickView.changeBlock = changeBlock;
     [datePickView addSubview:datePickView.datePicker];
     datePickView.alpha = 0.0f;
-
+    
     [UIView animateWithDuration:0.3 animations:^{
         datePickView.alpha = 1.0f;
     }];
@@ -425,9 +425,9 @@
  *  @brief 创建自定义的实时交互时间选择弹窗
  */
 + (instancetype)datePickViewWirhCustomChangeForPickerMode:(BMDatePickViewMode)pickerMode date:(NSDate *)date minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate changeBlock:(ChangeBlock)changeBlock {
-
+    
     UIWindow *win = [[UIApplication sharedApplication] keyWindow];
-    BMDatePickView *datePickView = [[BMDatePickView alloc] initWithFrame:win.bounds];
+    BMDatePickAlertView *datePickView = [[BMDatePickAlertView alloc] initWithFrame:win.bounds];
     datePickView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     datePickView.changeBlock = changeBlock;
     [datePickView addSubview:datePickView.pickerView];
@@ -447,7 +447,7 @@
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
 }
 - (void)diss {
-
+    
     [self tapBackgroundClick];
 }
 #pragma mark - 私有方法
@@ -469,7 +469,7 @@
 }
 
 - (void)conButtonClick {
-
+    
     // 获取显示的时间信息
     NSInteger year = 1;
     NSInteger mon  = 1;
@@ -555,7 +555,7 @@
     }
     // 时间判断
     NSDate *date = [NSDate dateWithYear:year mon:mon day:day h:h m:m s:s];
-
+    
     if (self.changeBlock) {
         self.changeBlock(self, date);
     }

@@ -1,17 +1,17 @@
 //
-//  BMDatePickView.h
-//  BMDatePickViewDemo
+//  BMDatePickAlertView.h
+//  LDTour
 //
-//  Created by Daredos on 16/6/16.
-//  Copyright © 2016年 LiangDahong. All rights reserved.
+//  Created by Daredos on 16/6/17.
+//  Copyright © 2016年 Daredos. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class BMDatePickView; 
+@class BMDatePickAlertView;
 
-typedef void(^ChangeBlock) (BMDatePickView *datePickView, NSDate *date);
-typedef void(^ConfirmBlock)(BMDatePickView *datePickView, NSDate *date);
+typedef void(^ChangeBlock) (BMDatePickAlertView *datePickView, NSDate *date);
+typedef void(^ConfirmBlock)(BMDatePickAlertView *datePickView, NSDate *date);
 
 /*!
  *  @brief 自定义的时间选择控件类型
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, BMDatePickViewMode) {
     BMDatePickViewModeYearMonthDayHourMinuteSecond,
 };
 
-@interface BMDatePickView : UIView
+@interface BMDatePickAlertView : UIView
 
 @property (strong, nonatomic) NSDate *date;
 
@@ -84,4 +84,5 @@ typedef NS_ENUM(NSInteger, BMDatePickViewMode) {
 - (void)show;
 
 - (void)diss;
+
 @end

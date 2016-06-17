@@ -298,9 +298,9 @@
     NSInteger year = 0;
     NSInteger mon  = 0;
     NSInteger day  = 0;
-    NSInteger h = 0;
-    NSInteger m = 0;
-    NSInteger s = 0;
+    NSInteger h    = 0;
+    NSInteger m    = 0;
+    NSInteger s    = 0;
     
     switch (self.datePickerMode) {
 

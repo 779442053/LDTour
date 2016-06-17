@@ -7,8 +7,10 @@
 //
 
 #import "LDCitPersonVC.h"
+#import "BMDatePickAlertView.h"
 
 @interface LDCitPersonVC ()
+
 
 @end
 
@@ -33,5 +35,55 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)cc1:(id)sender {
+
+    
+    BMDatePickAlertView *SS = [BMDatePickAlertView datePickViewWirhCustomChangeForPickerMode:0 date:nil minimumDate:nil maximumDate:nil changeBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
+        
+        
+    }];
+    [ SS show];
+    
+    
+    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithConfirmForPickerMode:arc4random()%4 date:nil minimumDate:nil maximumDate:nil confirmBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
+        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
+        [datePickView diss];
+    }];
+    [s show];
+}
+
+- (IBAction)cc2:(id)sender {
+    
+    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithChangeForPickerMode:arc4random()%4 date:nil minimumDate:nil maximumDate:nil changeBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
+        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
+    }];
+    [s show];
+}
+
+- (IBAction)cc3:(id)sender {
+
+    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithCustomConfirmForPickerMode:arc4random()%6 date:nil minimumDate:nil maximumDate:nil confirmBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
+        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
+        [datePickView diss];
+    }];
+    [s show];
+}
+
+- (IBAction)cc4:(id)sender {
+    
+    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWirhCustomChangeForPickerMode:arc4random()%6 date:nil minimumDate:nil maximumDate:nil changeBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
+        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
+    }];
+    [s show];
+}
 
 @end
