@@ -18,5 +18,6 @@
 #import "EXTScope.h"
 #import "DAAlertController.h"
 #import "LDHHTTPSessionManager.h"
+#import "LDProgressHUD.h"
 
 #endif

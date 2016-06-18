@@ -165,7 +165,7 @@
         }
         [self.recommendationTableView reloadData];
     } failureBlock:^(NSError *error) {
-        [SVProgressHUD showInfoWithStatus:error.domain];
+        [LDProgressHUD showHUDWithError:error];
         [self.recommendationTableView.header endRefreshing];
         [self.recommendationTableView.footer endRefreshing];
     }];

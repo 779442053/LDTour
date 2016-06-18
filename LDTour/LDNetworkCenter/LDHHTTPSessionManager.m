@@ -13,6 +13,7 @@
 #import "LDAertLoginVC.h"
 #import "UIApplication+BMExtension.h"
 #import <MobAPI/MobAPI.h>
+#import "LDProgressHUD.h"
 
 #define kBASE_URL            @""
 #define kTimeoutInterval     10.0f
@@ -268,7 +269,7 @@
     
     /*! 检测是否有网络 */
     AFNetworkReachabilityStatus net = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
-    if ( net == AFNetworkReachabilityStatusNotReachable) {
+    if ( net == AFNetworkReachabilityStatusNotReachable || net == AFNetworkReachabilityStatusUnknown) {
         // 没有网络
         NSError *cancelError = [NSError errorWithDomain:@"没有网络,请检测网络!" code:(-12002) userInfo:nil];
         ! failureBlock ? : failureBlock(cancelError);

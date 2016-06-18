@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LDTour/LDNetworkCenter/LDHHTTPSessionManager.m"
-            timestampString = "487609008.561894"
+            timestampString = "487942182.22757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "+getWxarticleCategoryWithNetIdentifier:downloadProgressBlock:successBlock:failureBlock:"
             landmarkType = "5">
          </BreakpointContent>
