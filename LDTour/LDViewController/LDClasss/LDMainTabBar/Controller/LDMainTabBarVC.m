@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tabBar.hidden = NO;
     self.tabBar.translucent = NO;
 
@@ -35,7 +34,6 @@
     navBarDict[NSFontAttributeName]            = [UIFont boldSystemFontOfSize:19.0f];
     navBarDict[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [[UINavigationBar appearance] setTitleTextAttributes:navBarDict];
-    
     
     LDTabBar *tabBar = [LDTabBar tabBar];
     tabBar.frame = self.tabBar.bounds;

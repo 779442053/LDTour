@@ -142,6 +142,8 @@
 		6350CD3F1D020542004FBA60 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2A1D020542004FBA60 /* UIScrollView+MJExtension.m */; };
 		6350CD401D020542004FBA60 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2C1D020542004FBA60 /* UIScrollView+MJRefresh.m */; };
 		6350CD411D020542004FBA60 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6350CD2E1D020542004FBA60 /* UIView+MJExtension.m */; };
+		636BC1B41D1F86EC006DC85D /* BMPointScannerCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636BC1B31D1F86EC006DC85D /* BMPointScannerCodeView.xib */; };
+		636BC1B71D1F86F3006DC85D /* BMPointScannerCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BC1B61D1F86F3006DC85D /* BMPointScannerCodeView.m */; };
 		636F3AF91D030CDE00395BC4 /* LDHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3AF81D030CDE00395BC4 /* LDHHTTPSessionManager.m */; };
 		636F3B061D031AE400395BC4 /* BMScannerQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F3AFC1D031AE400395BC4 /* BMScannerQRCodeView.m */; };
 		636F3B071D031AE400395BC4 /* image_qr_corner_001_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F3AFD1D031AE400395BC4 /* image_qr_corner_001_@2x.png */; };
@@ -486,6 +488,9 @@
 		6350CD2C1D020542004FBA60 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		6350CD2D1D020542004FBA60 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		6350CD2E1D020542004FBA60 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		636BC1B31D1F86EC006DC85D /* BMPointScannerCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPointScannerCodeView.xib; sourceTree = "<group>"; };
+		636BC1B51D1F86F3006DC85D /* BMPointScannerCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPointScannerCodeView.h; sourceTree = "<group>"; };
+		636BC1B61D1F86F3006DC85D /* BMPointScannerCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPointScannerCodeView.m; sourceTree = "<group>"; };
 		636F3AF71D030CDE00395BC4 /* LDHHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHHTTPSessionManager.h; sourceTree = "<group>"; };
 		636F3AF81D030CDE00395BC4 /* LDHHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHHTTPSessionManager.m; sourceTree = "<group>"; };
 		636F3AFB1D031AE400395BC4 /* BMScannerQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMScannerQRCodeView.h; sourceTree = "<group>"; };
@@ -1575,6 +1580,9 @@
 				636F3B031D031AE400395BC4 /* image_qr_corner_004_@2x.png */,
 				636F3B041D031AE400395BC4 /* image_qr_corner_004_@3x.png */,
 				636F3B051D031AE400395BC4 /* image_qr_scan_line_001@2x.png */,
+				636BC1B51D1F86F3006DC85D /* BMPointScannerCodeView.h */,
+				636BC1B61D1F86F3006DC85D /* BMPointScannerCodeView.m */,
+				636BC1B31D1F86EC006DC85D /* BMPointScannerCodeView.xib */,
 			);
 			path = BMScannerQRCodeView;
 			sourceTree = "<group>";
@@ -1813,6 +1821,7 @@
 				633697961D02BB9300D541A9 /* LDAdvertisementVC.xib in Resources */,
 				6375E9031D05CEF100E48B29 /* animate_gif.gif in Resources */,
 				6350CCC31D01F462004FBA60 /* LDBespokeVC.xib in Resources */,
+				636BC1B41D1F86EC006DC85D /* BMPointScannerCodeView.xib in Resources */,
 				63730E051D130013000ED67F /* BMDateSettingView.xib in Resources */,
 				636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */,
 				636F3B081D031AE400395BC4 /* image_qr_corner_001_@3x.png in Resources */,
@@ -1984,6 +1993,7 @@
 				6350CCA71D01F293004FBA60 /* LDBaseVC.m in Sources */,
 				ED1F3DEC1D0FF893009EB826 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				636F3AF91D030CDE00395BC4 /* LDHHTTPSessionManager.m in Sources */,
+				636BC1B71D1F86F3006DC85D /* BMPointScannerCodeView.m in Sources */,
 				63440CBC1D02589000F6D1F3 /* NSObject+MJClass.m in Sources */,
 				63ED9F9E1D04808400EFD598 /* LDAPPCacheManager.m in Sources */,
 				63440CB31D02589000F6D1F3 /* IQTitleBarButtonItem.m in Sources */,
