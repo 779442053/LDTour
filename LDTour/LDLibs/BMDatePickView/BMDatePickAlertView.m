@@ -19,18 +19,43 @@
 @property (assign, nonatomic, readonly) NSInteger second;
 @property (strong, nonatomic, readonly) NSDateComponents   *dateComponents;
 + (NSDate *)dateWithYear:(NSInteger)year mon:(NSInteger)mon day:(NSInteger)day h:(NSInteger)h m:(NSInteger)m s:(NSInteger)s;
+
 @end
 
 @implementation NSDate (BMDatePickViewTool)
 
-- (NSInteger)year   { return self.dateComponents.year;   }
-- (NSInteger)month  { return self.dateComponents.month;  }
-- (NSInteger)day    { return self.dateComponents.day;    }
-- (NSInteger)hour   { return self.dateComponents.hour;   }
-- (NSInteger)minute { return self.dateComponents.minute; }
-- (NSInteger)second { return self.dateComponents.second; }
+- (NSInteger)year   {
+    
+    return self.dateComponents.year;
+}
+
+- (NSInteger)month  {
+    
+    return self.dateComponents.month;
+    
+}
+- (NSInteger)day    {
+    
+    return self.dateComponents.day;
+}
+
+- (NSInteger)hour   {
+    
+    return self.dateComponents.hour;
+}
+
+- (NSInteger)minute {
+    
+    return self.dateComponents.minute;
+}
+
+- (NSInteger)second {
+    
+    return self.dateComponents.second;
+}
 
 - (NSDateComponents *)dateComponents {
+    
     NSCalendar *calendar0 = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     NSInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
@@ -82,8 +107,9 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    
     if (self) {
-        [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackgroundClick)]];
+        [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackgroundClickDiss)]];
     }
     return self;
 }
@@ -96,6 +122,7 @@
         _dateSettingView = [BMDateSettingView BMDateSettingViewWithFrame:CGRectMake(0, __sc_h__-__height__-40, __sc_w__, 40) confirmBlock:^{
             self.confirmBlock ? self.confirmBlock(self, self.datePicker.date) : nil;
         } cancelBlock:^{
+            self.cancelBlock ? self.cancelBlock() : nil;
             [self tapBackgroundClick];
         }];
     }
@@ -111,7 +138,6 @@
     
     return self.datePicker.date;
 }
-
 
 - (UIPickerView *)pickerView {
     
@@ -293,7 +319,6 @@
     UILabel*label    = [[UILabel alloc]initWithFrame:CGRectMake(component*(__sc_w__/w), 0,__sc_w__/w, 30)];
     label.font       = [UIFont systemFontOfSize:13.0];
     label.adjustsFontSizeToFitWidth = YES;
-    
     label.textAlignment = 1;
     switch (component) {
         case 0:
@@ -323,30 +348,32 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    if (self.pickerMode == 0 || self.pickerMode == 1) {
-        if (_changeBlock) {
-            [self changeButtonClick];
+    // if 只有年 或者 年月 就不需要对 天数做特殊处理
+    if (self.pickerMode == BMDatePickViewModeYear || self.pickerMode == BMDatePickViewModeYearMonth) {
+        
+        if ([self getDateReturn]) {
+            if (_changeBlock) {
+                [self changeButtonClick];
+            }
         }
         return;
     }
     
     if ((component == 1)
-        || (component == 0 && [pickerView selectedRowInComponent:1] == 1)) {
-        [pickerView reloadComponent:2];
+        || (component == 0
+            && [pickerView selectedRowInComponent:1] == 1)) {
+            [pickerView reloadComponent:2];
+        }
+    
+    if ([self getDateReturn]) {
         if (_changeBlock) {
             [self changeButtonClick];
         }
-        return;
-    }
-    if (_changeBlock) {
-        [self changeButtonClick];
     }
 }
 
 #pragma mark - 自定义delegate
-
 #pragma mark - 公有方法
-
 /*!
  *  @brief 创建系统自带的有确定按钮的时间选择弹窗
  */
@@ -384,6 +411,7 @@
             [datePickView conButtonClick];
         }
     } cancelBlock:^{
+        datePickView.cancelBlock ? datePickView.cancelBlock() : nil;
         [datePickView tapBackgroundClick];
     }]];
     
@@ -444,10 +472,11 @@
 }
 
 - (void)show {
+    
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
 }
+
 - (void)diss {
-    
     [self tapBackgroundClick];
 }
 #pragma mark - 私有方法
@@ -467,6 +496,19 @@
         [self removeFromSuperview];
     }];
 }
+
+- (void)tapBackgroundClickDiss {
+    
+    self.cancelBlock ? self.cancelBlock() : nil;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
+
+
 
 - (void)conButtonClick {
     
@@ -560,4 +602,71 @@
         self.changeBlock(self, date);
     }
 }
+
+- (NSDate *)getCurrDate {
+    
+    // 获取显示的时间信息
+    NSInteger year = 1;
+    NSInteger mon  = 1;
+    NSInteger day  = 1;
+    NSInteger h    = 0;
+    NSInteger m    = 0;
+    NSInteger s    = 0;
+    
+    switch (self.pickerMode) {
+            
+        case BMDatePickViewModeYearMonthDayHourMinuteSecond:
+        {
+            s =  [_pickerView selectedRowInComponent:5];
+        }
+        case BMDatePickViewModeYearMonthDayHourMinute:
+        {
+            m =  [_pickerView selectedRowInComponent:4];
+        }
+        case BMDatePickViewModeYearMonthDayHour:
+        {
+            h =  [_pickerView selectedRowInComponent:3];
+        }
+        case BMDatePickViewModeYearMonthDay:
+        {
+            day  = [_pickerView selectedRowInComponent:2] + 1;
+        }
+        case BMDatePickViewModeYearMonth:
+        {
+            mon  = [_pickerView selectedRowInComponent:1] + 1;
+        }
+        case BMDatePickViewModeYear:
+        {
+            year = [_pickerView selectedRowInComponent:0] + __start_year__ + 1;
+        }
+        default:
+            break;
+    }
+    // 时间判断
+    NSDate *date = [NSDate dateWithYear:year mon:mon day:day h:h m:m s:s];
+    return date;
+}
+
+- (BOOL)getDateReturn {
+    
+    NSDate *cuDate = [self getCurrDate];
+    
+    if (self.minimumPickDate && [cuDate compare:self.minimumPickDate] == NSOrderedAscending) {
+        self.pickDate = self.minimumPickDate;
+        if (_changeBlock) {
+            _changeBlock(self,self.minimumPickDate);
+        }
+        return NO;
+    }
+    
+    if (self.maximumPickDate && [cuDate compare:self.maximumPickDate] == NSOrderedDescending) {
+        self.pickDate = self.maximumPickDate;
+        if (_changeBlock) {
+            _changeBlock(self,self.maximumPickDate);
+        }
+        return NO;
+    }
+    return YES;
+}
+
 @end
