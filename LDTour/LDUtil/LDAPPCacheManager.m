@@ -12,6 +12,7 @@
 @interface LDAPPCacheManager ()
 
 @property (strong, nonatomic) YYCache *yyCache;
+@property (strong, nonatomic) NSString *A __attribute__((unavailable));
 
 @end
 

@@ -183,6 +183,12 @@
 		63ED9FA41D04833D00EFD598 /* LDAertLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA21D04833D00EFD598 /* LDAertLoginVC.xib */; };
 		63ED9FA81D048B7600EFD598 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9FA71D048B7600EFD598 /* icon.png */; };
 		63F835561D0BD35A00F7B1F8 /* LDProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F835551D0BD35A00F7B1F8 /* LDProgressHUD.m */; };
+		ED1B6F0B1D237AB90025FCCC /* TelephoneBookAddPersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B6F031D237AB90025FCCC /* TelephoneBookAddPersonVC.m */; };
+		ED1B6F0C1D237AB90025FCCC /* TelephoneBookAddPersonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B6F041D237AB90025FCCC /* TelephoneBookAddPersonVC.xib */; };
+		ED1B6F0D1D237AB90025FCCC /* TelephoneBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B6F061D237AB90025FCCC /* TelephoneBookCell.m */; };
+		ED1B6F0E1D237AB90025FCCC /* TelephoneBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B6F071D237AB90025FCCC /* TelephoneBookCell.xib */; };
+		ED1B6F0F1D237AB90025FCCC /* TelephoneBookDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B6F091D237AB90025FCCC /* TelephoneBookDateVC.m */; };
+		ED1B6F101D237AB90025FCCC /* TelephoneBookDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B6F0A1D237AB90025FCCC /* TelephoneBookDateVC.xib */; };
 		ED1F3DEA1D0FF893009EB826 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DDA1D0FF893009EB826 /* UITableView+FDIndexPathHeightCache.m */; };
 		ED1F3DEB1D0FF893009EB826 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DDC1D0FF893009EB826 /* UITableView+FDKeyedHeightCache.m */; };
 		ED1F3DEC1D0FF893009EB826 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1F3DDE1D0FF893009EB826 /* UITableView+FDTemplateLayoutCell.m */; };
@@ -200,6 +206,7 @@
 		ED8806421D22725100EF44E1 /* BMDatePickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88063E1D22725100EF44E1 /* BMDatePickAlertView.m */; };
 		ED8806431D22725100EF44E1 /* BMDateSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8806401D22725100EF44E1 /* BMDateSettingView.m */; };
 		ED8806441D22725100EF44E1 /* BMDateSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8806411D22725100EF44E1 /* BMDateSettingView.xib */; };
+		ED8A91B21D22750600B6F211 /* knowledge.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8A91B11D22750600B6F211 /* knowledge.m */; };
 		EDD416651D056A6F00908976 /* MobAPI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EDD416621D056A6F00908976 /* MobAPI.bundle */; };
 		EDD416661D056A6F00908976 /* MobAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416631D056A6F00908976 /* MobAPI.framework */; };
 		EDD416671D056A6F00908976 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD416641D056A6F00908976 /* MOBFoundation.framework */; };
@@ -547,6 +554,15 @@
 		63ED9FA71D048B7600EFD598 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		63F835541D0BD35A00F7B1F8 /* LDProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDProgressHUD.h; sourceTree = "<group>"; };
 		63F835551D0BD35A00F7B1F8 /* LDProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressHUD.m; sourceTree = "<group>"; };
+		ED1B6F021D237AB90025FCCC /* TelephoneBookAddPersonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelephoneBookAddPersonVC.h; sourceTree = "<group>"; };
+		ED1B6F031D237AB90025FCCC /* TelephoneBookAddPersonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelephoneBookAddPersonVC.m; sourceTree = "<group>"; };
+		ED1B6F041D237AB90025FCCC /* TelephoneBookAddPersonVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelephoneBookAddPersonVC.xib; sourceTree = "<group>"; };
+		ED1B6F051D237AB90025FCCC /* TelephoneBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelephoneBookCell.h; sourceTree = "<group>"; };
+		ED1B6F061D237AB90025FCCC /* TelephoneBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelephoneBookCell.m; sourceTree = "<group>"; };
+		ED1B6F071D237AB90025FCCC /* TelephoneBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelephoneBookCell.xib; sourceTree = "<group>"; };
+		ED1B6F081D237AB90025FCCC /* TelephoneBookDateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelephoneBookDateVC.h; sourceTree = "<group>"; };
+		ED1B6F091D237AB90025FCCC /* TelephoneBookDateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelephoneBookDateVC.m; sourceTree = "<group>"; };
+		ED1B6F0A1D237AB90025FCCC /* TelephoneBookDateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelephoneBookDateVC.xib; sourceTree = "<group>"; };
 		ED1F3DD91D0FF893009EB826 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
 		ED1F3DDA1D0FF893009EB826 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
 		ED1F3DDB1D0FF893009EB826 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
@@ -578,6 +594,8 @@
 		ED88063F1D22725100EF44E1 /* BMDateSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDateSettingView.h; sourceTree = "<group>"; };
 		ED8806401D22725100EF44E1 /* BMDateSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDateSettingView.m; sourceTree = "<group>"; };
 		ED8806411D22725100EF44E1 /* BMDateSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMDateSettingView.xib; sourceTree = "<group>"; };
+		ED8A91B01D22750600B6F211 /* knowledge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = knowledge.h; sourceTree = "<group>"; };
+		ED8A91B11D22750600B6F211 /* knowledge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knowledge.m; sourceTree = "<group>"; };
 		EDD416621D056A6F00908976 /* MobAPI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobAPI.bundle; sourceTree = "<group>"; };
 		EDD416631D056A6F00908976 /* MobAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobAPI.framework; sourceTree = "<group>"; };
 		EDD416641D056A6F00908976 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -1114,6 +1132,8 @@
 				63ED9F9D1D04808400EFD598 /* LDAPPCacheManager.m */,
 				ED5E18931D04FCC000B6F9FC /* LDConditionManager.h */,
 				ED5E18941D04FCC000B6F9FC /* LDConditionManager.m */,
+				ED8A91B01D22750600B6F211 /* knowledge.h */,
+				ED8A91B11D22750600B6F211 /* knowledge.m */,
 			);
 			path = LDUtil;
 			sourceTree = "<group>";
@@ -1268,6 +1288,15 @@
 				6350CCCE1D01F4F5004FBA60 /* LDCitPersonVC.h */,
 				6350CCCF1D01F4F5004FBA60 /* LDCitPersonVC.m */,
 				6350CCD01D01F4F5004FBA60 /* LDCitPersonVC.xib */,
+				ED1B6F021D237AB90025FCCC /* TelephoneBookAddPersonVC.h */,
+				ED1B6F031D237AB90025FCCC /* TelephoneBookAddPersonVC.m */,
+				ED1B6F041D237AB90025FCCC /* TelephoneBookAddPersonVC.xib */,
+				ED1B6F051D237AB90025FCCC /* TelephoneBookCell.h */,
+				ED1B6F061D237AB90025FCCC /* TelephoneBookCell.m */,
+				ED1B6F071D237AB90025FCCC /* TelephoneBookCell.xib */,
+				ED1B6F081D237AB90025FCCC /* TelephoneBookDateVC.h */,
+				ED1B6F091D237AB90025FCCC /* TelephoneBookDateVC.m */,
+				ED1B6F0A1D237AB90025FCCC /* TelephoneBookDateVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1812,6 +1841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6375E9081D05CF6300E48B29 /* ann.png in Resources */,
+				ED1B6F0E1D237AB90025FCCC /* TelephoneBookCell.xib in Resources */,
 				63440CD91D025A2B00F6D1F3 /* LDSettingVC.xib in Resources */,
 				6350CCD21D01F4F5004FBA60 /* LDCitPersonVC.xib in Resources */,
 				6350CCE01D01F5AF004FBA60 /* tabbar_explore_normal.png in Resources */,
@@ -1824,6 +1854,7 @@
 				636BC1B41D1F86EC006DC85D /* BMPointScannerCodeView.xib in Resources */,
 				636F3B0E1D031AE400395BC4 /* image_qr_corner_004_@3x.png in Resources */,
 				636F3B081D031AE400395BC4 /* image_qr_corner_001_@3x.png in Resources */,
+				ED1B6F0C1D237AB90025FCCC /* TelephoneBookAddPersonVC.xib in Resources */,
 				6350CCEB1D01F6ED004FBA60 /* LDAlertView.xib in Resources */,
 				636F3B091D031AE400395BC4 /* image_qr_corner_002_@2x.png in Resources */,
 				63ED9FA81D048B7600EFD598 /* icon.png in Resources */,
@@ -1848,6 +1879,7 @@
 				636F3B0C1D031AE400395BC4 /* image_qr_corner_003_@3x.png in Resources */,
 				63440CB61D02589000F6D1F3 /* IQKeyboardManager.bundle in Resources */,
 				6350CCE21D01F5AF004FBA60 /* tabbar_me_normal.png in Resources */,
+				ED1B6F101D237AB90025FCCC /* TelephoneBookDateVC.xib in Resources */,
 				636F3B0B1D031AE400395BC4 /* image_qr_corner_003_@2x.png in Resources */,
 				ED8806441D22725100EF44E1 /* BMDateSettingView.xib in Resources */,
 				634597451D01E4F3007837CD /* LaunchScreen.storyboard in Resources */,
@@ -1895,6 +1927,7 @@
 				633697881D02B44700D541A9 /* TAAnimatedDotView.m in Sources */,
 				6350CC3C1D01E9DE004FBA60 /* AFURLSessionManager.m in Sources */,
 				63440CA91D02589000F6D1F3 /* IQNSArray+Sort.m in Sources */,
+				ED8A91B21D22750600B6F211 /* knowledge.m in Sources */,
 				63ED9FA31D04833D00EFD598 /* LDAertLoginVC.m in Sources */,
 				63440CAB1D02589000F6D1F3 /* IQUITextFieldView+Additions.m in Sources */,
 				6397C96A1D0251790038CC4A /* UIDevice+BMDevice.m in Sources */,
@@ -1930,9 +1963,11 @@
 				63440CC51D02589000F6D1F3 /* SDWebImageDecoder.m in Sources */,
 				ED1F3DEE1D0FF893009EB826 /* YYCache.m in Sources */,
 				6350CD381D020542004FBA60 /* MJRefreshBackNormalFooter.m in Sources */,
+				ED1B6F0D1D237AB90025FCCC /* TelephoneBookCell.m in Sources */,
 				63ED9F9A1D04780400EFD598 /* EXTRuntimeExtensions.m in Sources */,
 				63440CCD1D02589000F6D1F3 /* UIImage+WebP.m in Sources */,
 				6350CC411D01E9DE004FBA60 /* MASLayoutConstraint.m in Sources */,
+				ED1B6F0B1D237AB90025FCCC /* TelephoneBookAddPersonVC.m in Sources */,
 				6350CCAE1D01F3B2004FBA60 /* LDNoTabBarBaseVC.m in Sources */,
 				63440CCA1D02589000F6D1F3 /* UIButton+WebCache.m in Sources */,
 				6350CD391D020542004FBA60 /* MJRefreshBackStateFooter.m in Sources */,
@@ -2020,6 +2055,7 @@
 				ED8806431D22725100EF44E1 /* BMDateSettingView.m in Sources */,
 				6350CCC71D01F46F004FBA60 /* LDCenterVC.m in Sources */,
 				6350CD3C1D020542004FBA60 /* MJRefreshStateHeader.m in Sources */,
+				ED1B6F0F1D237AB90025FCCC /* TelephoneBookDateVC.m in Sources */,
 				63440CC01D02589000F6D1F3 /* NSString+MJExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

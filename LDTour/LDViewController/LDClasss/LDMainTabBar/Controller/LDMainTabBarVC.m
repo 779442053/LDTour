@@ -25,11 +25,11 @@
     self.tabBar.hidden = NO;
     self.tabBar.translucent = NO;
 
+    [self addVC:[LDCitPersonVC class] title:@"联系人"];
     [self addVC:[LDRecommendationVC class] title:@"推荐"];
-    [self addVC:[LDCitPersonVC class] title:@"城市达人"];
     [self addVC:[LDBespokeVC class] title:@"面包订制"];
     [self addVC:[LDCenterVC class] title:@"个人中心"];
-    
+
     NSMutableDictionary *navBarDict            = [NSMutableDictionary dictionary];
     navBarDict[NSFontAttributeName]            = [UIFont boldSystemFontOfSize:19.0f];
     navBarDict[NSForegroundColorAttributeName] = [UIColor whiteColor];

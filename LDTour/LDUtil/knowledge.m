@@ -10,4 +10,12 @@
 
 @implementation knowledge
 
+
+- (instancetype)init{
+    if ( self = [super init]) {
+        self.name;
+    }
+    return self;
+}
+
 @end

@@ -7,61 +7,91 @@
 //
 
 #import "LDCitPersonVC.h"
-#import "BMDatePickAlertView.h"
+#import "TelephoneBookCell.h"
+#import "TelephoneBookDateVC.h"
+#import "TelephoneBookAddPersonVC.h"
+#import "YYCache.h"
 
-@interface LDCitPersonVC ()
+@interface LDCitPersonVC ()<UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *telephoneBookTableView;
+@property (strong, nonatomic) NSMutableArray *telephoneBookArray;
 
 @end
 
 @implementation LDCitPersonVC
 
+#pragma mark -
+
+#pragma mark - 生命周期
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (IBAction)systemDatePickForHaveConfirm {
-
-    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithConfirmForPickerMode:arc4random()%4 date:nil minimumDate:nil maximumDate:nil confirmBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
-        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
-        [datePickView diss];
-    }];
-    [s show];
-}
-
-- (IBAction)systemDatePickForChanged {
     
-    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithChangeForPickerMode:arc4random()%4 date:nil minimumDate:nil maximumDate:nil changeBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
-        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
-    }];
-    [s show];
-}
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItemClick)];
+ }
 
+#pragma mark - getters setters
 
-- (IBAction)selfDatePickForHaveConfirm {
+- (NSMutableArray *)telephoneBookArray {
     
-    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWithCustomConfirmForPickerMode:arc4random()%6 date:nil minimumDate:nil maximumDate:nil confirmBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
-        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
-        [datePickView diss];
-    }];
-    [s show];
+    YYCache *yyCache = [[YYCache alloc] initWithName:@"TelephoneBookDB"];
+    id a = [yyCache objectForKey:@"TelephoneBookArray"];
+    NSArray *arr = a;
+    if (arr && [arr isKindOfClass:[NSArray class]] && arr.count) {
+        _telephoneBookArray = [arr mutableCopy];
+    }else{
+        _telephoneBookArray = [@[] mutableCopy];
+    }
+    return _telephoneBookArray;
 }
 
-- (IBAction)selfDatePickForChanged {
+#pragma mark - 系统delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    BMDatePickAlertView *s = [BMDatePickAlertView datePickViewWirhCustomChangeForPickerMode:arc4random()%6 date:nil minimumDate:nil maximumDate:nil changeBlock:^(BMDatePickAlertView *datePickView, NSDate *date) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd--HH:mm:ss"];
-        NSLog(@"时间： %@",[dateFormatter stringFromDate:date]);
-    }];
-    [s show];
+    return self.telephoneBookArray.count;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TelephoneBookCell *cell = [TelephoneBookCell telephoneBookCellWithTableView:tableView];
+    
+    cell.dict = self.telephoneBookArray[indexPath.row];
+    
+    cell.smsBlock = ^(NSString *string){
+        NSString *str = [NSString stringWithFormat:@"sms://%@",string];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:str]];
+    };
+    cell.phoneBlock = ^(NSString *string){
+        NSString *str = [NSString stringWithFormat:@"telprompt://%@",string];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    };
+    return cell;
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.telephoneBookTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:0];
+    
+    TelephoneBookDateVC *c = [TelephoneBookDateVC new];
+    c.dict = self.telephoneBookArray[indexPath.row];
+    c.reloadBlock = ^{
+        [self.telephoneBookTableView reloadData];
+    };
+    [self.navigationController pushViewController:c animated:YES];
+}
+
+#pragma mark - 自定义delegate
+#pragma mark - 公有方法
+#pragma mark - 私有方法
+#pragma mark - 事件响应
+- (void)addItemClick{
+    
+    TelephoneBookAddPersonVC *c = [TelephoneBookAddPersonVC new];
+    c.reloadBlock = ^{
+        [self.telephoneBookTableView reloadData];
+    };
+    [self.navigationController pushViewController:c animated:YES];
+}
 @end

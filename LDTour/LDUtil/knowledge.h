@@ -10,4 +10,8 @@
 
 @interface knowledge : NSObject
 
+@property (strong, nonatomic) NSString *name UNAVAILABLE_ATTRIBUTE;
+
+- (instancetype)init  UNAVAILABLE_ATTRIBUTE;
+
 @end
