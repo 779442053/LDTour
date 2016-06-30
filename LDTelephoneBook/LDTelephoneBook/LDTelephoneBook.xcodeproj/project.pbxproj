@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDCAECA01D24F00900945A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAEC9F1D24F00900945A08 /* main.m */; };
+		EDCAECA31D24F00900945A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECA21D24F00900945A08 /* AppDelegate.m */; };
+		EDCAECAB1D24F00900945A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCAECAA1D24F00900945A08 /* Assets.xcassets */; };
+		EDCAECAE1D24F00900945A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCAECAC1D24F00900945A08 /* LaunchScreen.storyboard */; };
+		EDCAECB91D24F00900945A08 /* LDTelephoneBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECB81D24F00900945A08 /* LDTelephoneBookTests.m */; };
+		EDCAECC41D24F00900945A08 /* LDTelephoneBookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECC31D24F00900945A08 /* LDTelephoneBookUITests.m */; };
+		EDCAECD41D24F0A000945A08 /* LDTelephoneBookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECD21D24F0A000945A08 /* LDTelephoneBookVC.m */; };
+		EDCAECD51D24F0A000945A08 /* LDTelephoneBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCAECD31D24F0A000945A08 /* LDTelephoneBookVC.xib */; };
+		EDCAECD91D24F16F00945A08 /* LDTelephoneBookDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECD71D24F16F00945A08 /* LDTelephoneBookDateVC.m */; };
+		EDCAECDA1D24F16F00945A08 /* LDTelephoneBookDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCAECD81D24F16F00945A08 /* LDTelephoneBookDateVC.xib */; };
+		EDCAECE41D24F27A00945A08 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECDD1D24F27A00945A08 /* YYCache.m */; };
+		EDCAECE51D24F27A00945A08 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECDF1D24F27A00945A08 /* YYDiskCache.m */; };
+		EDCAECE61D24F27A00945A08 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECE11D24F27A00945A08 /* YYKVStorage.m */; };
+		EDCAECE71D24F27A00945A08 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECE31D24F27A00945A08 /* YYMemoryCache.m */; };
+		EDCAECEB1D24F4EA00945A08 /* LDTelephoneBookAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECE91D24F4EA00945A08 /* LDTelephoneBookAddVC.m */; };
+		EDCAECEC1D24F4EA00945A08 /* LDTelephoneBookAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCAECEA1D24F4EA00945A08 /* LDTelephoneBookAddVC.xib */; };
+		EDCAECEE1D24F53D00945A08 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCAECED1D24F53D00945A08 /* libsqlite3.tbd */; };
+		EDCAECF11D24F5CC00945A08 /* LDTelephoneBookManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCAECF01D24F5CC00945A08 /* LDTelephoneBookManger.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDCAECB51D24F00900945A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCAEC931D24F00900945A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCAEC9A1D24F00900945A08;
+			remoteInfo = LDTelephoneBook;
+		};
+		EDCAECC01D24F00900945A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCAEC931D24F00900945A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCAEC9A1D24F00900945A08;
+			remoteInfo = LDTelephoneBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDCAEC9B1D24F00900945A08 /* LDTelephoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDTelephoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCAEC9F1D24F00900945A08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDCAECA11D24F00900945A08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EDCAECA21D24F00900945A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EDCAECAA1D24F00900945A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDCAECAD1D24F00900945A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDCAECAF1D24F00900945A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCAECB41D24F00900945A08 /* LDTelephoneBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDTelephoneBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCAECB81D24F00900945A08 /* LDTelephoneBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookTests.m; sourceTree = "<group>"; };
+		EDCAECBA1D24F00900945A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCAECBF1D24F00900945A08 /* LDTelephoneBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDTelephoneBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCAECC31D24F00900945A08 /* LDTelephoneBookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookUITests.m; sourceTree = "<group>"; };
+		EDCAECC51D24F00900945A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCAECD11D24F0A000945A08 /* LDTelephoneBookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTelephoneBookVC.h; sourceTree = "<group>"; };
+		EDCAECD21D24F0A000945A08 /* LDTelephoneBookVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookVC.m; sourceTree = "<group>"; };
+		EDCAECD31D24F0A000945A08 /* LDTelephoneBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDTelephoneBookVC.xib; sourceTree = "<group>"; };
+		EDCAECD61D24F16F00945A08 /* LDTelephoneBookDateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTelephoneBookDateVC.h; sourceTree = "<group>"; };
+		EDCAECD71D24F16F00945A08 /* LDTelephoneBookDateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookDateVC.m; sourceTree = "<group>"; };
+		EDCAECD81D24F16F00945A08 /* LDTelephoneBookDateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDTelephoneBookDateVC.xib; sourceTree = "<group>"; };
+		EDCAECDC1D24F27A00945A08 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		EDCAECDD1D24F27A00945A08 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		EDCAECDE1D24F27A00945A08 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		EDCAECDF1D24F27A00945A08 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		EDCAECE01D24F27A00945A08 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		EDCAECE11D24F27A00945A08 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		EDCAECE21D24F27A00945A08 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		EDCAECE31D24F27A00945A08 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		EDCAECE81D24F4EA00945A08 /* LDTelephoneBookAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTelephoneBookAddVC.h; sourceTree = "<group>"; };
+		EDCAECE91D24F4EA00945A08 /* LDTelephoneBookAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookAddVC.m; sourceTree = "<group>"; };
+		EDCAECEA1D24F4EA00945A08 /* LDTelephoneBookAddVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDTelephoneBookAddVC.xib; sourceTree = "<group>"; };
+		EDCAECED1D24F53D00945A08 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EDCAECEF1D24F5CC00945A08 /* LDTelephoneBookManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTelephoneBookManger.h; sourceTree = "<group>"; };
+		EDCAECF01D24F5CC00945A08 /* LDTelephoneBookManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTelephoneBookManger.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDCAEC981D24F00900945A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAECEE1D24F53D00945A08 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECB11D24F00900945A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECBC1D24F00900945A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDCAEC921D24F00900945A08 = {
+			isa = PBXGroup;
+			children = (
+				EDCAECED1D24F53D00945A08 /* libsqlite3.tbd */,
+				EDCAEC9D1D24F00900945A08 /* LDTelephoneBook */,
+				EDCAECB71D24F00900945A08 /* LDTelephoneBookTests */,
+				EDCAECC21D24F00900945A08 /* LDTelephoneBookUITests */,
+				EDCAEC9C1D24F00900945A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDCAEC9C1D24F00900945A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAEC9B1D24F00900945A08 /* LDTelephoneBook.app */,
+				EDCAECB41D24F00900945A08 /* LDTelephoneBookTests.xctest */,
+				EDCAECBF1D24F00900945A08 /* LDTelephoneBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDCAEC9D1D24F00900945A08 /* LDTelephoneBook */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAECDB1D24F27A00945A08 /* YYCache */,
+				EDCAECA11D24F00900945A08 /* AppDelegate.h */,
+				EDCAECA21D24F00900945A08 /* AppDelegate.m */,
+				EDCAECD11D24F0A000945A08 /* LDTelephoneBookVC.h */,
+				EDCAECD21D24F0A000945A08 /* LDTelephoneBookVC.m */,
+				EDCAECD31D24F0A000945A08 /* LDTelephoneBookVC.xib */,
+				EDCAECD61D24F16F00945A08 /* LDTelephoneBookDateVC.h */,
+				EDCAECD71D24F16F00945A08 /* LDTelephoneBookDateVC.m */,
+				EDCAECD81D24F16F00945A08 /* LDTelephoneBookDateVC.xib */,
+				EDCAECE81D24F4EA00945A08 /* LDTelephoneBookAddVC.h */,
+				EDCAECE91D24F4EA00945A08 /* LDTelephoneBookAddVC.m */,
+				EDCAECEA1D24F4EA00945A08 /* LDTelephoneBookAddVC.xib */,
+				EDCAECEF1D24F5CC00945A08 /* LDTelephoneBookManger.h */,
+				EDCAECF01D24F5CC00945A08 /* LDTelephoneBookManger.m */,
+				EDCAECAA1D24F00900945A08 /* Assets.xcassets */,
+				EDCAECAC1D24F00900945A08 /* LaunchScreen.storyboard */,
+				EDCAECAF1D24F00900945A08 /* Info.plist */,
+				EDCAEC9E1D24F00900945A08 /* Supporting Files */,
+			);
+			path = LDTelephoneBook;
+			sourceTree = "<group>";
+		};
+		EDCAEC9E1D24F00900945A08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAEC9F1D24F00900945A08 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDCAECB71D24F00900945A08 /* LDTelephoneBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAECB81D24F00900945A08 /* LDTelephoneBookTests.m */,
+				EDCAECBA1D24F00900945A08 /* Info.plist */,
+			);
+			path = LDTelephoneBookTests;
+			sourceTree = "<group>";
+		};
+		EDCAECC21D24F00900945A08 /* LDTelephoneBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAECC31D24F00900945A08 /* LDTelephoneBookUITests.m */,
+				EDCAECC51D24F00900945A08 /* Info.plist */,
+			);
+			path = LDTelephoneBookUITests;
+			sourceTree = "<group>";
+		};
+		EDCAECDB1D24F27A00945A08 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAECDC1D24F27A00945A08 /* YYCache.h */,
+				EDCAECDD1D24F27A00945A08 /* YYCache.m */,
+				EDCAECDE1D24F27A00945A08 /* YYDiskCache.h */,
+				EDCAECDF1D24F27A00945A08 /* YYDiskCache.m */,
+				EDCAECE01D24F27A00945A08 /* YYKVStorage.h */,
+				EDCAECE11D24F27A00945A08 /* YYKVStorage.m */,
+				EDCAECE21D24F27A00945A08 /* YYMemoryCache.h */,
+				EDCAECE31D24F27A00945A08 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDCAEC9A1D24F00900945A08 /* LDTelephoneBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCAECC81D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBook" */;
+			buildPhases = (
+				EDCAEC971D24F00900945A08 /* Sources */,
+				EDCAEC981D24F00900945A08 /* Frameworks */,
+				EDCAEC991D24F00900945A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LDTelephoneBook;
+			productName = LDTelephoneBook;
+			productReference = EDCAEC9B1D24F00900945A08 /* LDTelephoneBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDCAECB31D24F00900945A08 /* LDTelephoneBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCAECCB1D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBookTests" */;
+			buildPhases = (
+				EDCAECB01D24F00900945A08 /* Sources */,
+				EDCAECB11D24F00900945A08 /* Frameworks */,
+				EDCAECB21D24F00900945A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCAECB61D24F00900945A08 /* PBXTargetDependency */,
+			);
+			name = LDTelephoneBookTests;
+			productName = LDTelephoneBookTests;
+			productReference = EDCAECB41D24F00900945A08 /* LDTelephoneBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDCAECBE1D24F00900945A08 /* LDTelephoneBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCAECCE1D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBookUITests" */;
+			buildPhases = (
+				EDCAECBB1D24F00900945A08 /* Sources */,
+				EDCAECBC1D24F00900945A08 /* Frameworks */,
+				EDCAECBD1D24F00900945A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCAECC11D24F00900945A08 /* PBXTargetDependency */,
+			);
+			name = LDTelephoneBookUITests;
+			productName = LDTelephoneBookUITests;
+			productReference = EDCAECBF1D24F00900945A08 /* LDTelephoneBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDCAEC931D24F00900945A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Daredos;
+				TargetAttributes = {
+					EDCAEC9A1D24F00900945A08 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					EDCAECB31D24F00900945A08 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EDCAEC9A1D24F00900945A08;
+					};
+					EDCAECBE1D24F00900945A08 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EDCAEC9A1D24F00900945A08;
+					};
+				};
+			};
+			buildConfigurationList = EDCAEC961D24F00900945A08 /* Build configuration list for PBXProject "LDTelephoneBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDCAEC921D24F00900945A08;
+			productRefGroup = EDCAEC9C1D24F00900945A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDCAEC9A1D24F00900945A08 /* LDTelephoneBook */,
+				EDCAECB31D24F00900945A08 /* LDTelephoneBookTests */,
+				EDCAECBE1D24F00900945A08 /* LDTelephoneBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDCAEC991D24F00900945A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAECDA1D24F16F00945A08 /* LDTelephoneBookDateVC.xib in Resources */,
+				EDCAECEC1D24F4EA00945A08 /* LDTelephoneBookAddVC.xib in Resources */,
+				EDCAECAE1D24F00900945A08 /* LaunchScreen.storyboard in Resources */,
+				EDCAECAB1D24F00900945A08 /* Assets.xcassets in Resources */,
+				EDCAECD51D24F0A000945A08 /* LDTelephoneBookVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECB21D24F00900945A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECBD1D24F00900945A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDCAEC971D24F00900945A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAECD91D24F16F00945A08 /* LDTelephoneBookDateVC.m in Sources */,
+				EDCAECE71D24F27A00945A08 /* YYMemoryCache.m in Sources */,
+				EDCAECE61D24F27A00945A08 /* YYKVStorage.m in Sources */,
+				EDCAECF11D24F5CC00945A08 /* LDTelephoneBookManger.m in Sources */,
+				EDCAECA31D24F00900945A08 /* AppDelegate.m in Sources */,
+				EDCAECEB1D24F4EA00945A08 /* LDTelephoneBookAddVC.m in Sources */,
+				EDCAECD41D24F0A000945A08 /* LDTelephoneBookVC.m in Sources */,
+				EDCAECE51D24F27A00945A08 /* YYDiskCache.m in Sources */,
+				EDCAECA01D24F00900945A08 /* main.m in Sources */,
+				EDCAECE41D24F27A00945A08 /* YYCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECB01D24F00900945A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAECB91D24F00900945A08 /* LDTelephoneBookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAECBB1D24F00900945A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAECC41D24F00900945A08 /* LDTelephoneBookUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDCAECB61D24F00900945A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCAEC9A1D24F00900945A08 /* LDTelephoneBook */;
+			targetProxy = EDCAECB51D24F00900945A08 /* PBXContainerItemProxy */;
+		};
+		EDCAECC11D24F00900945A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCAEC9A1D24F00900945A08 /* LDTelephoneBook */;
+			targetProxy = EDCAECC01D24F00900945A08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDCAECAC1D24F00900945A08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDCAECAD1D24F00900945A08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDCAECC61D24F00900945A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDCAECC71D24F00900945A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDCAECC91D24F00900945A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LDTelephoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EDCAECCA1D24F00900945A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LDTelephoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EDCAECCC1D24F00900945A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LDTelephoneBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LDTelephoneBook.app/LDTelephoneBook";
+			};
+			name = Debug;
+		};
+		EDCAECCD1D24F00900945A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LDTelephoneBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LDTelephoneBook.app/LDTelephoneBook";
+			};
+			name = Release;
+		};
+		EDCAECCF1D24F00900945A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LDTelephoneBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LDTelephoneBook;
+			};
+			name = Debug;
+		};
+		EDCAECD01D24F00900945A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LDTelephoneBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.LDTelephoneBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LDTelephoneBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDCAEC961D24F00900945A08 /* Build configuration list for PBXProject "LDTelephoneBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCAECC61D24F00900945A08 /* Debug */,
+				EDCAECC71D24F00900945A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCAECC81D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCAECC91D24F00900945A08 /* Debug */,
+				EDCAECCA1D24F00900945A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EDCAECCB1D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCAECCC1D24F00900945A08 /* Debug */,
+				EDCAECCD1D24F00900945A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EDCAECCE1D24F00900945A08 /* Build configuration list for PBXNativeTarget "LDTelephoneBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCAECCF1D24F00900945A08 /* Debug */,
+				EDCAECD01D24F00900945A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDCAEC931D24F00900945A08 /* Project object */;
+}
