@@ -42,6 +42,8 @@
         self.selectedIndex = selectIndex;
     };
     [self.tabBar addSubview:tabBar];
+    
+    
 
 }
 
